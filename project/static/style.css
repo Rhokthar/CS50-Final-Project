@@ -1,0 +1,146 @@
+/*******************/
+/* Document style */
+/*****************/
+body {
+    color: #ffffff;
+    background-color: #121212;
+}
+
+/************************/
+/* Top navigation menu */
+/**********************/
+
+/* Top-nav setup */
+.top-nav {
+    height: auto;
+    width: auto;
+    padding-right: 5%;
+}
+/* Items of top-nav setup */
+.top-nav > .item {
+    color: #ffffff;
+    float: right;
+    margin: 10px 20px 0px 0px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* Items on hover */
+.top-nav > .item:hover {
+    color: #ff7417;
+    font-size: 27px;
+}
+/* Items disabled */
+.top-nav > .item-disabled {
+    float: right;
+    margin: 10px 20px 0px 0px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #363636;
+}
+
+/**************/
+/* Img setup */
+/************/
+
+.nav-img {
+    width: 150px;
+    height: 150px;
+    margin: 2rem;
+    background: url("../imgs/nav-img.png") no-repeat;
+    background-size: 150px 150px;
+    background-position: 0px 0px;
+    transition: 0.3s;
+}
+/* Img change on mouse hover */
+.nav-img:hover {
+    background: url("../imgs/nav-img-hover.png") no-repeat;
+    background-size: 150px 150px;
+    background-position: 0px 0px;
+}
+/* Img Animation: bouncing */
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+	60% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
+	}
+}
+/* Span setup */
+span {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+/* Span animation on hover */
+span:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+/******************************************/
+/* Side Menu: sends user to page content */
+/****************************************/
+
+.sidenav {
+    height: auto; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 15rem; /* Stay at the top */
+    left: 0;
+    background-color: #242424; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/* Side menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    border-bottom: 1px solid #ff7417;
+    transition: 0.3s;
+} 
+/* When mouseover, change color */
+.sidenav a:hover {
+    border-left: 10px solid #ff7417;
+    color: #ff7417;
+}  
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/******************/  
+/* Media changes */
+/****************/
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
