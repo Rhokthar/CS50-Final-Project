@@ -35,25 +35,29 @@
         <!-- Nella home, un riassunto con una lunga pagina i cui link, a sinistra col logo, saranno delle 
         ridirezioni alle parti della pagina -->
         <!-- Bottone per il dark theme -->
-        <div class="main">
-            
-            <div class="top-nav">
-                <a href="/contacts" class="item">Contacts</a>
-                <a role="/blog" aria-disabled="true" class="item-disabled">Blog (coming soon...)</a>
-                <a href="/certificates" class="item">Certificates</a>
-                <a href="/projects" class="item">Projects</a>                
-                <a href="/about-me" class="item">About Me</a>
-            </div>
-            
+        <header class="header" role="banner">
+            <div class="header_nav">                
+                <nav class="top-nav" role="navigation">
+                    <ul class="nav_items">
+                        <li class="item"><a href="/contacts">About Me</a></li>                        
+                        <li class="item"><a href="/certificates">Projects</a></li>
+                        <li class="item-disabled"><a role="/blog" aria-disabled="true">Blog (coming soon...)</a></li>
+                        <li class="item"><a href="/projects">Certificates</a></li>                
+                        <li class="item"><a href="/about-me">Contacts</a></li>
+                    </ul>                    
+                </nav>               
+            </div>            
+        </header>
+        <main class="main" role="main" id="main">
             <!-- Image to open sidenav menu -->
             <div id="nav_img"></div>
             <!-- Effective sidenav menu -->
-            <div id="mySidenav">
+            <div id="mySidenav" role="navigation">
                 <a href="#" class="side-item">About Me</a>
                 <a href="#" class="side-item">Projects</a>
                 <a href="#" class="side-item">Contact</a>
                 <a role="link" aria-disabled="true" class="side-item-disabled">Blog (coming soon...)</a>
-              </div>
+            </div>
             
             <script>
                 // Take the elemements
@@ -75,7 +79,7 @@
                     sideNav.classList.toggle("active");
                 }
             </script>                     
-        </div>        
+        </main>         
         {% block main %}{% endblock %}
     </body>
 </html>
