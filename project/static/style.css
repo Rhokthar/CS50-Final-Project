@@ -3,7 +3,7 @@
 /*****************/
 body {
     color: #ffffff;
-    background-color: #121212;
+    background-color: #161616;
 }
 
 /************************/
@@ -23,11 +23,12 @@ body {
     margin: 10px 20px 0px 0px;
     font-size: 25px;
     text-decoration: none;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
     transition: 0.3s;
 }
 /* Items on hover */
 .top-nav > .item:hover {
-    color: #ff7417;
+    color: #ff7417;    
     font-size: 27px;
 }
 /* Items disabled */
@@ -132,12 +133,16 @@ body {
     transition: 0.3s;
 } 
 /* When mouseover, change color and add border */
-#mySidenav a:hover {
+#mySidenav a.side-item:hover {
     border-left: 10px solid #ff7417;
     background-color: rgba(255, 116, 23, 0.1);
     color: #ff7417;
 }
-
+#mySidenav a.side-item-disabled {
+    background-color: #121212;
+    color: #363636;
+    border-bottom: 0px;
+}
 /******************/  
 /* Media changes */
 /****************/
