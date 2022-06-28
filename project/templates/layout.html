@@ -9,6 +9,25 @@
         <link href="../static/style.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <title>Simone Molino - {% block title %}{% endblock %}</title>
+        <script>
+            // Full load DOM
+            document.addEventListener("DOMContentLoaded", function() {});
+
+            function ChangeStatus() 
+            {
+                let x = document.getElementById("mySidenav").style.width;
+                if (x === "250px")
+                {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+                else
+                {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+            }            
+            
+           
+          </script>
 </script>
     </head>
     <body>
@@ -17,34 +36,48 @@
         ridirezioni alle parti della pagina -->
         <!-- Bottone per il dark theme -->
         <div class="main">
+            
             <div class="top-nav">
                 <a href="/contacts" class="item">Contacts</a>
-                <a role="/" aria-disabled="true" class="item-disabled">Blog (coming soon...)</a>
+                <a role="/blog" aria-disabled="true" class="item-disabled">Blog (coming soon...)</a>
                 <a href="/certificates" class="item">Certificates</a>
                 <a href="/projects" class="item">Projects</a>                
                 <a href="/about-me" class="item">About Me</a>
             </div>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About Me</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact</a>
-                <a role="link" aria-disabled="true">Blog (coming soon...)</a>
+            <div id="toggle"></div>
+            
+            <!-- Use any element to open the sidenav -->
+            <div id="nav_img"></div>
+            <div id="mySidenav">
+                <a href="#" class="side-item">About Me</a>
+                <a href="#" class="side-item">Projects</a>
+                <a href="#" class="side-item">Contact</a>
+                <a role="link" aria-disabled="true" class="side-item">Blog (coming soon...)</a>
               </div>
+            
+            <script>
+                // Take the elemements
+                const nav_img = document.getElementById("nav_img");
+                const sideNav = document.getElementById("mySidenav");
+
+                // Check if user's clicking on elements
+                document.onclick = function(e) {
+                    if (e.target.id !== "mySidenav" && e.target.id !== "nav_img")
+                    {
+                        nav_img.classList.remove("active");
+                        sideNav.classList.remove("active");
+                    }
+                }
+
+                // Switch status on image click -> change class
+                nav_img.onclick = function() {
+                    nav_img.classList.toggle("active");
+                    sideNav.classList.toggle("active");
+                }
+            </script>
               
-              <!-- Use any element to open the sidenav -->
-              <span onclick="openNav()" class="nav-img"></span>
-              <script>
-                /* Set the width of the side navigation to 250px */
-                    function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                    }
-    
-                    /* Set the width of the side navigation to 0 */
-                    function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                    }
-              </script>
+              
+            
         </div>
         
         {% block main %}{% endblock %}

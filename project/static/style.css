@@ -43,7 +43,7 @@ body {
 /* Img setup */
 /************/
 
-.nav-img {
+#nav_img {
     width: 150px;
     height: 150px;
     margin: 2rem;
@@ -51,12 +51,30 @@ body {
     background-size: 150px 150px;
     background-position: 0px 0px;
     transition: 0.3s;
+    cursor: pointer;
+    /* Animation Setup */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 /* Img change on mouse hover */
-.nav-img:hover {
+#nav_img:hover {
     background: url("../imgs/nav-img-hover.png") no-repeat;
     background-size: 150px 150px;
     background-position: 0px 0px;
+
+    /* Animation Setup */
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
 }
 /* Img Animation: bouncing */
 @keyframes bounce {
@@ -76,44 +94,35 @@ body {
 		transform:         translateY(-10px)
 	}
 }
-/* Span setup */
-span {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-}
-/* Span animation on hover */
-span:hover {
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
+/* If clicked, switch to active */
+#nav_img.active {
+    background: url("../imgs/nav-img-hover.png") no-repeat;
+    background-size: 150px 150px;
+    background-position: 0px 0px;
 }
 
 /******************************************/
 /* Side Menu: sends user to page content */
 /****************************************/
 
-.sidenav {
-    height: auto; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
+#mySidenav {
+    height: auto; /* As big as many links */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; 
     z-index: 1; /* Stay on top */
-    top: 15rem; /* Stay at the top */
+    top: 15rem; 
     left: 0;
     background-color: #242424; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1)
+}
+#mySidenav.active
+{
+    width: 250px;
 }
 /* Side menu links */
-.sidenav a {
+#mySidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -122,18 +131,48 @@ span:hover {
     border-bottom: 1px solid #ff7417;
     transition: 0.3s;
 } 
-/* When mouseover, change color */
-.sidenav a:hover {
+/* When mouseover, change color and add border */
+#mySidenav a:hover {
     border-left: 10px solid #ff7417;
+    background-color: rgba(255, 116, 23, 0.1);
     color: #ff7417;
-}  
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+}
+
+#toggle {
+    position: fixed;    
+    top: 60px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ff7417;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+#toggle::before {
+    content:"";
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    width: 28px;
+    height: 2px;
+    background: #363636;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+#toggle::after {
+    content:"";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #363636;
+    transform: translateY(5px);
+    transition: 0.3s;
+}
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
 }
 
 /******************/  
