@@ -138,43 +138,6 @@ body {
     color: #ff7417;
 }
 
-#toggle {
-    position: fixed;    
-    top: 60px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: #ff7417;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
-#toggle::before {
-    content:"";
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #363636;
-    transform: translateY(-5px);
-    transition: 0.3s;
-}
-#toggle::after {
-    content:"";
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: #363636;
-    transform: translateY(5px);
-    transition: 0.3s;
-}
-#toggle.active::before {
-    transform: translateY(0px) rotate(45deg);
-}
-#toggle.active::after {
-    transform: translateY(0px) rotate(-45deg);
-}
-
 /******************/  
 /* Media changes */
 /****************/
