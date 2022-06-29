@@ -196,6 +196,33 @@ li.item-disabled {
     border: 2px solid #ff7417;
     z-index: 1;
 }
+/* Labels Section */
+.bar_labels_container {
+    border: 1px solid blue;
+    position: inherit;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: fit-content;
+    height: 100%;
+}
+.bar_labels_container li > p {
+    font-family: "Courier New", Courier, monospace;
+    margin-bottom: 22px;
+    transform: rotate(-25deg);
+    transition: 0.3s;
+    
+}
+.bar_labels_container li > p:hover {
+    transform: rotate(-25deg) scale(1.2);
+    color: #ff7417;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+.bar_labels_container li.selected > p {
+    color: #ff7417;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
 
 /*******************
     Footer Stuff

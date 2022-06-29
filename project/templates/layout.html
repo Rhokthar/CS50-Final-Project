@@ -16,9 +16,6 @@
         </script>
     </head>
     <body>
-        <!-- Facciamo un Nav che manda direttamente alla pagina con un ampia spiegazione -->
-        <!-- Nella home, un riassunto con una lunga pagina i cui link, a sinistra col logo, saranno delle 
-        ridirezioni alle parti della pagina -->
         <!-- Bottone per il dark theme -->
         <header class="header" role="banner">
             <div class="header_nav">                
@@ -38,16 +35,24 @@
         <div id="nav_img"></div>
 
         <!-- Progress Nav Bar -->
-        <!-- Aggiungere scritte di fianco che fungono anch'esse da link -->
+        <!-- Nav items -->
         <div id="progress_bar_container">
-            <ul class="progress_nav">
+            <ul class="progress_nav" role="navigation">
                 <li class="selected"></li>
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
+            <!-- Progression Bar -->
             <div class="bar_empty" id="bar_empty">
                 <div class="bar_filling" id="bar_filling"></div>
+            </div>
+            <!-- Labels for nav bar -->
+            <div class="bar_labels_container" role="navigation">
+                <li class="selected"><p>Section_1</p></li>
+                <li><p>Section_2</p></li>
+                <li><p>Section_3</p></li>
+                <li><p>Section_4</p></li>
             </div>
         </div>        
         <!-- Main Content -->
@@ -74,6 +79,7 @@
             const windowHeight = window.innerHeight;
             // Take navbar items
             const navigation = document.querySelector(".progress_nav");
+            const navigationLabels = document.querySelector(".bar_labels_container");
 
             // Reset class status function
             function reset() 
@@ -81,6 +87,7 @@
                 for (var i = 0; i < navigation.children.length; i++)
                 {
                     navigation.children[i].classList.remove("selected");
+                    navigationLabels.children[i].classList.remove("selected");
                 }
             }
             
@@ -95,6 +102,7 @@
                     {
                         reset();
                         navigation.children[i].classList.add("selected");
+                        navigationLabels.children[i].classList.add("selected");
                     }
 
                 });
@@ -102,6 +110,16 @@
 
             // Smooth passing through sections by clicking on nav items
             document.querySelectorAll(".progress_nav li").forEach(function(item, i) {
+                item.addEventListener("click", function() {
+                    window.scrollTo( {
+                        top: i * windowHeight,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Same for Labels
+            document.querySelectorAll(".bar_labels_container li").forEach(function(item, i) {
                 item.addEventListener("click", function() {
                     window.scrollTo( {
                         top: i * windowHeight,
