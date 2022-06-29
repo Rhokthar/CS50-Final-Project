@@ -11,75 +11,130 @@
         <title>Simone Molino - {% block title %}{% endblock %}</title>
         <script>
             // Full load DOM
-            document.addEventListener("DOMContentLoaded", function() {});
+            document.addEventListener("DOMContentLoaded", function() {});         
 
-            function ChangeStatus() 
-            {
-                let x = document.getElementById("mySidenav").style.width;
-                if (x === "250px")
-                {
-                    document.getElementById("mySidenav").style.width = "0";
-                }
-                else
-                {
-                    document.getElementById("mySidenav").style.width = "250px";
-                }
-            }            
-            
-           
-          </script>
-</script>
+        </script>
     </head>
     <body>
         <!-- Facciamo un Nav che manda direttamente alla pagina con un ampia spiegazione -->
         <!-- Nella home, un riassunto con una lunga pagina i cui link, a sinistra col logo, saranno delle 
         ridirezioni alle parti della pagina -->
         <!-- Bottone per il dark theme -->
+        <!-- Sistemare Shadow -->
         <header class="header" role="banner">
             <div class="header_nav">                
                 <nav class="top-nav" role="navigation">
                     <ul class="nav_items">
                         <li class="item"><a href="/contacts">About Me</a></li>                        
                         <li class="item"><a href="/certificates">Projects</a></li>
-                        <li class="item-disabled"><a role="/blog" aria-disabled="true">Blog (coming soon...)</a></li>
                         <li class="item"><a href="/projects">Certificates</a></li>                
                         <li class="item"><a href="/about-me">Contacts</a></li>
+                        <li class="item-disabled"><a role="/blog" aria-disabled="true">Blog (coming soon...)</a></li>
                     </ul>                    
                 </nav>               
             </div>            
         </header>
-        <main class="main" role="main" id="main">
-            <!-- Image to open sidenav menu -->
-            <div id="nav_img"></div>
-            <!-- Effective sidenav menu -->
-            <div id="mySidenav" role="navigation">
-                <a href="#" class="side-item">About Me</a>
-                <a href="#" class="side-item">Projects</a>
-                <a href="#" class="side-item">Contact</a>
-                <a role="link" aria-disabled="true" class="side-item-disabled">Blog (coming soon...)</a>
+        <!-- IMG: click = top page -->
+        <!-- Sposta questa parte in index.html dopo e aggiungi {% block %}-->
+        <div id="nav_img"></div>
+
+        <!-- Progress Nav Bar -->
+        <!-- Aggiungere barra progress -->
+        <!-- Aggiungere scritte di fianco che fungono anch'esse da link -->
+        <div id="progress_bar_container">
+            <ul class="progress_nav">
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="bar_empty" id="bar_empty">
+                <div class="bar_filling" id="bar_filling"></div>
             </div>
+        </div>        
+        <!-- Main Content -->
+        <main class="main" id="main" role="main">
+            <section>
+                <div>Section 1</div>
+            </section>
+            <section>
+                <div>Section 2</div>
+            </section>
+            <section>
+                <div>Section 3</div>
+            </section>
+            <section>
+                <div>Section 4</div>
+            </section>                        
+        </main>
+        <!-- Script (dunno why don't work in head) -->
+        <script>
+            // Array of sections
+            const sections = document.querySelectorAll("section");
+            // Take height of the page we're seeing
+            const windowHeight = window.innerHeight;
+            // Take navbar items
+            const navigation = document.querySelector(".progress_nav");
+
+            // Reset class status function
+            function reset() 
+            {
+                for (var i = 0; i < navigation.children.length; i++)
+                {
+                    navigation.children[i].classList.remove("selected");
+                }
+            }
             
-            <script>
-                // Take the elemements
-                const nav_img = document.getElementById("nav_img");
-                const sideNav = document.getElementById("mySidenav");
-
-                // Check if user's clicking on elements
-                document.onclick = function(e) {
-                    if (e.target.id !== "mySidenav" && e.target.id !== "nav_img")
+            // Check scrolling
+            window.addEventListener("scroll", function() {
+                // Take the value of the scrolling
+                const scrollTop = window.scrollY;
+                // Check for every section
+                sections.forEach(function(section, i) {
+                    // Check if half of the new section has been passed by scrolling
+                    if (section.offsetTop < scrollTop + (windowHeight/2) && scrollTop < section.offsetTop + (windowHeight/2))
                     {
-                        nav_img.classList.remove("active");
-                        sideNav.classList.remove("active");
+                        reset();
+                        navigation.children[i].classList.add("selected");
                     }
-                }
 
-                // Switch status on image click -> change class
-                nav_img.onclick = function() {
-                    nav_img.classList.toggle("active");
-                    sideNav.classList.toggle("active");
-                }
-            </script>                     
-        </main>         
-        {% block main %}{% endblock %}
+                });
+            });
+
+            // Smooth passing through sections by clicking on nav items
+            document.querySelectorAll(".progress_nav li").forEach(function(item, i) {
+                item.addEventListener("click", function() {
+                    window.scrollTo( {
+                        top: i * windowHeight,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Same thing with the image
+            let home = document.querySelector("#nav_img");
+            home.addEventListener("click", function() {
+                window.scrollTo( {
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+            
+            window.onscroll = function() {BarFilling()};
+
+            function BarFilling() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("bar_filling").style.height = scrolled + "%";
+            }
+        </script>
+        <!-- Footer: thanks and social links -->
+        <!-- Sistemare Shadow -->
+        <footer class="footer" id="footer" role="footer">
+            <p>Designed and Built by Simone Molino</p>
+            <!-- Icone Social -->
+            <!-- Implementare uno stat recorder: visite etc. -->
+        </footer>        
     </body>
 </html>
