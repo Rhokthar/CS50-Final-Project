@@ -20,7 +20,6 @@
         <!-- Nella home, un riassunto con una lunga pagina i cui link, a sinistra col logo, saranno delle 
         ridirezioni alle parti della pagina -->
         <!-- Bottone per il dark theme -->
-        <!-- Sistemare Shadow -->
         <header class="header" role="banner">
             <div class="header_nav">                
                 <nav class="top-nav" role="navigation">
@@ -39,7 +38,6 @@
         <div id="nav_img"></div>
 
         <!-- Progress Nav Bar -->
-        <!-- Aggiungere barra progress -->
         <!-- Aggiungere scritte di fianco che fungono anch'esse da link -->
         <div id="progress_bar_container">
             <ul class="progress_nav">
@@ -67,7 +65,8 @@
                 <div>Section 4</div>
             </section>                        
         </main>
-        <!-- Script (dunno why don't work in head) -->
+
+        <!-- Script for Left Nav Bar -->
         <script>
             // Array of sections
             const sections = document.querySelectorAll("section");
@@ -92,7 +91,7 @@
                 // Check for every section
                 sections.forEach(function(section, i) {
                     // Check if half of the new section has been passed by scrolling
-                    if (section.offsetTop < scrollTop + (windowHeight/2) && scrollTop < section.offsetTop + (windowHeight/2))
+                    if (section.offsetTop < scrollTop + (windowHeight/5) && scrollTop < section.offsetTop + (windowHeight/5))
                     {
                         reset();
                         navigation.children[i].classList.add("selected");
@@ -120,20 +119,30 @@
                 });
             });
             
+            // Fill the bar while scrolling
             window.onscroll = function() {BarFilling()};
 
             function BarFilling() {
+                // Take top page
                 var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                // Take user height in that moment
                 var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                // % scrolled
                 var scrolled = (winScroll / height) * 100;
+                // Set value
                 document.getElementById("bar_filling").style.height = scrolled + "%";
             }
         </script>
         <!-- Footer: thanks and social links -->
-        <!-- Sistemare Shadow -->
         <footer class="footer" id="footer" role="footer">
-            <p>Designed and Built by Simone Molino</p>
-            <!-- Icone Social -->
+            <!-- Credits -->
+            <p>Designed and Built by Simone Molino &copy; 2022</p>
+            <!-- Social Links -->
+            <div class="social_container" id="social_container" role="link">
+                <a href="https://github.com/Rhokthar"><img src="../imgs/git-ico.png" alt="git-ico.png" height="25" width="25"></a>
+                <a href="https://www.linkedin.com/in/simone-molino-884486194/"><img src="../imgs/lin-ico.png" alt="lin-ico.png" height="25" width="25"></a>
+                <a href="https://www.instagram.com/rhokthar/"><img src="../imgs/insta-ico.png" alt="insta-ico.png" height="30" width="30"></a>
+            </div>
             <!-- Implementare uno stat recorder: visite etc. -->
         </footer>        
     </body>

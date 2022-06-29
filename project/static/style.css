@@ -6,11 +6,12 @@ body {
     background-color: #161616;
 }
 .footer, .header {
+    position: relative;
     font-family: "Courier New", Courier, monospace;
     background-color: #121212;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     z-index: 1;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 .header {
     display: flex;
@@ -20,7 +21,7 @@ body {
     font-size: 1.1rem;    
 }
 .main {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 /*
 .main {
@@ -28,15 +29,7 @@ body {
     width: min(100% - 20rem);
     margin-inline: auto;
 }*/
-.footer {
-    border: 2px solid red;
-    width: 100%;
-}
-.footer p {
-    text-align: center;
-    font-size: 12px;
-    padding: 1rem;
-}
+
 ul, ol, li {
     list-style-type: none;
 }
@@ -67,7 +60,6 @@ section div {
 /************************/
 /* Top navigation menu */
 /**********************/
-
 /* Top-nav setup */
 .header_nav {
     margin-right: 5rem;
@@ -100,7 +92,6 @@ li.item-disabled {
 /**************/
 /* Img setup */
 /************/
-
 #nav_img {
     width: 150px;
     height: 150px;
@@ -124,7 +115,6 @@ li.item-disabled {
     -webkit-animation-iteration-count: infinite;
     z-index: 1;
 }
-/* Img change on mouse hover */
 #nav_img:hover {
     background: url("../imgs/nav-img-hover.png") no-repeat;
     background-size: 150px 150px;
@@ -157,8 +147,27 @@ li.item-disabled {
 /*************************
     Progress Nav Bar
 *************************/
+/* Bar Section */
+.bar_empty {
+    border: 1px solid black;
+    position: inherit;
+    height: 80%;
+    left: 0;
+    top: 60%;
+    transform: translate(120%, -50%);
+    width: 30%;        
+    z-index: -1;
+    
+}
+.bar_filling {
+    position: inherit;
+    width: 100%;
+    height: 0%;
+    background-color: #ff7417;
+}
+/* Dots Section */
 #progress_bar_container {
-    /* border: 1px solid red;*/
+    border: 1px solid red;
     left: 1.5%;
     position: fixed;   
     top: 50%;
@@ -187,23 +196,36 @@ li.item-disabled {
     border: 2px solid #ff7417;
     z-index: 1;
 }
-.bar_empty {
-    border: 1px solid black;
-    position: inherit;
-    height: 80%;
-    left: 0;
-    top: 60%;
-    transform: translate(120%, -50%);
-    width: 30%;        
-    z-index: -1;
-    
-}
-.bar_filling {
-    position: inherit;
+
+/*******************
+    Footer Stuff
+********************/
+.footer {
+    border: 2px solid red;
     width: 100%;
-    height: 0%;
-    background-color: #ff7417;
 }
+.footer p {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 1rem;
+}
+/* Social Section */
+.social_container {
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    /* border: 1px solid red;*/
+}
+.social_container a > img {
+    padding: 0.1rem;
+    transition: 0.3s;
+}
+.social_container a > img:hover {
+    transform: scale(1.3);
+}
+
 
 /******************/  
 /* Media changes */
