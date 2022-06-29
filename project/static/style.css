@@ -1,6 +1,6 @@
-/*******************/
-/* Document style */
-/*****************/
+/********************
+    General Styles
+*********************/
 body {
     color: #ffffff;
     background-color: #161616;
@@ -11,7 +11,15 @@ body {
     background-color: #121212;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     z-index: 1;
-    /* border: 2px solid red; */
+    border: 1px solid red;
+}
+.footer {
+    width: 100%;
+}
+.footer p {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 1rem;
 }
 .header {
     display: flex;
@@ -19,9 +27,6 @@ body {
     justify-content: flex-end;
     padding-top: 1.1rem;
     font-size: 1.1rem;    
-}
-.main {
-    /* border: 2px solid red; */
 }
 /*
 .main {
@@ -36,6 +41,7 @@ ul, ol, li {
 h1 {
     font-family: Copperplate, Papyrus, fantasy;
 }
+/* Section */
 section {
     background-color: #484848;
     height: 100vh;
@@ -62,7 +68,7 @@ section div {
 /**********************/
 /* Top-nav setup */
 .header_nav {
-    margin-right: 5rem;
+    margin-right: 2.5rem;
 }
 .nav_items {
     display: flex;
@@ -85,10 +91,66 @@ li.item-disabled {
     color: #484848;
     float: right;
     padding: 10px;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
-
+/* Switch Theme Button */                       
+.switch_theme {
+    position: relative;
+    display: inline-block;    
+    width: 50px;
+    height: 25px;
+}
+.switch_theme input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch_theme_container {
+    position: relative;  
+    top: 7px;
+    right: 15px; 
+    height: fit-content;
+    width: fit-content;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+input:checked + .slider {
+    background-color: #ff7417;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #ff7417;
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
 /**************/
 /* Img setup */
 /************/
@@ -220,6 +282,7 @@ li.item-disabled {
     cursor: pointer;
 }
 .bar_labels_container li.selected > p {
+    transform: rotate(-25deg) scale(1.2);
     color: #ff7417;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);
 }
@@ -227,15 +290,6 @@ li.item-disabled {
 /*******************
     Footer Stuff
 ********************/
-.footer {
-    border: 2px solid red;
-    width: 100%;
-}
-.footer p {
-    text-align: center;
-    font-size: 12px;
-    padding-top: 1rem;
-}
 /* Social Section */
 .social_container {
     height: fit-content;
