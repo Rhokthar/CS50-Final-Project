@@ -28,8 +28,57 @@
 </div>        
 <!-- Main Content -->
 <main class="main" id="main" role="main">
-    <section>
-        <div>Section 1</div>
+    <!-- The viewed part of the page -->
+    <section class="page_section" id="home">
+        <!-- Container of the containers of the elements in the section -->
+        <div class="section_container">
+            <!-- Container of the text part -->
+            <div class="text_container">
+                <!-- Title -->
+                <h1 role="section-title">
+                    <span>Hello, everyone! I'm</span><br>
+                    <div class="special_text">
+                        <span class="text">
+                            <span class="symbol">></span>
+                            <span class="letter" data-text="S">S</span>
+                            <span class="letter" data-text="I">I</span>
+                            <span class="letter" data-text="M">M</span>
+                            <span class="letter" data-text="O">O</span>
+                            <span class="letter" data-text="N">N</span>
+                            <span class="letter" data-text="E">E&nbsp;</span>                        
+                            <span class="letter" data-text="M">M</span>
+                            <span class="letter" data-text="O">O</span>
+                            <span class="letter" data-text="L">L</span>
+                            <span class="letter" data-text="I">I</span>
+                            <span class="letter" data-text="N">N</span>
+                            <span class="letter" data-text="O">O</span>
+                        :</span><br>
+                    </div>
+                   
+                    <div class="adjectives_container">
+                        <span>a</span>
+                        <div class="adjectives">
+                            <div>Software Developer</div>
+                            <div>Guy</div>
+                            <div>Challenge Lover</div>
+                        </div> 
+                    </div>
+                </h1>
+                <!-- Underline -->
+                <!-- IMPLEMENTARE CHE QUANDO CLICCO SU FRONT-END RIMANE COM'E' -->
+                <!-- QUANDO CLICCO SU BACK END MOSTRA IL CODICE SORGENTE COME BACKGROUND -->
+                <p>Front-End <span class="diff_color">|</span> Back-End </p>
+            </div>
+            <!-- Container of the image part -->
+            <div class="img_container" role="link">
+                <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png">
+                <span class="tooltip" role="tooltip">
+                    Thanks to 
+                    <a href="https://www.bitmoji.com/" target="_blank">bitmoji</a> 
+                    for the Avatars!
+                </span>                
+            </div>
+        </div>        
     </section>
     <section>
         <div>Section 2</div>
@@ -44,6 +93,7 @@
 
 <!-- Script for Left Nav Bar -->
 <script>
+    // Scrolling Scripts
     // Array of sections
     const sections = document.querySelectorAll("section");
     // Take height of the page we're seeing
@@ -120,7 +170,25 @@
         // Set value
         document.getElementById("bar_filling").style.height = scrolled + "%";
     }
+
+    // Letter Bouncing Script
+    // Select letters
+    document.querySelectorAll(".letter").forEach((element) => {
+        // Add listening for mouseover
+        element.addEventListener("mouseover", (e) => BounceLetter(e.target));
+    });
+
+    // Set class to bounce
+    function BounceLetter(letter) 
+    {
+        if (!letter.classList.contains("letter_bouncing")) 
+        {
+            letter.classList.add("letter_bouncing");
+            setTimeout(function() 
+            {
+                letter.classList.remove("letter_bouncing");
+            }, 1000);
+        }
+    }
 </script>
-
-
 {% endblock %}
