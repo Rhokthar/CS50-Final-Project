@@ -40,150 +40,29 @@
                     </ul>                    
                 </nav>                                              
             </div>
-            <!-- Bottone per il dark theme -->
+            <!-- Dark Theme Button -->
             <div class="switch_theme_container" role="group">
-                <img src="../imgs/moon-dark-theme.png" alt="moon-dark-theme.png" height="25" width="35">
+                <img src="{{ url_for('static', filename='moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35">
                 <label class="switch_theme" role="checkbox">                
                     <input type="checkbox">
                     <span class="slider round"></span>
                 </label>  
-            </div>
-
-                        
+            </div>                        
         </header>
         <!-- IMG: click = top page -->        
-        <div id="nav_img"></div>
-
-        <!-- Sposta questa parte in index.html dopo e aggiungi {% block %}-->
-        <!-- Progress Nav Bar: change index sections -->
-        <!-- Nav items -->
-        <div id="progress_bar_container">
-            <ul class="progress_nav" role="navigation">
-                <li class="selected"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <!-- Progression Bar -->
-            <div class="bar_empty" id="bar_empty">
-                <div class="bar_filling" id="bar_filling"></div>
-            </div>
-            <!-- Labels for nav bar -->
-            <div class="bar_labels_container" role="navigation">
-                <li class="selected"><p>Section_1</p></li>
-                <li><p>Section_2</p></li>
-                <li><p>Section_3</p></li>
-                <li><p>Section_4</p></li>
-            </div>
-        </div>        
-        <!-- Main Content -->
-        <main class="main" id="main" role="main">
-            <section>
-                <div>Section 1</div>
-            </section>
-            <section>
-                <div>Section 2</div>
-            </section>
-            <section>
-                <div>Section 3</div>
-            </section>
-            <section>
-                <div>Section 4</div>
-            </section>                        
-        </main>
-
-        <!-- Script for Left Nav Bar -->
-        <script>
-            // Array of sections
-            const sections = document.querySelectorAll("section");
-            // Take height of the page we're seeing
-            const windowHeight = window.innerHeight;
-            // Take navbar items
-            const navigation = document.querySelector(".progress_nav");
-            const navigationLabels = document.querySelector(".bar_labels_container");
-
-            // Reset class status function
-            function reset() 
-            {
-                for (var i = 0; i < navigation.children.length; i++)
-                {
-                    navigation.children[i].classList.remove("selected");
-                    navigationLabels.children[i].classList.remove("selected");
-                }
-            }
-            
-            // Check scrolling
-            window.addEventListener("scroll", function() {
-                // Take the value of the scrolling
-                const scrollTop = window.scrollY;
-                // Check for every section
-                sections.forEach(function(section, i) {
-                    // Check if half of the new section has been passed by scrolling
-                    if (section.offsetTop < scrollTop + (windowHeight/5) && scrollTop < section.offsetTop + (windowHeight/5))
-                    {
-                        reset();
-                        navigation.children[i].classList.add("selected");
-                        navigationLabels.children[i].classList.add("selected");
-                    }
-
-                });
-            });
-
-            // Smooth passing through sections by clicking on nav items
-            document.querySelectorAll(".progress_nav li").forEach(function(item, i) {
-                item.addEventListener("click", function() {
-                    window.scrollTo( {
-                        top: i * windowHeight + 20,
-                        behavior: "smooth"
-                    });
-                });
-            });
-
-            // Same for Labels
-            document.querySelectorAll(".bar_labels_container li").forEach(function(item, i) {
-                item.addEventListener("click", function() {
-                    window.scrollTo( {
-                        top: i * windowHeight,
-                        behavior: "smooth"
-                    });
-                });
-            });
-
-            // Same thing with the image
-            let home = document.querySelector("#nav_img");
-            home.addEventListener("click", function() {
-                window.scrollTo( {
-                    top: 0,
-                    behavior: "smooth"
-                });
-            });
-            
-            // Fill the bar while scrolling
-            window.onscroll = function() {BarFilling()};
-
-            function BarFilling() {
-                // Take top page
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                // Take user height in that moment
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                // % scrolled
-                var scrolled = (winScroll / height) * 100;
-                // Set value
-                document.getElementById("bar_filling").style.height = scrolled + "%";
-            }
-        </script>
-
+        <div id="nav_img"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></div>
+        {% block main %}{% endblock %}
         <!-- FOOTER -->
         <footer class="footer" id="footer" role="footer">
             <!-- Credits -->
             <p>Designed and Built by Simone Molino &copy; 2022</p>
             <!-- Social Links -->
-            <div class="social_container" id="social_container" role="link">
-                <a href="https://github.com/Rhokthar"><img src="../imgs/git-ico.png" alt="git-ico.png" height="25" width="25"></a>
-                <a href="https://www.linkedin.com/in/simone-molino-884486194/"><img src="../imgs/lin-ico.png" alt="lin-ico.png" height="25" width="25"></a>
-                <a href="https://www.instagram.com/rhokthar/"><img src="../imgs/insta-ico.png" alt="insta-ico.png" height="30" width="30"></a>
+            <div class="social_container" id="social_container" role="link">                
+                <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='lin-ico.png') }}" alt="lin-ico.png" height="25" width="25"></a>
+                <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='git-ico.png') }}" alt="git-ico.png" height="25" width="25"></a>
+                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='insta-ico.png') }}" alt="insta-ico.png" height="30" width="30"></a>
             </div>
-            <!-- Implementare uno stat recorder: visite etc. -->
+            <!-- TODO: stat recorder -->
         </footer>        
     </body>
 </html>

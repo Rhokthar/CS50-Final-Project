@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<!-- Progress Nav Bar: change index sections -->
+<!-- Nav items -->
+<div id="progress_bar_container">
+    <ul class="progress_nav" role="navigation">
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- Progression Bar -->
+    <div class="bar_empty" id="bar_empty">
+        <div class="bar_filling" id="bar_filling"></div>
+    </div>
+    <!-- Labels for nav bar -->
+    <div class="bar_labels_container" role="navigation">
+        <li class="selected"><p>Section_1</p></li>
+        <li><p>Section_2</p></li>
+        <li><p>Section_3</p></li>
+        <li><p>Section_4</p></li>
+    </div>
+</div>        
+<!-- Main Content -->
+<main class="main" id="main" role="main">
+    <section>
+        <div>Section 1</div>
+    </section>
+    <section>
+        <div>Section 2</div>
+    </section>
+    <section>
+        <div>Section 3</div>
+    </section>
+    <section>
+        <div>Section 4</div>
+    </section>                        
+</main>
+
+<!-- Script for Left Nav Bar -->
+<script>
+    // Array of sections
+    const sections = document.querySelectorAll("section");
+    // Take height of the page we're seeing
+    const windowHeight = window.innerHeight;
+    // Take navbar items
+    const navigation = document.querySelector(".progress_nav");
+    const navigationLabels = document.querySelector(".bar_labels_container");
+
+    // Reset class status function
+    function reset() 
+    {
+        for (var i = 0; i < navigation.children.length; i++)
+        {
+            navigation.children[i].classList.remove("selected");
+            navigationLabels.children[i].classList.remove("selected");
+        }
+    }
+    
+    // Check scrolling
+    window.addEventListener("scroll", function() {
+        // Take the value of the scrolling
+        const scrollTop = window.scrollY;
+        // Check for every section
+        sections.forEach(function(section, i) {
+            // Check if half of the new section has been passed by scrolling
+            if (section.offsetTop < scrollTop + (windowHeight/5) && scrollTop < section.offsetTop + (windowHeight/5))
+            {
+                reset();
+                navigation.children[i].classList.add("selected");
+                navigationLabels.children[i].classList.add("selected");
+            }
+        });
+    });
+
+    // Smooth passing through sections by clicking on nav items
+    document.querySelectorAll(".progress_nav li").forEach(function(item, i) {
+        item.addEventListener("click", function() {
+            window.scrollTo( {
+                top: i * windowHeight + 20,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Same for Labels
+    document.querySelectorAll(".bar_labels_container li").forEach(function(item, i) {
+        item.addEventListener("click", function() {
+            window.scrollTo( {
+                top: i * windowHeight,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    // Same thing with the image
+    let home = document.querySelector("#nav_img");
+    home.addEventListener("click", function() {
+        window.scrollTo( {
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    
+    // Fill the bar while scrolling
+    window.onscroll = function() {BarFilling()};
+
+    function BarFilling() {
+        // Take top page
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        // Take user height in that moment
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        // % scrolled
+        var scrolled = (winScroll / height) * 100;
+        // Set value
+        document.getElementById("bar_filling").style.height = scrolled + "%";
+    }
+</script>
+
+
+{% endblock %}
