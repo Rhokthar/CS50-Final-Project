@@ -84,7 +84,7 @@
     <section class="page_section" id="about_me" role="info">
         <div class="section_container">
             <div class="text_container_2">
-                <!-- Titolone -->
+                <!-- Biggest Title ever -->
                 <h1 role="section_title">
                     <div class="special_text_2">
                         <span class="letter">A</span>
@@ -112,17 +112,82 @@
             <div class="img_container_2">
                 <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Me.jpg" height="535" width="400">
             </div>
-
         </div>
     </section>
-    <!-- Projects: all my projects -->
+    <!-- Projects Section -->
     <section class="page_section" id="projects" role="info">
         <div class="section_container">
+            <!-- Title -->
+            <div class="text_container_3">
+                <h1 role="section_title">
+                    <div class="special_text_2">
+                        <span class="letter">P</span>
+                        <span class="letter">R</span>
+                        <span class="letter">O</span>
+                        <span class="letter">J</span>
+                        <span class="letter">E</span>
+                        <span class="letter">C</span>
+                        <span class="letter">T</span>
+                        <span class="letter">S</span>
+                    </div>
+                </h1>
+                <!-- Disclaimer: while !professional -->
+                <div class="disclaimer">
+                    <h4>Disclaimer</h4>
+                    <p>For now, I've only worked on school and educational projects for the various courses that I've done. That's gonna change really soon, and more complex projects will be added to the portfolio.</p>
+                </div>
 
+                <p>Here are some of the projects that I've been (and I'm currently) working on:</p>
+
+                <!-- Projects view -->       
+                <!-- Container for all projects -->
+                <div class="projects_container">
+                    <!-- Class Project Container -->
+                    <div class="project">
+                        <h2>Class Project</h2>
+                        <img src="{{ url_for('static', filename='class-project-cs50-finance.png') }}" alt="cs50-finance.png" width="390" height="250">
+                        <h3>CS50 - Finance</h3>
+                        <p>Based on the IEX API, this Web application resumes all the concepts studied in the CS50's Course.</p>
+                    </div>
+                    <!-- Personal Project Container -->
+                    <div class="project">
+                        <h2>Personal Project</h2>
+                        <img src="{{ url_for('static', filename='password.png') }}" alt="password.png" width="390" height="250">
+                        <h3>Password Manager</h3>
+                        <p>A funny way to practice, and I actually need one.<br> Will be released upon finishing as free app.<br> Because if it's mine is better 😝</p>
+                    </div>
+                    <!-- Professional Project Container -->
+                    <div class="project">
+                        <h2>Professional Project</h2>
+                        <img src="{{ url_for('static', filename='placeholder.png') }}" alt="placeholder.png" width="390" height="250">
+                        <h3>none</h3>
+                        <p>As soon as I'll be hired by someone, I'll update this field and the project's page as well.</p>
+                    </div>
+                </div>
+                <!-- Button: redirect to projects page -->
+                <form action="/projects" method="get">
+                    <button>More Projects</button>
+                </form>                
+            </div>
         </div>
     </section>
+    <!-- Contacts Section -->
     <section class="page_section" id="contacts" role="info">
         <div class="section_container">
+            <div class="text_container_4">
+                <h1 role="section_title">
+                    <div class="special_text_2">
+                        <span class="letter">C</span>
+                        <span class="letter">O</span>
+                        <span class="letter">N</span>
+                        <span class="letter">T</span>
+                        <span class="letter">A</span>
+                        <span class="letter">C</span>
+                        <span class="letter">T</span>
+                        <span class="letter">S</span>
+                    </div>
+                </h1>
+            </div>
 
         </div>
     </section>
