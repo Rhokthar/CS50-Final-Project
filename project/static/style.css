@@ -22,7 +22,7 @@ body {
 .footer p {
     text-align: center;
     font-size: 12px;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 .header {
     display: flex;
@@ -595,6 +595,7 @@ input:focus + .slider {
 ********************/
 /* Social Section */
 .social_container {
+    /* border: 1px solid red; */
     height: fit-content;
     width: fit-content;
     margin-left: auto;
@@ -608,7 +609,10 @@ input:focus + .slider {
 .social_container a > img:hover {
     transform: scale(1.3);
 }
-
+#language_change {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
 /* KeyFrames */
 /* IMG Bounce */
 @keyframes bounce {
