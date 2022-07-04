@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+<!-- {% block lang %}lang="en"{% endblock %} -->
+
 {% block title %}
     Home
 {% endblock %}
@@ -78,11 +80,16 @@
                     for the Avatars!
                 </span>                
             </div>
-        </div>        
+        </div>
     </section>
     <!-- About me: very short description + my photo -->
     <section class="page_section" id="about_me" role="info">
         <div class="section_container">
+            <!-- IMG First -->
+            <div class="img_container_2">
+                <img src="{{ url_for('static', filename='Me.png') }}" alt="Me.png">
+            </div>
+            <!-- Text -->
             <div class="text_container_2">
                 <!-- Biggest Title ever -->
                 <h1 role="section_title">
@@ -109,14 +116,11 @@
                     </form>                    
                 </div>
             </div>
-            <div class="img_container_2">
-                <img src="{{ url_for('static', filename='Me.jpg') }}" alt="Me.jpg" height="535" width="400">
-            </div>
         </div>
     </section>
     <!-- Projects Section -->
     <section class="page_section" id="projects" role="info">
-        <div class="section_container">
+        <div class="section_container projects">
             <!-- Title -->
             <div class="text_container_3">
                 <h1 role="section_title">
@@ -174,6 +178,15 @@
     <!-- Contacts Section -->
     <section class="page_section" id="contacts" role="info">
         <div class="section_container">
+             <!-- Embed Google Maps -->
+             <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=paderno%20dugnano&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-to.org"></a><br>
+                    <a href="https://www.embedgooglemap.net">embedding google maps in webpage</a>
+                </div>
+            </div>
+            <!-- Text -->
             <div class="text_container_4">
                 <h1 role="section_title">
                     <div class="special_text_2">
@@ -198,15 +211,6 @@
                     </form> 
                 </div>
             </div>
-            <!-- Embed Google Maps -->
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=paderno%20dugnano&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://123movies-to.org"></a><br>
-                    <a href="https://www.embedgooglemap.net">embedding google maps in webpage</a>
-                </div>
-            </div>
-
         </div>
     </section>
 </main>
