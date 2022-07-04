@@ -9,6 +9,7 @@ body {
     color: #ffffff;
     background-color: #121212;
 }
+
 .footer, .header {
     position: relative;
     font-family: "Courier New", Courier, monospace;
@@ -46,7 +47,7 @@ h1 {
 section {
     /* border: 1px solid red; */
     background-color: #484848;
-    padding: 3rem 0;
+    /* padding: 3rem 0; */
 }
 /* 
     Index Sections
@@ -199,6 +200,9 @@ h1 .adjectives_container {
     text-transform: uppercase;
 }
 /* Section 2 - Text Container */
+#about_me {
+    background-color: #363636;
+}
 .section_container .text_container_2,
 .section_container .text_container_4 {
     /* border: 1px solid blue; */
@@ -351,6 +355,7 @@ form button:hover {
     padding-bottom: 20px;
 }
 #projects {
+    background-color: #242424;
     padding-left: 10em;
     padding-right: 10em;
     
@@ -394,6 +399,12 @@ form button:hover {
     margin: 2rem auto;
 }
 /* Section 4 - Text Section (form) */
+#contacts {
+    background-color: #363636;
+}
+#contacts .separator {
+    background-color: #242424;
+}
 .mapouter {
     position: relative;
     text-align: right;
@@ -1012,6 +1023,7 @@ input:focus + .slider {
 @media (max-width: 630px) {
     .text_container h1 {
         font-size: 1rem;
+        padding-left: 1rem;
     }
     .text_container p {
         font-size: 15px;
