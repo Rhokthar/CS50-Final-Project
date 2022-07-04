@@ -10,16 +10,20 @@
 <!-- Progress Nav Bar: change index sections -->
 <!-- Nav items -->
 <div class="navbar_fullscreen">
-    <ul class="menu__list">
-        <li class="menu__item"><a href="#">Home</a></li>
-        <li class="menu__item"><a href="/about-me">About Me</a></li>                        
-        <li class="menu__item"><a href="/projects">Projects</a></li>
-        <li class="menu__item"><a href="/skills">Skills</a></li>                
-        <li class="menu__item"><a href="/contacts">Contacts</a></li>
-        <li class="item-disabled"><a role="/blog" aria-disabled="true">Blog (coming soon...)</a></li>
-    </ul>           
+    <div class="menu__button">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu__wrapper">
+        <ul class="menu__list">
+            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="/about-me" class="menu__link">About Me</a></li>                        
+            <li class="menu__item"><a href="/projects" class="menu__link">Projects</a></li>
+            <li class="menu__item"><a href="/skills" class="menu__link">Skills</a></li>                
+            <li class="menu__item"><a href="/contacts" class="menu__link">Contacts</a></li>
+        </ul>  
+    </div>           
 </div>
-
 <div id="progress_bar_container">
     <ul class="progress_nav" role="navigation">
         <li class="selected"></li>
@@ -234,8 +238,21 @@
         </div>
     </section>
 </main>
-<!-- Script for Left Nav Bar -->
+
+<!-- Scripts -->
 <script>
+    // Script for the FullScreen Nav Menu
+    document.querySelector(".menu__button").onclick = function(e) {
+        var menu = document.querySelector(".menu__wrapper");
+        var button = document.querySelector(".menu__button");
+        
+        menu.classList.toggle("active");
+        button.classList.toggle("active");
+        e.preventDefault();
+    }
+    
+
+
     // Scrolling Scripts
     // Array of sections
     const sections = document.querySelectorAll("section");
