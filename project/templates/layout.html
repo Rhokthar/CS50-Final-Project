@@ -50,7 +50,9 @@
             </div>                        
         </header>
         <!-- IMG: click = top page -->        
-        <div id="nav_img"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></div>
+        <div id="nav_img">
+            <a href="#"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></a>
+        </div>
         {% block main %}{% endblock %}
         <!-- FOOTER -->
         <footer class="footer" id="footer" role="footer">

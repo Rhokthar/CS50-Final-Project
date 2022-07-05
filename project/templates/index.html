@@ -37,10 +37,10 @@
     </div>
     <!-- Labels for nav bar -->
     <div class="bar_labels_container" role="navigation">
-        <li class="selected"><p>Home</p></li>
-        <li><p>About Me</p></li>
-        <li><p>Projects</p></li>
-        <li><p>Contacts</p></li>
+        <a href="#" class="selected"><li><p>Home</p></li></a>
+        <a href="#about_me"><li><p>About Me</p></li></a>
+        <a href="#projects"><li><p>Projects</p></li></a>
+        <a href="#contacts"><li><p>Contacts</p></li></a>
     </div>
 </div>        
 <!-- Main Content -->
@@ -283,35 +283,6 @@
                 navigation.children[i].classList.add("selected");
                 navigationLabels.children[i].classList.add("selected");
             }
-        });
-    });
-
-    // Smooth passing through sections by clicking on nav items
-    document.querySelectorAll(".progress_nav li").forEach(function(item, i) {
-        item.addEventListener("click", function() {
-            window.scrollTo( {
-                top: i * windowHeight + 20,
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Same for Labels
-    document.querySelectorAll(".bar_labels_container li").forEach(function(item, i) {
-        item.addEventListener("click", function() {
-            window.scrollTo( {
-                top: i * windowHeight,
-                behavior: "smooth"
-            });
-        });
-    });
-
-    // Same thing with the image
-    let home = document.querySelector("#nav_img");
-    home.addEventListener("click", function() {
-        window.scrollTo( {
-            top: 0,
-            behavior: "smooth"
         });
     });
     

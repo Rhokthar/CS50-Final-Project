@@ -154,7 +154,7 @@ section .section_container {
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
-    padding: 5em 0;
+    padding: 7em 0;
     width: fit-content;
     /* width: min(90%, 100rem); */
 }
@@ -613,7 +613,7 @@ input:focus + .slider {
 /**************/
 /* Img setup */
 /************/
-#nav_img {
+#nav_img a {
     cursor: pointer;
     position: fixed;
     left: 0%;
@@ -634,7 +634,7 @@ input:focus + .slider {
     z-index: 2;
 }
 /* Animation */
-#nav_img:hover {
+#nav_img a:hover {
     cursor: pointer;
     animation-name: bounce;
     -moz-animation-name: bounce;
@@ -699,20 +699,27 @@ input:focus + .slider {
     width: fit-content;
     height: 100%;
 }
-.bar_labels_container li > p {
+.bar_labels_container a {
+    text-decoration: none;
+}
+.bar_labels_container a {
+    color: white;
+    text-decoration: none;
+}
+.bar_labels_container a > li > p {
     font-family: "Courier New", Courier, monospace;
     margin-bottom: 22px;
     transform: rotate(-25deg);
     transition: 0.3s;
     
 }
-.bar_labels_container li > p:hover {
+.bar_labels_container a > li > p:hover {
     transform: rotate(-25deg) scale(1.2);
     color: #ff7417;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);
     cursor: pointer;
 }
-.bar_labels_container li.selected > p {
+.bar_labels_container a.selected > li > p {
     transform: rotate(-25deg) scale(1.2);
     color: #ff7417;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);
