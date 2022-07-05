@@ -17,14 +17,19 @@
         <!-- Script -->
         <script>
             // Full load DOM
-            document.addEventListener("DOMContentLoaded", function() {});         
-
+            document.addEventListener("DOMContentLoaded", function() {});       
         </script>
     </head>
 
     <!-- BODY -->
     <body>
-        
+         <!-- Loading Spinner -->    
+        <div class="spinner__wrapper" id="spinner__wrapper">
+             <div class="spinner-border" role="status">
+                <span class="visually-hidden">Setting things up for you...</span>
+            </div>
+        </div>
+         
         <!-- Header -->
         <header class="header" role="banner">        
             <!-- Top nav bar: change pages -->
@@ -66,6 +71,32 @@
                 <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='insta-ico.png') }}" alt="insta-ico.png" height="30" width="30"></a><br>
             </div>            
             <!-- TODO: stat recorder -->            
-        </footer>        
+        </footer>
+        <!-- Scripts -->
+        <script>
+
+            // Spinner scripts
+            let spinner = document.querySelector(".spinner__wrapper");
+            let body = document.querySelector("body");
+            
+            window.addEventListener("load", function() {
+                spinner.classList.add("hidden");
+                body.style.overflow = "visible";
+            });
+
+            if (history.scrollRestoration) 
+            {
+                history.scrollRestoration = 'manual';
+            } 
+            else 
+            {
+                window.onbeforeunload = function () {
+                    window.scrollTo(0, 0);
+                }
+            }
+            
+
+
+        </script>             
     </body>
 </html>

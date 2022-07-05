@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 
-<!-- {% block lang %}lang="en"{% endblock %} -->
+{% block lang %}
+lang="en"
+{% endblock %}
 
 {% block title %}
     Home
@@ -25,12 +27,12 @@
     </div>           
 </div>
 <div id="progress_bar_container">
-    <ul class="progress_nav" role="navigation">
+    <div class="progress_nav" role="navigation">
         <li class="selected"></li>
         <li></li>
         <li></li>
         <li></li>
-    </ul>
+    </div>
     <!-- Progression Bar -->
     <div class="bar_empty" id="bar_empty">
         <div class="bar_filling" id="bar_filling"></div>
@@ -305,7 +307,6 @@
     document.querySelectorAll(".letter").forEach((element) => {
         // Add listening for mouseover
         element.addEventListener("mouseover", (e) => BounceLetter(e.target));
-        element.addEventListener("click", (e) => SetColor(e.target));
     });
 
     // Set class to bounce
