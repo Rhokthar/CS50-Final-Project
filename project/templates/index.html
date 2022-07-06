@@ -10,13 +10,15 @@ lang="en"
 
 {% block main %}
 <!-- Progress Nav Bar: change index sections -->
-<!-- Nav items -->
-<!-- Prova per Git -->
+
+<!-- "HIDDEN NAV": Spawns when width goes down (top right) -->
 <div class="navbar_fullscreen">
+    <!-- Just graphics' stuff -->
     <div class="menu__button">
         <span></span>
         <span></span>
-    </div>
+    </div> <!-- End "HIDDEN NAV" -->
+    <!-- "MENU HIDDEN NAV" -->
     <div class="menu__wrapper">
         <ul class="menu__list">
             <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
@@ -25,31 +27,35 @@ lang="en"
             <li class="menu__item"><a href="/skills" class="menu__link">Skills</a></li>                
             <li class="menu__item"><a href="/contacts" class="menu__link">Contacts</a></li>
         </ul>  
-    </div>           
-</div>
+    </div> <!-- End "MENU HIDDEN NAV"-->           
+</div> <!-- END "HIDDEN NAV"-->
+
+<!-- "PROGRESS BAR" -->
 <div id="progress_bar_container">
+    <!-- Buttons -->
     <div class="progress_nav" role="navigation">
         <li class="selected"></li>
         <li></li>
         <li></li>
         <li></li>
-    </div>
-    <!-- Progression Bar -->
+    </div> <!-- End Buttons -->
+    <!-- "PROGRESSION BAR" -->
     <div class="bar_empty" id="bar_empty">
         <div class="bar_filling" id="bar_filling"></div>
-    </div>
-    <!-- Labels for nav bar -->
+    </div> <!-- End "PROGRESSION BAR" -->
+    <!-- "LABELS" for nav bar -->
     <div class="bar_labels_container" role="navigation">
         <a href="#" class="selected"><li><p>Home</p></li></a>
         <a href="#about_me"><li><p>About Me</p></li></a>
         <a href="#projects"><li><p>Projects</p></li></a>
         <a href="#contacts"><li><p>Contacts</p></li></a>
-    </div>
-</div>        
-<!-- Main Content -->
+    </div> <!-- End "LABELS"-->
+</div> <!-- End "PROGRESS BAR"-->   
+
+<!-- "MAIN CONTENT" -->
 <main class="main" id="main" role="main">
-    <!-- Home: title and Bitmoji -->
-    <section class="page_section" id="home" role="home">
+    <!-- "HERO" Section: title and Bitmoji -->
+    <section class="page_section" id="hero" role="hero">
         <!-- Container of the containers of the elements in the section -->
         <div class="section_container">
             <!-- Container of the text part -->
@@ -102,10 +108,10 @@ lang="en"
         <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-    </section>
-    <!-- About me: very short description + my photo -->
+    </section> <!-- End "HERO" Section -->    
+    <!-- "ABOUT ME" Section: very short description + my photo -->
     <section class="page_section" id="about_me" role="info">
-        <div class="section_container">
+        <div class="section_container about_me">
             <!-- IMG First -->
             <div class="img_container_2">
                 <img src="{{ url_for('static', filename='Me.png') }}" alt="Me.png">
@@ -141,8 +147,8 @@ lang="en"
         <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#242424" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-    </section>
-    <!-- Projects Section -->
+    </section> <!-- End "ABOUT ME" Section -->    
+    <!-- "PROJECTS" Section -->
     <section class="page_section" id="projects" role="info">
         <div class="section_container projects">
             <!-- Title -->
@@ -198,8 +204,8 @@ lang="en"
                 </form>                
             </div>
         </div>            
-    </section>
-    <!-- Contacts Section -->
+    </section> <!-- End "PROJECTS" Section -->    
+    <!-- "CONTACTS" Section -->
     <section class="page_section" id="contacts" role="info">
         <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
@@ -239,8 +245,8 @@ lang="en"
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </section> <!-- End "CONTACTS" Section -->    
+</main> <!-- End "MAIN CONTENT" -->
 
 <!-- Scripts -->
 <script>
@@ -322,5 +328,42 @@ lang="en"
             }, 1000);
         }
     }
+    
+
+    // Script for GSAP Scrolling Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.defaults({
+        toggleActions: "restart pause resume reverse",
+        markers: true
+    });
+
+    // TODO: PUT THIS AFTER PAGE LOADS
+    // Animation "HERO"
+    gsap.from("#hero > .section_container", {
+        opacity: 0,
+        x: -100,
+        delay: 1,
+        duration: 1,
+        ease: "bounce"
+    });
+
+    let sectionsArray = gsap.utils.toArray(".section_container");
+    for (let i = 1; i < sectionsArray.length; i++)
+    {
+        gsap.from(sectionsArray[i], {
+        scrollTrigger: {
+            trigger: sectionsArray[i],
+            start: "top center",
+            end: "bottom center"
+        },
+        opacity: 0,
+        y: 100,
+        stagger: 0.25,
+        duration: 1,
+        ease: "Power2.easeOut" 
+    });
+    }
+    
 </script>
 {% endblock %}
