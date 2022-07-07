@@ -45,7 +45,7 @@ ul, ol, li {
     list-style-type: none;
 }
 h1 {
-    font-family: Copperplate, Papyrus, fantasy;
+    font-family: "Copperplate", "Papyrus", "fantasy";
 }
 section {
     /* border: 1px solid red; */
@@ -329,7 +329,8 @@ h1 .adjectives_container {
     height: fit-content;
     width: 500px;
 }
-h2 .special_text_2 {
+h2 .special_text_2,
+h1 .special_text_2 {
     /* border: 1px solid blue; */
     font-family: Copperplate, Papyrus, fantasy;
     font-size: 0;
@@ -542,6 +543,12 @@ form button:hover {
 .text_container_4 {
     /* border: 1px solid blue; */
     margin-right: -4rem;
+}
+/* ABOUT ME PAGE */
+.about_me > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0 1em 0 1em;
 }
 /************************/
 /* Top navigation menu */

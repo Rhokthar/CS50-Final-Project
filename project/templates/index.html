@@ -8,28 +8,7 @@ lang="en"
     Home
 {% endblock %}
 
-{% block main %}
-<!-- Progress Nav Bar: change index sections -->
-
-<!-- "HIDDEN NAV": Spawns when width goes down (top right) -->
-<div class="navbar_fullscreen">
-    <!-- Just graphics' stuff -->
-    <div class="menu__button">
-        <span></span>
-        <span></span>
-    </div> <!-- End "HIDDEN NAV" -->
-    <!-- "MENU HIDDEN NAV" -->
-    <div class="menu__wrapper">
-        <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="/about-me" class="menu__link">About Me</a></li>                        
-            <li class="menu__item"><a href="/projects" class="menu__link">Projects</a></li>
-            <li class="menu__item"><a href="/skills" class="menu__link">Skills</a></li>                
-            <li class="menu__item"><a href="/contacts" class="menu__link">Contacts</a></li>
-        </ul>  
-    </div> <!-- End "MENU HIDDEN NAV"-->           
-</div> <!-- END "HIDDEN NAV"-->
-
+{% block main %}  
 <!-- "PROGRESS BAR" -->
 <div id="progress_bar_container">
     <!-- Buttons -->
@@ -250,16 +229,6 @@ lang="en"
 
 <!-- Scripts -->
 <script>
-    // Script for the FullScreen Nav Menu
-    document.querySelector(".menu__button").onclick = function(e) {
-        var menu = document.querySelector(".menu__wrapper");
-        var button = document.querySelector(".menu__button");
-        
-        menu.classList.toggle("active");
-        button.classList.toggle("active");
-        e.preventDefault();
-    } 
-
     // Scrolling Scripts
     // Array of sections
     const sections = document.querySelectorAll("section");
