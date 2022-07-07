@@ -26,7 +26,7 @@
     </head>
 
     <!-- BODY -->
-    <body class="noclass">
+    <body>
          <!-- Loading Spinner -->    
         <div class="spinner__wrapper" id="spinner__wrapper">
              <div class="spinner-border" role="status">
@@ -60,7 +60,7 @@
         </header>
         <!-- IMG: click = top page -->        
         <div id="nav_img">
-            <a href="#"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></a>
+            <a href="/"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></a>
         </div>
         {% block main %}{% endblock %}
         <!-- FOOTER -->
@@ -98,9 +98,6 @@
                     window.scrollTo(0, 0);
                 }
             }
-            
-
-
         </script>             
     </body>
 </html>
