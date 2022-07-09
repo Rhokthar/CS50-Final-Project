@@ -269,14 +269,6 @@ h1 .adjectives_container {
 }
 /* Section 1 - Img Section */
 .section_container .img_container {
-    /* border: 1px solid blue; */
-    /* display: inline-block; */
-    /* position: absolute; */
-    /* right: 0; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
-    /* height: fit-content; */
-    /* width: fit-content; */
     transition: 0.3s;
 }
 .img_container .tooltip {
@@ -325,11 +317,6 @@ h1 .adjectives_container {
 }
 .section_container .text_container_2,
 .section_container .text_container_4 {
-    /* border: 1px solid blue; */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* right: 10%; */
-    /* transform: translateY(-50%); */
     height: fit-content;
     width: 500px;
 }
@@ -338,16 +325,13 @@ h2 .special_text_2 {
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-size: 0;
     margin-left: 10px;
-    line-height: 1.5;
+    /* line-height: 1.5; */
     height: fit-content;
     width: fit-content;
     text-transform: uppercase;
     text-shadow: 0 0 10px #121212;   
 }
 .special_text_2 span {
-    animation-timing-function: linear;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
     font-size: 4rem;
     color: #ff7417;
     transition: all 0.3s;
@@ -550,15 +534,74 @@ form button:hover {
     margin-right: -4rem;
 }
 /* ABOUT ME PAGE */
-.about_me {
-    /* border: 1px solid blue; */
-    margin: 0;
-    padding: 0 4rem;    
+.main__text.about_me,
+.secondary__text.about_me {
+    position: relative;
 }
 .about_me p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 0;
+    font-size: 20px;
+    
 }
+.special_text_2.about_me {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+.secondary__text li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    list-style-type: circle;
+    line-height: 2;
+}
+/* TODO FIX CAROUSEL */
+.carousel {
+    /* border: 1px solid blue; */
+    display: flex;
+    position: relative;
+    max-width: 500px;
+    max-height: 500px;
+    float: right;
+    overflow: hidden;
+    margin: 2rem;
+    box-shadow: 0 0 10px black;
+    border-radius: 34px;
+}
+.img_container.about_me {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    
+}
+.img_container.about_me:hover {
+    cursor: default;
+    transform: scale(1);
+}
+.img_container.about_me > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+.img_container.about_me.hobby {
+    float: left;
+}
+.personal.img,
+.hobby.img {
+    min-width: 100%;
+    position: relative;
+}
+.secondary__text.about_me {
+    display: flex;
+    margin-top: 10rem;
+    /* gap: 2rem; */
+}
+.secondary__text.about_me > * {
+    flex: 1;
+}
+
+
 /************************/
 /* Top navigation menu */
 /**********************/
@@ -656,7 +699,8 @@ input:focus + .slider {
     position: fixed;
     left: 0%;
     margin: 1rem 2rem;
-    top: 0%;    
+    top: 0%;
+    opacity: 30%;    
 
     /* Animation Setup */
     -webkit-animation-duration: 1s;
@@ -673,6 +717,7 @@ input:focus + .slider {
 }
 /* Animation */
 #nav_img a:hover {
+    opacity: 100%;
     cursor: pointer;
     animation-name: bounce;
     -moz-animation-name: bounce;
