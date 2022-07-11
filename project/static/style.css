@@ -555,7 +555,6 @@ form button:hover {
     list-style-type: circle;
     line-height: 2;
 }
-/* TODO FIX CAROUSEL */
 .carousel {
     /* border: 1px solid blue; */
     display: flex;
@@ -602,8 +601,122 @@ form button:hover {
 .secondary__text.about_me > * {
     flex: 1;
 }
+/* SKILLS PAGE */
+.section_container.skills {
+    display: flex;
+    flex-direction: column;
+}
+.main__text.skills {
+    margin-bottom: 5rem;
+}
+.progress__wrapper {
+    /* border: 1px solid green; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;   
+}
+.skill {
+    /* border: 1px solid blue; */
+    height: 10px;
+    max-width: 70%;
+    flex: 100%;
+    background-color: #121212;
+    position: relative;
+    padding: 1px;
+    box-shadow: 0 0 10px black;
+}
+.skill h3 {
+    position: absolute;
+    top: 100%;
+}
+.skill > span {
+    display: block;
+    height: 100%;
+    background-color: #ff7417;
+    position: relative;
+    transition: 0.3s;
+}
+.skill > span:hover {
+    box-shadow: 0 0 10px #ff7417;
+}
+.skill #sb_html {
+    /* HTML (80%) */
+    width: 80%;
+}
+.skill #sb_css {
+    /* CSS (60%) */
+    width: 60%;
+}
+.skill #sb_js {
+    /* JAVASCRIPT (35%) */
+    width: 35%;
+}
+.skill #sb_py {
+    /* PYTHON (85%) */
+    width: 85%;
+}
+.skill #sb_c {
+    /* C (95%) */
+    width: 95%;
+}
+.skill #sb_cpp {
+    /* C++ (10%) */
+    width: 10%;
+}
+.skill #sb_csharp {
+    /* C# (50%) */
+    width: 50%;
+}
+.skill #sb_java {
+    /* JAVA (5%) */
+    width: 5%;
+}   
+.skill #sb_sql {
+    /* SQL (70%) */
+    width: 70%;
+}
+.side_skills_wrapper,
+.wannaknow_skills {
+    /* border: 1px solid green; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+}
+.side_skills_wrapper > div,
+.wannaknow_skills > div {
+    width: 20%;
+}
+.side_skills_wrapper > div h3,
+.wannaknow_skills > div h3 {
+    text-align: center;
+    color: #ff7417;
+    text-shadow: 0 0 5px black;
+    margin-bottom: 2rem;
+}
+.side_skills_wrapper > div li, 
+.wannaknow_skills > div li {
+    list-style-type: disc;
+    font-size: 18px;
+}
+@media (max-width: 940px)
+{
+    .side_skills_wrapper,
+    .wannaknow_skills {
+        flex-direction: column;
+    }
+    .side_skills_wrapper > div,
+    .wannaknow_skills > div {
+        width: 80%;
+        align-self: center;
+    }
 
-
+}
 /************************/
 /* Top navigation menu */
 /**********************/
