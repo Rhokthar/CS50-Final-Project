@@ -533,17 +533,19 @@ form button:hover {
     /* border: 1px solid blue; */
     margin-right: -4rem;
 }
-/* ABOUT ME PAGE */
+/* ABOUT ME PAGE; SKILLS PAGE */
 .main__text.about_me,
 .secondary__text.about_me {
     position: relative;
 }
-.about_me p {
+.about_me p,
+.skills p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     
 }
-.special_text_2.about_me {
+.special_text_2.about_me,
+.special_text_2.skills {
     margin-left: 2rem;
     margin-bottom: 1.5rem;
 }
