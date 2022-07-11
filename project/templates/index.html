@@ -41,24 +41,23 @@ lang="en"
             <div class="text_container">
                 <!-- Title -->
                 <h1 role="section-title">
-                    <span>Hello, everyone! I'm</span><br>
+                    <span class="title">Hello, everyone! I'm</span>
                     <!-- My Name: bouncing and filling each letter -->
                     <div class="special_text">
-                        <span class="text">
-                            <span class="symbol">></span>
-                            <span class="letter" data-text="S">S</span>
-                            <span class="letter" data-text="I">I</span>
-                            <span class="letter" data-text="M">M</span>
-                            <span class="letter" data-text="O">O</span>
-                            <span class="letter" data-text="N">N</span>
-                            <span class="letter" data-text="E">E&nbsp;</span>                        
-                            <span class="letter" data-text="M">M</span>
-                            <span class="letter" data-text="O">O</span>
-                            <span class="letter" data-text="L">L</span>
-                            <span class="letter" data-text="I">I</span>
-                            <span class="letter" data-text="N">N</span>
-                            <span class="letter" data-text="O">O</span>
-                        :</span><br>
+                        <span class="symbol">></span>
+                        <span class="letter" data-text="S">S</span>
+                        <span class="letter" data-text="I">I</span>
+                        <span class="letter" data-text="M">M</span>
+                        <span class="letter" data-text="O">O</span>
+                        <span class="letter" data-text="N">N</span>
+                        <span class="letter" data-text="E">E&nbsp;</span>                        
+                        <span class="letter" data-text="M">M</span>
+                        <span class="letter" data-text="O">O</span>
+                        <span class="letter" data-text="L">L</span>
+                        <span class="letter" data-text="I">I</span>
+                        <span class="letter" data-text="N">N</span>
+                        <span class="letter" data-text="O">O</span>
+                        <br>
                     </div>
                     <!-- Cycling Words -->
                     <div class="adjectives_container">
@@ -71,8 +70,10 @@ lang="en"
                     </div>
                 </h1>
                 <!-- Underline -->
-                <p>Front-End <span class="diff_color">|</span> Back-End </p>
-            </div>
+                <div class="underline">
+                    <p>Front-End <span class="diff_color">|</span> Back-End </p>
+                </div>                
+            </div> <!-- End "text_container"-->
             <!-- Container of the image part -->
             <div class="img_container" role="link">
                 <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png">
@@ -100,13 +101,13 @@ lang="en"
                 <!-- Biggest Title ever -->
                 <h2 role="section_title">
                     <div class="special_text_2">
-                        <span class="letter">A</span>
-                        <span class="letter">b</span>
-                        <span class="letter">o</span>
-                        <span class="letter">u</span>
-                        <span class="letter">t&nbsp;</span>
-                        <span class="letter">M</span>
-                        <span class="letter">e</span>
+                        <span>A</span>
+                        <span>b</span>
+                        <span>o</span>
+                        <span>u</span>
+                        <span>t&nbsp;</span>
+                        <span>M</span>
+                        <span>e</span>
                     </div>
                 </h1>
                 <!-- Form: Nome, Cognome, Età, Sesso, Cittadinanza, Cosa faccio -->
@@ -134,14 +135,14 @@ lang="en"
             <div class="text_container_3">
                 <h2 role="section_title">
                     <div class="special_text_2">
-                        <span class="letter">P</span>
-                        <span class="letter">R</span>
-                        <span class="letter">O</span>
-                        <span class="letter">J</span>
-                        <span class="letter">E</span>
-                        <span class="letter">C</span>
-                        <span class="letter">T</span>
-                        <span class="letter">S</span>
+                        <span>P</span>
+                        <span>R</span>
+                        <span>O</span>
+                        <span>J</span>
+                        <span>E</span>
+                        <span>C</span>
+                        <span>T</span>
+                        <span>S</span>
                     </div>
                 </h1>
                 <!-- Disclaimer: while !professional -->
@@ -202,14 +203,14 @@ lang="en"
             <div class="text_container_4">
                 <h2 role="section_title">
                     <div class="special_text_2">
-                        <span class="letter">C</span>
-                        <span class="letter">O</span>
-                        <span class="letter">N</span>
-                        <span class="letter">T</span>
-                        <span class="letter">A</span>
-                        <span class="letter">C</span>
-                        <span class="letter">T</span>
-                        <span class="letter">S</span>
+                        <span>C</span>
+                        <span>O</span>
+                        <span>N</span>
+                        <span>T</span>
+                        <span>A</span>
+                        <span>C</span>
+                        <span>T</span>
+                        <span>S</span>
                     </div>
                 </h2>
                 <div class="contacts_form" role="info">
@@ -299,6 +300,7 @@ lang="en"
     }
     
 
+  
     // Script for GSAP Scrolling Animations
     gsap.registerPlugin(ScrollTrigger);
 
@@ -307,31 +309,86 @@ lang="en"
         markers: true
     });
 
-    // TODO: PUT THIS AFTER PAGE LOADS
-    // Animation "HERO"
-    gsap.from("#hero > .section_container", {
-        opacity: 0,
-        x: -100,
-        delay: 1,
-        duration: 1,
-        ease: "bounce"
-    });
+    // HERO ANIMATION
+    // Load done before function execution
+    window.addEventListener("load", function() {
 
+        // Animation "HERO"
+        let tl = gsap.timeline();
+        // Nav_img animation
+        tl.from("#nav_img", {
+            delay: 1,
+            opacity: 0,
+            duration: 1,
+        });
+        // Top-Navbar animation
+        tl.from(".header", {
+            duration: 1,
+            opacity: 0,
+        });
+        // Side-Navbar animation
+        tl.from("#progress_bar_container", {
+            opacity: 0,
+            duration:1,
+            x: -50,
+        }, "-=1");    
+        // Title animation
+        tl.from(".title", {
+            opacity: 0,
+            x: -100,
+            duration: 1.5,
+            ease: "power4.out"
+        });
+        tl.from(".symbol", {
+            opacity: 0,
+            x: -100,
+            duration: 1.5,
+            ease: "power4.out"
+        }, "-=1.25");
+        tl.from(".letter", {
+            opacity: 0,
+            stagger: 0.1,
+            y: -100,
+            duration: 0.5,
+            ease: "power4.out"
+        }, "-=0.5");
+        // img_container animation
+        tl.from(".img_container", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power4.out"
+        });
+        tl.from(".adjectives_container", {
+            opacity: 0,
+            x: -100,
+            duration: 1,
+            ease: "power4.out"
+        }, "-=1");
+        tl.from(".underline", {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            ease: "power4.out"
+        }, "-=1");
+    });
+    // End HERO animation
+
+    // Sections easy Animation
     let sectionsArray = gsap.utils.toArray(".section_container");
     for (let i = 1; i < sectionsArray.length; i++)
     {
         gsap.from(sectionsArray[i], {
-        scrollTrigger: {
-            trigger: sectionsArray[i],
-            start: "top center",
-            end: "bottom center"
-        },
-        opacity: 0,
-        y: 100,
-        stagger: 0.25,
-        duration: 1,
-        ease: "Power2.easeOut" 
-    });
+            scrollTrigger: {
+                trigger: sectionsArray[i],
+                start: "top center",
+                end: "bottom center"
+            },
+            opacity: 0,
+            y: 100,
+            stagger: 0.25,
+            duration: 1,
+            ease: "Power2.easeOut" 
+        });
     }
     
 </script>

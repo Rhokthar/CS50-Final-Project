@@ -9,37 +9,211 @@ About Me
 {% endblock %}
 
 {% block main %}
-<section class="page_section">
+<!-- Start "PAGE_SECTION ABOUT_ME" -->
+<section class="page_section about_me">
+    <!-- Start "SECTION CONTAINER" -->
     <div class="section_container">
+        <!-- Start "TEXT_CONTAINER" -->
         <div class="text_container">
-            <h1>
-                <div class="special_text_2">
-                    <span class="letter">A</span>
-                    <span class="letter">B</span>
-                    <span class="letter">O</span>
-                    <span class="letter">U</span>
-                    <span class="letter">T&nbsp;</span>
-                    <span class="letter">M</span>
-                    <span class="letter">E</span>    
-                </div>               
-            </h1>
-            <div class="text_content about_me">
-                <p>Welcome, fellow visitor! I'm Simone Molino, a guy from Milan, Italy.</p>
-                <p>I can describe myself as a pretty shy person, and a Computer Scientist.</p>                
-                <p>As long as I can remember, I had the passion for tech and computers in general. That passion growth with time, and pushed me to study and learn more
-                    about this world.</p>
-                <p>I started with learning some Windows related stuff, such as console commands, shortcuts and some DOS (wich now, to be honest, I can't remember very well).</p> 
-                <p>Then, I studied effectively Computer Science at High School, where I've learnt how computers (and tech-devices) works at low level, programming languages such as Assembly (x8086) and C,
-                    web programming, databases and networks with HTML, CSS and SQL.</p>
-                <p>Then, problems brought me away from my study plan, and I had to work to fix them. And that brought me to cook for living.</p>    
-                <p>Now, after many years in that reality, I can now definetly tell you that "the cooking-way" is not the one that could have holded me back forever. Things have changed and now I have the opportunity to take back my life and return to study some more Computer Science.</p>
-                <p>As a self-taught, in this period, I've studied books, took place at some bootcamps and courses, and I'm still doing some right now while I'm writing this article.</p>
-                <p>Now that I've found my way again, I'm really happy and motivated to learn as many things as possible and to face as
-                    many challenges and problems that the World has to offer with those new learnt skills!</p>
-                <p>I've just scratched the surface of the opportunities, and I'm so excited to be part of it!</p>
+            <!-- Start "MAIN TEXT" -->
+            <div class="main__text about_me">
+                <!-- Title -->
+                <h2>
+                    <div class="special_text_2 about_me">
+                        <span>A</span>
+                        <span>B</span>
+                        <span>O</span>
+                        <span>U</span>
+                        <span>T&nbsp;</span>
+                        <span>M</span>
+                        <span>E</span>    
+                    </div>               
+                </h2> <!-- End Title-->
+                <!-- Description -->
+                <p>Welcome, fellow visitors! If you're arrived on this page is because, probably, you wanna know more about me. Well, you're in the right place!<br>
+                Sit back and make yourself confortable: I'm going to tell you a big chunk of my life's story!</p>                
+                <p>I'll start with introducing myself: I'm Simone Molino, 26 years old from Milan, Italy.</p>    
+                <p>If I had to briefly describe myself I can say that I am a simple INFP guy with a scientific mind, atheist, feminist and politically neutral. Oh yes! I almost forgot: very passionate about technology and computer science from an early age, and it is this passion that has led me, over time, to undertake technical and scientific studies oriented towards computer science.</p>
+                <p>Since I was a kid I've always been a so said "geek" - or "nerd" as you prefer. The classic little boy who preferes to stay at home in front of an electronic device instead of going outside to play ball with friends - <span>spoiler</span>: it's still like this. 
+                    In fact, Many hours of the day I spent in front of the computer geeking around with the various programs and the various tools that the programs and OSs of the time offered me. And yeah, I know you are wondering about it: even playing. I was still a child, come on! (<span>another spoiler</span>: it wasn't a "kid phase" 😝)</p>
+                <p>I started by understanding how the command line interface works and that there were also entire operating systems and programs based completely on that technology, I discovered that the mouse was a thing that you could do very well without, and discovered how it works and the charm of being able to create small batch programs with DOS instructions, which, if you were to ask me now, I wouldn't even remember: so much time has passed!</p>
+                <!-- IMG CAROUSEL -->
+                <!-- Carousel START -->
+                <div class="carousel">
+                    <!-- IMG Wrapper -->
+                    <div class="img_container about_me personal">
+                        <!-- Type of Image: Personal -->
+                        <div class="personal img">
+                            <img src="../static/personal1.png" alt="Personal IMG 1" />
+                        </div>
+                        <div class="personal img">
+                            <img src="../static/personal2.png" alt="Personal IMG 2" />
+                        </div>
+                        <div class="personal img">
+                            <img src="../static/personal3.png" alt="Personal IMG 3" />
+                        </div>
+                        <div class="personal img">
+                            <img src="../static/personal4.png" alt="Personal IMG 4" />
+                        </div>
+                        <div class="personal img">
+                            <img src="../static/personal5.png" alt="Personal IMG 5" />
+                        </div>
+                    </div> <!-- End IMG Wrapper-->
+                </div> <!-- End CAROUSEL -->
+                <p>Subsequently, when the guidelines for the studies granted it, I began to seriously study computer science at high school. In fact, I graduated as a Computer Expert and began (but unfortunately never finished) university studies at the Bicocca University of Milan. Through the studies of those years, I deepened my knowledge regarding the engineering and low-level structures and operational's models of computers and electronic devices, I studied and learned programming languages, formatting languages and database querying, such as C, HTML / CSS and SQL and even Assembly (for Intel x8086 processors), and finally I learned how networks and the Internet infrastructure's works. At university, I understood better how algorithms works and how to apply them, and I also began to study Java as an additional programming language.</p>
+                <p>Unfortunately, however, life doesn't always go the way we think. And so it was for me, as I had to face, during my studies' period, various adversities that led me away from this path and pushed me towards the world of work. And that's how I began my culinary career.</p>
+                <p>Not misunderstanding! I like cooking and it is a hobby that I still cultivate, but after many years I can tell you, with extreme frankness, cooking for a living is very different from cooking as a hobby, and the "the cooking way" was certainly not what could have holded me back forever, because the passions, the really deep ones, resurface. Always.</p>
+                <p>And so it was! Several years later, after stabilizing the previous "unconfortable" situation, I decided to go back to study some more computer science. Since my age is starting to be, pass me the term, "advanced", it would have been hard to come back and finish university's studies, especially after so much time of inactivity. So I started reconnecting with this world through self-studying books and by taking place at some courses and bootcamps. With this approach, I have further deepened my previous knowledge and updated myself on new technologies and new studies that can be useful in the workplace.</p>
+                <p>You're not thinking I stopped, are you? No way! Even as I am writing this article, I am continuing to follow and search for new courses, books and anything that can lead me to learn new things! And I have no intention in stopping!</p>
+                <p>Now that I'm back on track, I'm really happy and motivated to learn as much as possible and to tackle as many challenges and problems this world has to offer me with my new skills!</p>
+                <p>I've only scratched the tip of the iceberg of the opportunities available, and I'm really excited to be able to keep digging into it!</p>
                 <p>I'm <b>Simone Molino</b>, and I'm proud to be a <b>Computer Scientist</b>.</p>
-            </div>
-        </div>
-    </div>
-</section>
+                <!-- End DESCRIPTION -->
+            </div> <!-- End "MAIN TEXT"-->
+            <!-- "CURIOSITIES" Section -->
+            <div class="secondary__text about_me">
+                <!-- CAROUSEL START -->
+                <div class="carousel">
+                    <!-- IMG Wrapper -->
+                    <div class="img_container about_me hobby">
+                        <!-- Type of Image: Hobby -->
+                        <div class="hobby img">
+                            <img src="../static/hobby1.png" alt="Hobby IMG 1" />
+                        </div>
+                        <div class="hobby img">
+                            <img src="../static/hobby2.png" alt="Hobby IMG 2" />
+                        </div>
+                        <div class="hobby img">
+                            <img src="../static/hobby3.png" alt="Hobby IMG 3" />
+                        </div>
+                    </div> <!-- End IMG WRAPPER-->
+                </div> <!-- End Carousel -->
+                <!-- START CURIOSITIES CONTAINER -->
+                <div class="curiosities__wrapper">
+                    <!-- Title -->
+                    <h2>
+                        <div class="special_text_2 about_me">
+                            <span>C</span>
+                            <span>U</span>
+                            <span>R</span>
+                            <span>I</span>
+                            <span>O</span>
+                            <span>S</span>
+                            <span>I</span>
+                            <span>T</span>
+                            <span>I</span>
+                            <span>E</span>
+                            <span>S</span>
+                        </div>
+                    </h2> <!-- End Title -->
+                    <!-- List of curiosities -->
+                    <ul>
+                        <li>I'm also a musician: I've played bass since 2014.</li>
+                        <li>I really listen to any musical genre, but if I had to choose one to be my preferite, I'd surely pick rock and its sub-genres.</li>
+                        <li>Big anime fan, so much that I've played as bassist in a Cartoon Cover Band.</li>
+                        <li>I've been a Martial Arts student for 5 years and I've played Basketball as an amateur for another 6 years.</li>
+                        <li>Also, big fan of scientific documentaries, mostly space related ones. Always been fashinated by universe and its misteries.</li>
+                        <li>When I'm not studying or coding, I love playing videogames or watching TV-shows and Films.</li>
+                        <li>I'm a pretty competitive person generally talking, so I tend to wanna be the best in everything I do, and it reflects on hobby activities or job related ones. Maybe told this way may sounds a bad thing, but it really isn't: if my goal is hard to reach, I'll put all of my energies in what I do to reach it, both alone and as a team. That's why I can be a part of a team in a productive way: because the goal is more important than the personal ego, but that's my personal opinion.</li>
+                        <li>I'm engaged with my twin-soul, Lisa, since 2018 and we're planning to go living together.</li>
+                    </ul> <!-- End of List of Curiosities-->
+                </div> <!-- End Curiosities Container-->
+            </div> <!-- End "CURIOSITIES" Section -->
+        </div> <!-- End "TEXT_CONTAINER" -->
+    </div> <!-- END "SECTION_CONTAINER"-->
+</section> <!-- END "PAGE_SECTION ABOUT_ME"-->
+<!-- Start SCRIPTS -->
+<script>
+    //  TODO: ANIMAZIONE QUANDO SI ARRIVA SULLA PAGINA
+    // TODO: ANIMAZIONE AUTOMATICA FOTO AGGIUNTE
+    // Get Containers
+    const mainTextContainer = document.querySelector(".main__text.about_me");
+    const personalImgContainer = document.querySelector(".img_container.about_me.personal")
+    const hobbyImgContainer = document.querySelector(".img_container.about_me.hobby");
+
+    // Some Variables Declaration
+    let indexPersonal = 1;
+    let indexHobby = 1;
+    let animationID;   
+    const animationSpeed = 3000; 
+
+    // Get array of imgs and lenght of imgs
+    let personalImgs = document.querySelectorAll(".personal.img");
+    let hobbyImgs = document.querySelectorAll(".hobby.img");
+    const imgsWidth = personalImgs[1].clientWidth;
+
+    // Get first and last img as a clone
+    const personalFirstClone = personalImgs[0].cloneNode(true);
+    const hobbyFirstClone = hobbyImgs[0].cloneNode(true);
+    const personalLastClone = personalImgs[personalImgs.length - 1].cloneNode(true);
+    const hobbyLastClone = hobbyImgs[hobbyImgs.length - 1].cloneNode(true);
+
+    // Set IDs and Append/Prepend Clones to Containers
+    personalFirstClone.id = "personal-first-clone";
+    hobbyFirstClone.id = "hobby-first-clone";
+    personalLastClone.id = "personal-last-clone";
+    hobbyLastClone.id = "hobby-last-clone";
+
+    personalImgContainer.append(personalFirstClone);
+    personalImgContainer.prepend(personalLastClone);
+    hobbyImgContainer.append(hobbyFirstClone);
+    hobbyImgContainer.prepend(hobbyLastClone);
+
+    // Re-allign first slide
+    personalImgContainer.style.transform = `translateX(${-imgsWidth * indexPersonal}px)`;
+    hobbyImgContainer.style.transform = `translateX(${-imgsWidth * indexHobby}px)`;
+
+    // Slide
+    const StartSlide = () => {
+        animationID = setInterval(() => {
+            indexPersonal++;
+            indexHobby++;
+            personalImgContainer.style.transform = `translateX(${-imgsWidth * indexPersonal}px)`;
+            personalImgContainer.style.transition = "0.5s";
+            hobbyImgContainer.style.transform = `translateX(${-imgsWidth * indexHobby}px)`;
+            hobbyImgContainer.style.transition = "0.5s";
+        }, animationSpeed);
+    }
+
+    // When No More Clips, Reset Clips Personal
+    personalImgContainer.addEventListener("transitionend", () => {
+        personalImgs = document.querySelectorAll(".personal.img");
+        if (personalImgs[indexPersonal].id === personalFirstClone.id)
+        {
+            personalImgContainer.style.transition = "none";
+            indexPersonal = 1;
+            personalImgContainer.style.transform = `translateX(${-imgsWidth * indexPersonal}px)`;
+        }
+    });
+    
+    // When No More Clips, Reset Clips Hobby
+    hobbyImgContainer.addEventListener("transitionend", () => {
+        hobbyImgs = document.querySelectorAll(".hobby.img");
+        if (hobbyImgs[indexHobby].id === hobbyFirstClone.id)
+        {
+            hobbyImgContainer.style.transition = "none";
+            indexHobby = 1;
+            hobbyImgContainer.style.transform = `translateX(${-imgsWidth * indexHobby}px)`;
+        }
+    });
+    
+    // Stop and Go
+    personalImgContainer.addEventListener("mouseenter", () => {
+        clearInterval(animationID);
+    });
+    personalImgContainer.addEventListener("mouseleave", () => {
+        StartSlide();
+    });
+    hobbyImgContainer.addEventListener("mouseenter", () => {
+        clearInterval(animationID);
+    });
+    hobbyImgContainer.addEventListener("mouseleave", () => {
+        StartSlide();
+    });
+
+    StartSlide();  
+    
+
+ 
+</script> <!-- END SCRIPTS -->
 {% endblock %}

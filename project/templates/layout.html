@@ -11,18 +11,13 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
         <!-- My CSS -->
         <link href="../static/style.css" rel="stylesheet">
         
         <!-- Tab Title -->
         <title>Simone Molino - {% block title %}{% endblock %}</title>
-        <!-- Script -->
-        <script>
-            // Full load DOM
-            document.addEventListener("DOMContentLoaded", function() {});       
-        </script>
     </head>
 
     <!-- BODY -->
@@ -54,7 +49,7 @@
         </div> <!-- END "HIDDEN NAV"-->
 
         <!-- Header -->
-        <header class="header" role="banner">        
+        <header class="header" id="header" role="banner">        
             <!-- Top nav bar: change pages -->
             <div class="header_nav">                
                 <nav class="top-nav" role="navigation">
@@ -78,7 +73,7 @@
             </div>                        
         </header>
         <!-- IMG: click = top page -->        
-        <div id="nav_img">
+        <div class="nav_img" id="nav_img">
             <a href="/"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></a>
         </div>
         {% block main %}{% endblock %}
@@ -97,16 +92,15 @@
         </footer>
         <!-- Scripts -->
         <script>
-
             // Spinner scripts
             let spinner = document.querySelector(".spinner__wrapper");
             let body = document.querySelector("body");
-            
+
             window.addEventListener("load", function() {
                 spinner.classList.add("hidden");
                 body.style.overflow = "visible";
             });
-
+            
             if (history.scrollRestoration) 
             {
                 history.scrollRestoration = 'manual';
@@ -127,7 +121,6 @@
                 button.classList.toggle("active");
                 e.preventDefault();
             }
-             
         </script>             
     </body>
 </html>
