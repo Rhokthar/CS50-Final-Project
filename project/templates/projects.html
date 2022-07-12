@@ -9,6 +9,7 @@ Projects
 {% endblock %}
 
 {% block main %}
+<!-- TODO: LINKS TO EFFECTIVE PROJECTS -->
 <!-- START SECTION  -->
 <section class="page_section">
     <!-- START SECTION_CONTAINER PROJECTS -->
@@ -30,72 +31,107 @@ Projects
             </h2>
         </div> <!-- END TITLE -->
 
+        <!-- Disclaimer: while !professional -->
+        <div class="disclaimer">
+            <h4>Disclaimer</h4>
+            <p>For now, I've only worked on school and educational projects for the various courses that I've done. That's gonna change really soon, and more complex projects will be added to the portfolio.</p>
+        </div>
+        
         <!-- START PROJECTS__WRAPPER #1 -->
-        <div class="projects__wrapper">
+        <div class="projects__wrapper reverse-direction first">
             <!-- PROJECT TEXT -->
-            <div class="project_text">
-                <h3>FINANCE</h3>
-                <p>This was a project done for the CS50's Harvard Course. It's a simple web application who tracks a portfolio of the possessed market stocks. It uses IEX API for getting real time value of every given stock. It also has a back-end done in Python with the implementation of Flask's framework.</p>
-                <button>Take a Look</button>
-            </div> <!-- END PROJECT TEXT-->
+            <div class="text__wrapper">
+                <div class="project_text">
+                    <h3 class="diff_color">FINANCE</h3>
+                    <p>A full web application built for a Problem Set of Harvard's Course CS50. It uses IEX API to get real-time values of market stocks, and works as a portfolio of bought stocks. Back-end: Python - Front-End: Bootstrap. Working on implementing a real cash wallet.</p>
+                </div> <!-- END PROJECT TEXT-->
+            </div>
             <!-- PROJECT IMG -->
-            <div class="project_img">
-                <div class="img__wrapper projects">
-                    <img src="" alt="" title="" />
+            <div class="img__wrapper end-justify">
+                <div class="project_img">
+                    <img src="../static/finance-img.jpg" alt="finance-img.jpg" />
                 </div>
             </div> <!-- END PROJECT IMG -->
         </div> <!-- END PROJECTS__WRAPPER-->
+
+        <button class="btn">Take a Look</button> 
+
         <!-- START PROJECTS__WRAPPER #2 -->
         <div class="projects__wrapper">
             <!-- START PROJECT TEXT -->
-            <div class="project_text">
-                <h3>SIMPLE FILTER APPLIER</h3>
-                <p>In this project, also made for the CS50'S Harvard Course, I've implemented a small filter applier for images, such as <i>seppia</i>, <i>greyscale</i> and so on. It's implemented fully in C, and works with CLAs.</p>
-                <button>Take a Look</button>
-            </div> <!-- END PROJECT_TEXT -->
+            <div class="text__wrapper end-justify">
+                <div class="project_text">
+                    <h3 class="diff_color">SIMPLE FILTER APPLIER</h3>
+                    <p>Another program built for a Problem Set of Harvard's Course CS50. Console Program programmed in C that applies filters to images, done by calculating pixels values one by one.</p>
+                </div> <!-- END PROJECT_TEXT -->
+            </div>
             <!-- START PROJECT_IMG -->
-            <div class="project_img">
-
-            </div> <!-- END PROJECT_IMG -->
+            <div class="img__wrapper start-justify">
+                <div class="project_img">
+                    <img src="../static/filter-img.png" alt="filter-img.jpg" />
+                </div>
+            </div><!-- END PROJECT_IMG -->
         </div> <!-- END PROJECTS__WRAPPER #2 -->
-        <!-- START PROJECTS__WRAPPER #3 -->
-        <div class="projects__wrapper">
-            <!-- START PROJECT_TEXT -->
-            <div class="project_text">
-                <h3>PYTHON ARITHMETIC FORMATTER</h3>
-                <p>In this simple console program made in Python, I was asked to format an arithmetic calculator, bot for sum and substraction, to display the arithmetic problem and solution vertically. I had to follow some instructions and some limitation for making it as the client asked, such as 9999 as max number, only sum and substraction etc.</p>
-                <p>Made for <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></p>
-            </div> <!-- END PROJECT_TEXT-->
-            <!-- START PROJECT IMG -->
-            <div class="project_img">
 
+        <button class="btn">Take a Look</button>
+
+        <!-- START PROJECTS__WRAPPER #3 -->
+        <div class="projects__wrapper reverse-direction">
+            <!-- START PROJECT_TEXT -->
+            <div class="text__wrapper">
+                <div class="project_text">
+                    <h3 class="diff_color">PYTHON ARITHMETIC FORMATTER</h3>
+                    <p>Arithmetic Formatter built in Python for a skill-test of FreeCodeCamp's Course "Scientific Computing with Python". It displays additions and substractions by visualizing them via column method. If checked, it also gives the result of the operation.</p>
+                </div> <!-- END PROJECT_TEXT-->
+            </div>
+            <!-- START PROJECT IMG -->
+            <div class="img__wrapper end-justify">
+                <div class="project_img">
+                    <img src="../static/formatter-img.png" alt="formatter-img.png" />
+                </div>
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #3 -->
+
+        <button class="btn">Take a Look</button>
+
         <!-- START PROJECTS__WRAPPER #4 -->
         <div class="projects__wrapper">
             <!-- START PROJECT_TEXT -->
-            <div class="project_text">
-                <h3>PYTHON TIME CALCULATOR</h3>
-                <p>In this project I was asked to make a Time Calculator in Python as a console program. The goal was to </p>
-            </div> <!-- END PROJECT_TEXT-->
+            <div class="text__wrapper end-justify">
+                <div class="project_text">
+                    <h3 class="diff_color">PYTHON TIME CALCULATOR</h3>
+                    <p>Time Calculator built in Python for another skill-test of FreeCodeCamp's Course "Scientific Computing with Python". It recalculates hour after users adds more time to a given hour via CLA. Displays new hour in AM/PM and how many days have passed.</p>
+                </div> <!-- END PROJECT_TEXT-->
+            </div>
             <!-- START PROJECT IMG -->
-            <div class="project_img">
-
+            <div class="img__wrapper start-justify">
+                <div class="project_img">
+                    <img src="../static/time-calculator-img.png" alt="time-calculator-img.png" />
+                </div>
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #4 -->
-        <!-- START PROJECTS__WRAPPER #5 -->
-        <div class="projects__wrapper">
-            <!-- START PROJECT_TEXT -->
-            <div class="project_text">
-                <h3>SQL FIFTYVILLE</h3>
-                <p>In this "little-game" project, also made as a task for the CS50's Harvard Course, I've made many "investigative queries" to a DB to find who stolen an object from a shop. The goal were to query many DBs to search for clues, join clues together and find the criminal.</p>
-                <button>Take a Look</button>
-            </div> <!-- END PROJECT_TEXT-->
-            <!-- START PROJECT IMG -->
-            <div class="project_img">
+        
+        <button class="btn">Take a Look</button>
 
-            </div> <!-- END PROJECT_IMG -->
+        <!-- START PROJECTS__WRAPPER #5 -->
+        <div class="projects__wrapper reverse-direction">
+            <!-- START PROJECT_TEXT -->
+            <div class="text__wrapper">
+                <div class="project_text">
+                    <h3 class="diff_color">SQL FIFTYVILLE</h3>
+                    <p>Little "investigative-game" project done for Harvard's Course CS50. I had to interrogate some DBs to find clues of a theft in a shop. By following the clues, I'd have found the guilty man and his (or her 😉) accomplice.</p>
+                </div> <!-- END PROJECT_TEXT-->
+            </div>
+            <!-- START PROJECT IMG -->
+            <div class="img__wrapper end-justify">
+                <div class="project_img">
+                    <img src="../static/sql-fiftyville-img.webp" alt="sql-fiftyville-img.webp" />
+                </div> <!-- END PROJECT_IMG -->
+            </div>
         </div> <!-- END PROJECT__WRAPPER #5 -->
+
+        <button class="btn">Take a Look</button>
+
 
     </div> <!-- END SECTION_CONTAINER PROJECT -->
 </section> <!-- END SECTION -->

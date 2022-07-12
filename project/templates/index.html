@@ -119,7 +119,7 @@ lang="en"
                     <h3>Country:</h3><p>Italy</p><br>
                     <h3>Who am I:</h3><p>I'm a never-ending CS's student and a Software Developer for both Back-End and Front-End. Currently, I'm taking courses and I'm studying both UI/UX and Machine Learning's stuffs</p>
                     <form action="/about_me" method="get">
-                        <button>More About Me</button>            
+                        <button class="btn">More About Me</button>            
                     </form>                    
                 </div>
             </div>
@@ -145,11 +145,6 @@ lang="en"
                         <span>S</span>
                     </div>
                 </h1>
-                <!-- Disclaimer: while !professional -->
-                <div class="disclaimer">
-                    <h4>Disclaimer</h4>
-                    <p>For now, I've only worked on school and educational projects for the various courses that I've done. That's gonna change really soon, and more complex projects will be added to the portfolio.</p>
-                </div>
 
                 <p>Here are some of the projects that I've been (and I'm currently) working on:</p>
 
@@ -180,7 +175,7 @@ lang="en"
                 </div>
                 <!-- Button: redirect to projects page -->
                 <form action="/projects" method="get">
-                    <button>More Projects</button>
+                    <button class="btn">More Projects</button>
                 </form>                
             </div>
         </div>            
@@ -220,7 +215,7 @@ lang="en"
                     <h3>GitHub:</h3><a href="https://github.com/Rhokthar" target="_blank">GitHub's Direct Link</a><br>
                     <h3>Instagram:</h3><a href="https://www.instagram.com/rhokthar/" target="_blank">Instagram's Direct Link</a><br>
                     <form action="/about_me" method="get">
-                        <button>Wanna E-Mail me?</button>            
+                        <button class="btn">Wanna E-Mail me?</button>            
                     </form> 
                 </div>
             </div>
@@ -299,14 +294,12 @@ lang="en"
         }
     }
     
-
-  
     // Script for GSAP Scrolling Animations
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.defaults({
         toggleActions: "restart pause resume reverse",
-        markers: true
+        // markers: true
     });
 
     // HERO ANIMATION
