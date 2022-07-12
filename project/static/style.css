@@ -716,6 +716,23 @@ form button:hover {
     }
 
 }
+/* PROJECTS PAGE */
+.section_container.projects {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.projects__wrapper {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.img__wrapper.projects {
+    
+}
 /************************/
 /* Top navigation menu */
 /**********************/
@@ -1067,9 +1084,9 @@ input:focus + .slider {
     section .section_container {
         flex-direction: row;
     }
-    .section_container > * + * {
-        margin-left: 5em;
-    }
+    /* .section_container > * + * {
+        padding-left: 5em;
+    } */
 }
 /* < */
 /* If width < 1520... */
