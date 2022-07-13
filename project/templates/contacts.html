@@ -13,7 +13,7 @@ Contacts
     <!-- START SECTION_CONTAINER PROJECTS -->
     <div class="section_container contacts vertical-row">
         <!-- PAGE__WRAPPER STARTS -->
-        <div class="page__wrapper">
+        <div class="page__wrapper width-100 left-padding right-padding">
             <!-- START TITLE__WRAPPER -->
             <div class="title__wrapper">
                 <div class="div__wrapper justify-center">
@@ -32,24 +32,24 @@ Contacts
                     </h2>
                 </div>
             </div> <!-- END TITLE -->
-            <p>You can contact me directly with this form, or via socials and telephone</p>
+            <p>You can contact me directly with this form, or via socials and telephone. I'm interested in everything, so go on!</p>
             <form action="/contacts" method="post">
-                <div class="div__wrapper vertical-row justify-center">
-                    <label for="name_input">Name</label>
-                    <input type="text" id="name_input" placeholder="Your Name" autofocus />
-                    <label for="surname_input">Surname</label>
-                    <input type="text" id="surname_input" placeholder="Your Surname" />
-                    <label for="e-mail">E-mail</label>
-                    <input type="email" id="e-mail" placeholder="Your E-Mail" />
-                    <label for="contact_info">More Information</label>
-                    <input type="text" id="contact_info" placeholder="What are you contacting me for?" />
+                <div class="div__wrapper vertical-row align-center bg-dark-theme-hard padding-all border-rounded width-75">
+                    <label for="name_input" class="main-text-color text-shadow-color bottom-padding">Name</label>
+                    <input type="text" id="name_input" name="name_input" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Name" autofocus />
+                    <label for="surname_input" class="top-padding bottom-padding main-text-color text-shadow-color">Surname</label>
+                    <input type="text" id="surname_input" name="surname_input" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Surname" />
+                    <label for="e-mail" class="top-padding bottom-padding main-text-color text-shadow-color">E-mail</label>
+                    <input type="email" id="e-mail" name="e-mail" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your E-Mail" />
+                    <label for="contact_info" class="top-padding bottom-padding main-text-color text-shadow-color">More Informations</label>
+                    <textarea id="contact_info" name="contact_info" class="input-text-style bg-dark-theme-medium box-shadow-color resize-vertical height-20 width-75 min-height" placeholder="What are you contacting me for?"></textarea>
                     <button class="btn" type="submit">Submit</button>
                 </div>
             </form>
             <div class="other_contacts">
-                <div class="div__wrapper">
+                <div class="div__wrapper justify-center">
                     <p><span class="diff_color">Telephone</span> - +39 392 551 3237</p>
-                    <p><span class="diff_color">Socials</span> - <a href="" target="_blank">Linkedin</a>, <a href="" target="_blank">GitHub</a>, <a href="" target="_blank">Instagram</a></p>
+                    <p><span class="diff_color">Socials</span> - <a href="" target="_blank" class="a-hover secondary-text-color">Linkedin</a>, <a href="" target="_blank" class="a-hover secondary-text-color">GitHub</a>, <a href="" target="_blank" class="a-hover secondary-text-color">Instagram</a></p>
                 </div>
             </div>
         </div> <!-- PAGE__WRAPPER ENDS -->        
