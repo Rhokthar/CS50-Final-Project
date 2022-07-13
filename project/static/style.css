@@ -1,6 +1,9 @@
 /********************
     General Styles
 *********************/
+:root {
+    --window-max-width: 1440px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -794,9 +797,45 @@ button.btn:hover {
 .reverse-direction {
     flex-direction: row-reverse;
 }
-/* .img__wrapper.projects {
-    
-} */
+/* Contacts Page */
+.section_container.contacts {
+    border: 1px solid red;
+    width: 100%;
+}
+.section_container.contacts p {
+    font-size: 18px;
+    text-align: center;
+}
+.page__wrapper {
+    max-width: var(--window-max-width);
+    margin: 0 auto;
+}
+.div__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.div__wrapper.row-reverse {
+    flex-direction: row-reverse;
+}
+.div__wrapper.vertical-row {
+    flex-direction: column;
+}
+.div__wrapper.vertical-row-reverse {
+    flex-direction: column-reverse;
+}
+.div__wrapper.justify-center {
+    justify-content: center;
+}
+.div__wrapper.align-center {
+    align-items: center;
+}
+#contact_info {
+    margin-bottom: 2rem;
+}
+.other_contacts p {
+    padding: 2rem;
+}
 /************************/
 /* Top navigation menu */
 /**********************/

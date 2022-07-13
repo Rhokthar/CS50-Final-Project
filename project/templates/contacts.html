@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block lang %}
+lang="en"
+{% endblock %}
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block main %}
+<section class="page_section">
+    <!-- START SECTION_CONTAINER PROJECTS -->
+    <div class="section_container contacts vertical-row">
+        <!-- PAGE__WRAPPER STARTS -->
+        <div class="page__wrapper">
+            <!-- START TITLE__WRAPPER -->
+            <div class="title__wrapper">
+                <div class="div__wrapper justify-center">
+                    <h2>
+                        <!-- SPECIAL TEXT START -->
+                        <div class="special_text_2 contacts">
+                            <span>C</span>
+                            <span>O</span>
+                            <span>N</span>
+                            <span>T</span>
+                            <span>A</span>
+                            <span>C</span>
+                            <span>T</span>
+                            <span>S</span>
+                        </div> <!-- SPECIAL TEXT END-->
+                    </h2>
+                </div>
+            </div> <!-- END TITLE -->
+            <p>You can contact me directly with this form, or via socials and telephone</p>
+            <form action="/contacts" method="post">
+                <div class="div__wrapper vertical-row justify-center">
+                    <label for="name_input">Name</label>
+                    <input type="text" id="name_input" placeholder="Your Name" autofocus />
+                    <label for="surname_input">Surname</label>
+                    <input type="text" id="surname_input" placeholder="Your Surname" />
+                    <label for="e-mail">E-mail</label>
+                    <input type="email" id="e-mail" placeholder="Your E-Mail" />
+                    <label for="contact_info">More Information</label>
+                    <input type="text" id="contact_info" placeholder="What are you contacting me for?" />
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+            <div class="other_contacts">
+                <div class="div__wrapper">
+                    <p><span class="diff_color">Telephone</span> - +39 392 551 3237</p>
+                    <p><span class="diff_color">Socials</span> - <a href="" target="_blank">Linkedin</a>, <a href="" target="_blank">GitHub</a>, <a href="" target="_blank">Instagram</a></p>
+                </div>
+            </div>
+        </div> <!-- PAGE__WRAPPER ENDS -->        
+    </div> <!-- END SECTION_CONTAINER PROJECT -->
+</section> <!-- END SECTION -->
+{% endblock %}
