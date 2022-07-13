@@ -137,6 +137,30 @@ Projects
 </section> <!-- END SECTION -->
 <!-- START SCRIPTS -->
 <script>
+    gsap.registerPlugin(ScrollTrigger);
 
+    ScrollTrigger.defaults({
+        toggleActions: "play pause resume none",
+        markers: true
+    });
+
+    window.addEventListener("load", () => {
+
+        let projectsTimeLine = gsap.timeline();
+        
+        projectsTimeLine.from(".title__wrapper", {
+            delay: 0.5,
+            y: -100,
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out"
+        });
+        projectsTimeLine.from(".disclaimer", {
+            opacity: 0,
+            width: 0,
+            duration: 0.5,
+        });
+
+    });
 </script> <!-- END SCRIPTS-->
 {% endblock %}
