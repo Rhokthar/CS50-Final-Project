@@ -54,10 +54,15 @@ Projects
             </div> <!-- END PROJECT IMG -->
         </div> <!-- END PROJECTS__WRAPPER-->
 
-        <button class="btn">Take a Look</button> 
+        <div class="button__wrapper">
+            <button class="btn">Take a Look</button>
+        </div> 
 
+        <div class="separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
         <!-- START PROJECTS__WRAPPER #2 -->
-        <div class="projects__wrapper">
+        <div class="projects__wrapper bg-dark-theme-medium">
             <!-- START PROJECT TEXT -->
             <div class="text__wrapper end-justify">
                 <div class="project_text">
@@ -73,7 +78,12 @@ Projects
             </div><!-- END PROJECT_IMG -->
         </div> <!-- END PROJECTS__WRAPPER #2 -->
 
-        <button class="btn">Take a Look</button>
+        <div class="button__wrapper bg-dark-theme-medium">
+            <button class="btn">Take a Look</button>
+        </div>
+        <div class="separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
 
         <!-- START PROJECTS__WRAPPER #3 -->
         <div class="projects__wrapper reverse-direction">
@@ -92,7 +102,9 @@ Projects
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #3 -->
 
-        <button class="btn">Take a Look</button>
+        <div class="button__wrapper">
+            <button class="btn">Take a Look</button>
+        </div>
 
         <!-- START PROJECTS__WRAPPER #4 -->
         <div class="projects__wrapper">
@@ -111,7 +123,9 @@ Projects
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #4 -->
         
-        <button class="btn">Take a Look</button>
+        <div class="button__wrapper">
+            <button class="btn">Take a Look</button>
+        </div>
 
         <!-- START PROJECTS__WRAPPER #5 -->
         <div class="projects__wrapper reverse-direction">
@@ -130,7 +144,9 @@ Projects
             </div>
         </div> <!-- END PROJECT__WRAPPER #5 -->
 
-        <button class="btn">Take a Look</button>
+        <div class="button__wrapper">
+            <button class="btn">Take a Look</button>
+        </div>
 
         <!-- START PROJECTS__WRAPPER #6 -->
         <div class="projects__wrapper end-justify">
@@ -166,16 +182,24 @@ Projects
             </div>
         </div> <!-- END PROJECT__WRAPPER #6 -->
 
+        <div class="button__wrapper">
+            <button class="btn">Take a Look</button>
+        </div>
+
 
     </div> <!-- END SECTION_CONTAINER PROJECT -->
 </section> <!-- END SECTION -->
 <!-- START SCRIPTS -->
 <script>
+    let textWrapperArray = document.querySelectorAll(".text__wrapper");
+    let imgWrapperArray = document.querySelectorAll(".img__wrapper");
+    let buttonsArray = document.querySelectorAll(".btn");
+    var invertAnimationDirection = -1;
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.defaults({
-        toggleActions: "play pause resume none",
-        markers: true
+        toggleActions: "play none none none",
+        // markers: true
     });
 
     window.addEventListener("load", () => {
@@ -194,7 +218,47 @@ Projects
             width: 0,
             duration: 0.5,
         });
+    }); 
+    // END LOAD ANIMATIONS
 
-    });
+    // SCROLL ANIMATIONS
+    for (var i = 0; i < textWrapperArray.length; i++)
+    {
+        gsap.from(textWrapperArray[i], {
+            scrollTrigger: {
+                trigger: textWrapperArray[i],
+                start: "30% center",
+                end: "bottom center"
+            },
+            opacity: 0,
+            x: (100 * invertAnimationDirection * -1),
+            duration: 1,
+            ease: "power4.out"
+        });
+        gsap.from(imgWrapperArray[i], {
+            scrollTrigger: {
+                trigger: textWrapperArray[i],
+                start: "30% center",
+                end: "bottom center"
+            },
+            opacity: 0,
+            x: (100 * invertAnimationDirection * -1),
+            duration: 1,
+            ease: "power4.out"
+        });
+        gsap.from(buttonsArray[i], {
+            scrollTrigger: {
+                trigger: textWrapperArray[i],
+                start: "top center",
+                end: "bottom center",
+            },
+            opacity: 0,
+            x: (100 * invertAnimationDirection),
+            duration: 0.5,
+            ease: "bounce"
+        });
+        invertAnimationDirection = invertAnimationDirection * (-1);
+    }
+    
 </script> <!-- END SCRIPTS-->
 {% endblock %}

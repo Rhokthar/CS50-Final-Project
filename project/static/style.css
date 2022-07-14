@@ -774,6 +774,11 @@ button.btn:hover {
     flex-direction: row;
     padding-bottom: 2rem;
 }
+.button__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 /* For Padding TOP - First no pading top*/
 .projects__wrapper:not(.first) {
     padding-top: 15rem;
