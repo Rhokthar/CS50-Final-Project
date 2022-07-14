@@ -13,9 +13,9 @@ Projects
 <!-- START SECTION  -->
 <section class="page_section">
     <!-- START SECTION_CONTAINER PROJECTS -->
-    <div class="section_container projects">
+    <div class="flex-container vertical-row flex-wrap width-100 align-center top-padding-m">
         <!-- START TITLE__WRAPPER -->
-        <div class="title__wrapper">
+        <div class="title__wrapper bottom-padding-s">
             <h2>
                 <!-- SPECIAL TEXT START -->
                 <div class="special_text_2 projects">
@@ -32,160 +32,182 @@ Projects
         </div> <!-- END TITLE -->
 
         <!-- Disclaimer: while !professional -->
-        <div class="disclaimer">
-            <h4>Disclaimer</h4>
-            <p>For now, I've only worked on school and educational projects for the various courses that I've done. That's gonna change really soon, and more complex projects will be added to the portfolio.</p>
+        <div class="flex-container boxed-container w-100 left-padding right-padding">
+            <div class="disclaimer width-100 left-margin-s right-margin-s bottom-margin-m bottom-padding-xs">
+                <h4>Disclaimer</h4>
+                <p>For now, I've only worked on school and educational projects for the various courses that I've done. That's gonna change really soon, and more complex projects will be added to the portfolio.</p>
+            </div>
         </div>
         
         <!-- START PROJECTS__WRAPPER #1 -->
-        <div class="projects__wrapper reverse-direction first">
-            <!-- PROJECT TEXT -->
-            <div class="text__wrapper">
-                <div class="project_text">
+        <!-- projects__wrapper reverse-direction -->
+        <div class="flex-container flex-wrap-reverse row-reverse bottom-padding-s width-100">
+            <!-- PROJECT TEXT STARTS -->
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">FINANCE</h3>
                     <p>A full web application built for a Problem Set of Harvard's Course CS50. It uses IEX API to get real-time values of market stocks, and works as a portfolio of bought stocks. Back-end: Python - Front-End: Bootstrap. Working on implementing a real cash wallet.</p>
-                </div> <!-- END PROJECT TEXT-->
+                </div> <!-- PROJECT TEXT ENDS -->
             </div>
             <!-- PROJECT IMG -->
-            <div class="img__wrapper end-justify">
-                <div class="project_img">
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <img src="../static/finance-img.jpg" alt="finance-img.jpg" />
                 </div>
             </div> <!-- END PROJECT IMG -->
         </div> <!-- END PROJECTS__WRAPPER-->
 
-        <div class="button__wrapper">
+        <!-- BUTTON STARTS -->
+        <div class="flex-container justify-center width-100">
             <button class="btn">Take a Look</button>
-        </div> 
+        </div> <!-- END BUTTON -->
 
-        <div class="separator">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--bg-dark-theme-medium)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
         <!-- START PROJECTS__WRAPPER #2 -->
-        <div class="projects__wrapper bg-dark-theme-medium">
+        <div class="flex-container flex-wrap-reverse row bottom-padding-s width-100 bg-dark-theme-medium">
             <!-- START PROJECT TEXT -->
-            <div class="text__wrapper end-justify">
-                <div class="project_text">
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center justify-end">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">SIMPLE FILTER APPLIER</h3>
                     <p>Another program built for a Problem Set of Harvard's Course CS50. Console Program programmed in C that applies filters to images, done by calculating pixels values one by one.</p>
                 </div> <!-- END PROJECT_TEXT -->
             </div>
             <!-- START PROJECT_IMG -->
-            <div class="img__wrapper start-justify">
-                <div class="project_img">
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <img src="../static/filter-img.png" alt="filter-img.jpg" />
                 </div>
             </div><!-- END PROJECT_IMG -->
         </div> <!-- END PROJECTS__WRAPPER #2 -->
 
-        <div class="button__wrapper bg-dark-theme-medium">
+        <div class="flex-container justify-center width-100 bg-dark-theme-medium">
             <button class="btn">Take a Look</button>
         </div>
-        <div class="separator">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        </div>
+
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-medium"><path fill="var(--bg-dark-theme-hard)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
         <!-- START PROJECTS__WRAPPER #3 -->
-        <div class="projects__wrapper reverse-direction">
+        <div class="flex-container flex-wrap-reverse row-reverse bottom-padding-s bg-dark-theme-hard width-100">
             <!-- START PROJECT_TEXT -->
-            <div class="text__wrapper">
-                <div class="project_text">
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">PYTHON ARITHMETIC FORMATTER</h3>
                     <p>Arithmetic Formatter built in Python for a skill-test of FreeCodeCamp's Course "Scientific Computing with Python". It displays additions and substractions by visualizing them via column method. If checked, it also gives the result of the operation.</p>
                 </div> <!-- END PROJECT_TEXT-->
             </div>
             <!-- START PROJECT IMG -->
-            <div class="img__wrapper end-justify">
-                <div class="project_img">
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <img src="../static/formatter-img.png" alt="formatter-img.png" />
                 </div>
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #3 -->
 
-        <div class="button__wrapper">
+        <div class="flex-container justify-center width-100 bg-dark-theme-hard">
             <button class="btn">Take a Look</button>
         </div>
 
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-hard"><path fill="var(--bg-dark-theme-medium)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
         <!-- START PROJECTS__WRAPPER #4 -->
-        <div class="projects__wrapper">
-            <!-- START PROJECT_TEXT -->
-            <div class="text__wrapper end-justify">
-                <div class="project_text">
+        <div class="flex-container flex-wrap-reverse row bottom-padding-s width-100 bg-dark-theme-medium">
+            <!-- START PROJECT_TEXT --> 
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center justify-end">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">PYTHON TIME CALCULATOR</h3>
                     <p>Time Calculator built in Python for another skill-test of FreeCodeCamp's Course "Scientific Computing with Python". It recalculates hour after users adds more time to a given hour via CLA. Displays new hour in AM/PM and how many days have passed.</p>
                 </div> <!-- END PROJECT_TEXT-->
             </div>
             <!-- START PROJECT IMG -->
-            <div class="img__wrapper start-justify">
-                <div class="project_img">
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <img src="../static/time-calculator-img.png" alt="time-calculator-img.png" />
                 </div>
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #4 -->
         
-        <div class="button__wrapper">
+        <div class="flex-container justify-center width-100 bg-dark-theme-medium">
             <button class="btn">Take a Look</button>
         </div>
 
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-medium"><path fill="var(--bg-dark-theme-hard)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
         <!-- START PROJECTS__WRAPPER #5 -->
-        <div class="projects__wrapper reverse-direction">
+        <div class="flex-container flex-wrap-reverse row-reverse bottom-padding-s bg-dark-theme-hard width-100">
             <!-- START PROJECT_TEXT -->
-            <div class="text__wrapper">
-                <div class="project_text">
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">SQL FIFTYVILLE</h3>
                     <p>Little "investigative-game" project done for Harvard's Course CS50. I had to interrogate some DBs to find clues of a theft in a shop. By following the clues, I'd have found the guilty man and his (or her 😉) accomplice.</p>
                 </div> <!-- END PROJECT_TEXT-->
             </div>
             <!-- START PROJECT IMG -->
-            <div class="img__wrapper end-justify">
-                <div class="project_img">
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <img src="../static/sql-fiftyville-img.webp" alt="sql-fiftyville-img.webp" />
                 </div> <!-- END PROJECT_IMG -->
             </div>
         </div> <!-- END PROJECT__WRAPPER #5 -->
 
-        <div class="button__wrapper">
+        <div class="flex-container justify-center width-100 bg-dark-theme-hard">
             <button class="btn">Take a Look</button>
         </div>
 
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-hard"><path fill="var(--bg-dark-theme-medium)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        
         <!-- START PROJECTS__WRAPPER #6 -->
-        <div class="projects__wrapper end-justify">
+        <div class="flex-container flex-wrap-reverse row bottom-padding-s width-100 bg-dark-theme-medium">
             <!-- START PROJECT_TEXT -->
-            <div class="text__wrapper">
-                <div class="project_text">
-                    <h3 class="diff_color">MY HIGH SCHOOL FRONT-END SITE</h3>
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center justify-end">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
+                    <h3 class="diff_color">MY HIGH SCHOOL WEB-SITE (FRONT-END)</h3>
+                    <p>When I was at High School, we had to remake the web-site for our school as a team-project. I was asked, with other classmates, to take care of the front-end.</p>
                 </div> <!-- END PROJECT_TEXT-->
             </div>
             <!-- START PROJECT IMG -->
-            <div class="img__wrapper start-justify">
-                <div class="project_img">
-            
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
+                    <a href="https://www.iislagrange.edu.it/" target="_blank">
+                        <img src="../static/highschool-image.jpg" alt="highschool-image" />
+                    </a>
                 </div> <!-- END PROJECT_IMG -->
             </div>
         </div> <!-- END PROJECT__WRAPPER #6 -->
 
-        <button class="btn">Take a Look</button>
+        <div class="flex-container justify-center width-100 bg-dark-theme-medium">
+            <button class="btn">Take a Look</button>
+        </div>
+
+        <!-- SEPARATOR - CHANGING COLOR INSIDE TAGS VALUES AND CLASSES -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-medium"><path fill="var(--bg-dark-theme-light)" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,149.3C384,139,480,117,576,96C672,75,768,53,864,42.7C960,32,1056,32,1152,53.3C1248,75,1344,117,1392,138.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
 
         <!-- START PROJECTS__WRAPPER #7 -->
-        <div class="projects__wrapper reverse-direction">
+        <div class="flex-container flex-wrap-reverse row-reverse bottom-padding-s bg-dark-theme-light width-100">
             <!-- START PROJECT_TEXT -->
-            <div class="text__wrapper">
-                <div class="project_text">
+            <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center">
+                <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">MY PORTFOLIO WEBSITE</h3>
+                    <p>Well, obviously the site you're surfing in has been also a project made by myself. I'm not a professional designer, so I really hope that you're liking it! 😁</p>
                 </div> <!-- END PROJECT_TEXT-->
             </div>
             <!-- START PROJECT IMG -->
-            <div class="img__wrapper end-justify">
-                <div class="project_img">
-            
+            <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
+                <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
+                    <img src="../static/sql-fiftyville-img.webp" alt="sql-fiftyville-img.webp" />
                 </div> <!-- END PROJECT_IMG -->
             </div>
-        </div> <!-- END PROJECT__WRAPPER #6 -->
+        </div> <!-- END PROJECT__WRAPPER #7 -->
 
-        <div class="button__wrapper">
+        <div class="flex-container justify-center width-100 bg-dark-theme-light bottom-padding-xl">
             <button class="btn">Take a Look</button>
         </div>
-
 
     </div> <!-- END SECTION_CONTAINER PROJECT -->
 </section> <!-- END SECTION -->
@@ -215,19 +237,37 @@ Projects
         });
         projectsTimeLine.from(".disclaimer", {
             opacity: 0,
-            width: 0,
-            duration: 0.5,
+            duration: 0.1,
         });
+        projectsTimeLine.from(textWrapperArray[0], {
+            delay: 0.5,
+            opacity: 0,
+            x: (100 * invertAnimationDirection * -1),
+            duration: 1,
+            ease: "power4.out"
+        });
+        projectsTimeLine.from(imgWrapperArray[0], {
+            opacity: 0,
+            x: (100 * invertAnimationDirection),
+            duration: 1,
+            ease: "power4.out"
+        }, "-=0.5");
+        projectsTimeLine.from(buttonsArray[0], {
+            opacity: 0,
+            x: (100 * invertAnimationDirection),
+            duration: 0.5,
+            ease: "bounce"
+        }, "-=0.5");
     }); 
     // END LOAD ANIMATIONS
 
     // SCROLL ANIMATIONS
-    for (var i = 0; i < textWrapperArray.length; i++)
+    for (var i = 1; i < textWrapperArray.length; i++)
     {
         gsap.from(textWrapperArray[i], {
             scrollTrigger: {
                 trigger: textWrapperArray[i],
-                start: "30% center",
+                start: "top center",
                 end: "bottom center"
             },
             opacity: 0,

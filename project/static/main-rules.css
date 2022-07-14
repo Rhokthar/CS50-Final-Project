@@ -1,0 +1,282 @@
+/* VARIABLES !! NEVER CHANGE NAMES !! */
+:root {
+    --window-max-width: 1440px;
+}
+
+/* BORDER RELATED RULES STARTS */
+.border-rounded {
+    border-radius: 3.4rem;
+}
+.border {
+    border: 1px solid red;
+}
+/* BORDER RELATED RULES ENDS */
+
+/* BOXING RELATED RULES STARTS */
+.boxed-container {
+    width: 100%;
+    max-width: var(--window-max-width);
+}
+.box-hidden {
+    display: hidden;
+}
+.box-visible {
+    display: visible;
+}
+/* BOXING RELATED RULES ENDS */
+
+/* FLEX-BOX RELATED RULES STARTS*/
+.flex-container {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.row {
+    flex-direction: row;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.vertical-row {
+    flex-direction: column;
+}
+.vertical-row-reverse {
+    flex-direction: column-reverse;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.justify-space-around {
+    justify-content: space-around;
+}
+.align-center {
+    align-items: center;
+}
+.align-end {
+    align-items: flex-end;
+}
+/* SPACE RELATED RULES ENDS */
+
+/* SPACING RELATED RULES STARTS*/
+/* PADDING */
+/* XS -> 1rem */
+.top-padding-xs {
+    padding-top: 1rem;
+}
+.bottom-padding-xs {
+    padding-bottom: 1rem;
+}
+.left-padding-xs {
+    padding-left: 1rem;
+}
+.right-padding-xs {
+    padding-right: 1rem;
+}
+.padding-all-xs {
+    padding: 1rem;
+}
+/* S -> 2rem */
+.top-padding-s {
+    padding-top: 2rem;
+}
+.bottom-padding-s {
+    padding-bottom: 2rem;
+}
+.left-padding-s {
+    padding-left: 2rem;
+}
+.right-padding-s {
+    padding-right: 2rem;
+}
+.padding-all-s {
+    padding: 2rem;
+}
+/* M -> 5rem */
+.top-padding-m {
+    padding-top: 5rem;
+}
+.bottom-padding-m {
+    padding-bottom: 5rem;
+}
+.left-padding-m {
+    padding-left: 5rem;
+}
+.right-padding-m {
+    padding-right: 5rem;
+}
+.padding-all-m {
+    padding: 5rem;
+}
+/* L -> 7rem */
+.top-padding-l {
+    padding-top: 7rem;
+}
+.bottom-padding-l {
+    padding-bottom: 7rem;
+}
+.left-padding-l {
+    padding-left: 7rem;
+}
+.right-padding-l {
+    padding-right: 7rem;
+}
+.padding-all-l {
+    padding: 7rem;
+}
+/* XL -> 10rem */
+.top-padding-xl {
+    padding-top: 10rem;
+}
+.bottom-padding-xl {
+    padding-bottom: 10rem;
+}
+.left-padding-xl {
+    padding-left: 10rem;
+}
+.right-padding-xl {
+    padding-right: 10rem;
+}
+.padding-all-xl {
+    padding: 10rem;
+}
+/* MARGIN */
+/* XS -> 1rem */
+.top-margin-xs {
+    margin-top: 1rem;
+}
+.bottom-margin-xs {
+    margin-bottom: 1rem;
+}
+.left-margin-xs {
+    margin-left: 1rem;
+}
+.right-margin-xs {
+    margin-right: 1rem;
+}
+.margin-all-xs {
+    margin: 1rem;
+}
+/* S -> 2rem */
+.top-margin-s {
+    margin-top: 2rem;
+}
+.bottom-margin-s {
+    margin-bottom: 2rem;
+}
+.left-margin-s {
+    margin-left: 2rem;
+}
+.right-margin-s {
+    margin-right: 2rem;
+}
+.margin-all-s {
+    margin: 2rem;
+}
+/* M -> 5rem */
+.top-margin-m {
+    margin-top: 5rem;
+}
+.bottom-margin-m {
+    margin-bottom: 5rem;
+}
+.left-margin-m {
+    margin-left: 5rem;
+}
+.right-margin-m {
+    margin-right: 5rem;
+}
+.margin-all-m {
+    margin: 5rem;
+}
+/* L -> 7rem */
+.top-margin-l {
+    margin-top: 7rem;
+}
+.bottom-margin-l {
+    margin-bottom: 7rem;
+}
+.left-margin-l {
+    margin-left: 7rem;
+}
+.right-margin-l {
+    margin-right: 7rem;
+}
+.margin-all-l {
+    margin: 7rem;
+}
+/* XL -> 10rem */
+.top-margin-xl {
+    margin-top: 10rem;
+}
+.bottom-margin-xl {
+    margin-bottom: 10rem;
+}
+.left-margin-xl {
+    margin-left: 10rem;
+}
+.right-margin-xl {
+    margin-right: 10rem;
+}
+.margin-all-xl {
+    margin: 10rem;
+}
+/* AUTO */
+.left-margin-auto {
+    margin-left: auto;
+}
+.right-margin-auto {
+    margin-right: auto;
+}
+.top-margin-auto {
+    margin-top: auto;
+}
+.bottom-margin-auto {
+    margin-bottom: auto;
+}
+.margin-all-auto {
+    margin: auto;
+}
+/* SPACE RELATED RULES ENDS */
+
+/* TEXT RELATED RULES */
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+/* TEXT RELATED RULES ENDS */
+
+/* PUT AT THE END */
+/* PROJECT START STUFF STARTS*/
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+/* PROJECT START STUFF ENDS */
