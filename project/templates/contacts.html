@@ -34,12 +34,12 @@ Contacts
                 </div> <!-- DIV__WRAPPER ENDS -->
             </div> <!-- END TITLE -->
             
-            <p>You can contact me directly with this form, or via socials and telephone. I'm interested in everything, so go on!</p>
+            <p class="desc">You can contact me directly with this form, or via socials and telephone. I'm interested in everything, so go on!</p>
 
             <!-- FORM STARTS  -->
             <form action="/contacts" method="post">
                 <!-- FORM CONTAINER - DIV__WRAPPER -->
-                <div class="div__wrapper vertical-row align-center bg-dark-theme-hard padding-all border-rounded width-75">
+                <div class="div__wrapper form vertical-row align-center bg-dark-theme-hard padding-all border-rounded width-75">
                     <label for="name_input" class="main-text-color text-shadow-color bottom-padding">Name</label>
                     <input type="text" id="name_input" name="name_input" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Name" autofocus />
                     <label for="surname_input" class="top-padding bottom-padding main-text-color text-shadow-color">Surname</label>
@@ -59,7 +59,41 @@ Contacts
                     <p><span class="diff_color">Socials</span> - <a href="" target="_blank" class="a-hover secondary-text-color">Linkedin</a>, <a href="" target="_blank" class="a-hover secondary-text-color">GitHub</a>, <a href="" target="_blank" class="a-hover secondary-text-color">Instagram</a></p>
                 </div> <!-- OTHER CONTACTS DIV__WRAPPER ENDS -->
             </div> <!-- OTHER CONTACTS ENDS -->
-        </div> <!-- PAGE__WRAPPER ENDS -->        
-    </div> <!-- END SECTION_CONTAINER PROJECT -->
+        </div> <!-- PAGE__WRAPPER ENDS -->       
+    </div> <!-- END SECTION_CONTAINER PROJECT --> 
 </section> <!-- END SECTION -->
+<script>
+    
+    // Timeline
+    let contactsTimeLine = gsap.timeline();
+
+    // Animation after page loads
+    window.addEventListener("load", () => {
+        contactsTimeLine.from(".title__wrapper", {
+            delay: 0.5,
+            opacity: 0,
+            duration: 1,
+            y: -100,
+            ease: "power4.out"
+        });
+        contactsTimeLine.from(".desc", {
+            opacity: 0,
+            x: -100,
+            duration: 0.5,
+            ease: "power4.out"
+        }, "-=0.5");
+        contactsTimeLine.from(".div__wrapper.form", {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power4.out"
+        });
+        contactsTimeLine.from(".other_contacts", {
+            opacity: 0,
+            duration: 0.5,
+            x: 100,
+            ease: "power4.out"
+        });
+        
+    });
+</script>
 {% endblock %}
