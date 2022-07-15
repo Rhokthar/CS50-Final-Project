@@ -73,80 +73,80 @@
 /* SPACING RELATED RULES STARTS*/
 /* PADDING */
 /* XS -> 1rem */
-.top-padding-xs {
+.padding-top-xs {
     padding-top: 1rem;
 }
-.bottom-padding-xs {
+.padding-bottom-xs {
     padding-bottom: 1rem;
 }
-.left-padding-xs {
+.padding-left-xs {
     padding-left: 1rem;
 }
-.right-padding-xs {
+.padding-right-xs {
     padding-right: 1rem;
 }
 .padding-all-xs {
     padding: 1rem;
 }
 /* S -> 2rem */
-.top-padding-s {
+.padding-top-s {
     padding-top: 2rem;
 }
-.bottom-padding-s {
+.padding-bottom-s {
     padding-bottom: 2rem;
 }
-.left-padding-s {
+.padding-left-s {
     padding-left: 2rem;
 }
-.right-padding-s {
+.padding-right-s {
     padding-right: 2rem;
 }
 .padding-all-s {
     padding: 2rem;
 }
 /* M -> 5rem */
-.top-padding-m {
+.padding-top-m {
     padding-top: 5rem;
 }
-.bottom-padding-m {
+.padding-bottom-m {
     padding-bottom: 5rem;
 }
-.left-padding-m {
+.padding-left-m {
     padding-left: 5rem;
 }
-.right-padding-m {
+.padding-right-m {
     padding-right: 5rem;
 }
 .padding-all-m {
     padding: 5rem;
 }
 /* L -> 7rem */
-.top-padding-l {
+.padding-top-l {
     padding-top: 7rem;
 }
-.bottom-padding-l {
+.padding-bottom-l {
     padding-bottom: 7rem;
 }
-.left-padding-l {
+.padding-left-l {
     padding-left: 7rem;
 }
-.right-padding-l {
+.padding-right-l {
     padding-right: 7rem;
 }
 .padding-all-l {
     padding: 7rem;
 }
 /* XL -> 10rem */
-.top-padding-xl {
+.padding-top-xl {
     padding-top: 10rem;
 }
-.bottom-padding-xl {
+.padding-bottom-xl {
     padding-bottom: 10rem;
 }
-.left-padding-xl {
+.padding-left-xl {
     padding-left: 10rem;
 }
-.right-padding-xl {
+.padding-right-xl {
     padding-right: 10rem;
 }
 .padding-all-xl {
@@ -154,96 +154,96 @@
 }
 /* MARGIN */
 /* XS -> 1rem */
-.top-margin-xs {
+.margin-top-xs {
     margin-top: 1rem;
 }
-.bottom-margin-xs {
+.margin-bottom-xs {
     margin-bottom: 1rem;
 }
-.left-margin-xs {
+.margin-left-xs {
     margin-left: 1rem;
 }
-.right-margin-xs {
+.margin-right-xs {
     margin-right: 1rem;
 }
 .margin-all-xs {
     margin: 1rem;
 }
 /* S -> 2rem */
-.top-margin-s {
+.margin-top-s {
     margin-top: 2rem;
 }
-.bottom-margin-s {
+.margin-bottom-s {
     margin-bottom: 2rem;
 }
-.left-margin-s {
+.margin-left-s {
     margin-left: 2rem;
 }
-.right-margin-s {
+.margin-right-s {
     margin-right: 2rem;
 }
 .margin-all-s {
     margin: 2rem;
 }
 /* M -> 5rem */
-.top-margin-m {
+.margin-top-m {
     margin-top: 5rem;
 }
-.bottom-margin-m {
+.margin-bottom-m {
     margin-bottom: 5rem;
 }
-.left-margin-m {
+.margin-left-m {
     margin-left: 5rem;
 }
-.right-margin-m {
+.margin-right-m {
     margin-right: 5rem;
 }
 .margin-all-m {
     margin: 5rem;
 }
 /* L -> 7rem */
-.top-margin-l {
+.margin-top-l {
     margin-top: 7rem;
 }
-.bottom-margin-l {
+.margin-bottom-l {
     margin-bottom: 7rem;
 }
-.left-margin-l {
+.margin-left-l {
     margin-left: 7rem;
 }
-.right-margin-l {
+.margin-right-l {
     margin-right: 7rem;
 }
 .margin-all-l {
     margin: 7rem;
 }
 /* XL -> 10rem */
-.top-margin-xl {
+.margin-top-xl {
     margin-top: 10rem;
 }
-.bottom-margin-xl {
+.margin-bottom-xl {
     margin-bottom: 10rem;
 }
-.left-margin-xl {
+.margin-left-xl {
     margin-left: 10rem;
 }
-.right-margin-xl {
+.margin-right-xl {
     margin-right: 10rem;
 }
 .margin-all-xl {
     margin: 10rem;
 }
 /* AUTO */
-.left-margin-auto {
+.margin-left-auto {
     margin-left: auto;
 }
-.right-margin-auto {
+.margin-right-auto {
     margin-right: auto;
 }
-.top-margin-auto {
+.margin-top-auto {
     margin-top: auto;
 }
-.bottom-margin-auto {
+.margin-bottom-auto {
     margin-bottom: auto;
 }
 .margin-all-auto {
@@ -258,6 +258,16 @@
 .text-right {
     text-align: right;
 }
+.text-upper {
+    text-transform: uppercase;
+}
+.text-lower{
+    text-transform: lowercase;
+}
+.text-decoration-none {
+    text-decoration: none;
+}
+
 /* TEXT RELATED RULES ENDS */
 
 /* PUT AT THE END */
