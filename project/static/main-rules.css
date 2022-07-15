@@ -3,6 +3,18 @@
     --window-max-width: 1440px;
 }
 
+/* BLOCK RELATED RULES STARTS */
+.block-container {
+    display: block;
+}
+.inline-container {
+    display: inline;
+}
+.inline-block-container {
+    display: inline-block;
+}
+/* BLOCK RELATED RULES ENDS */
+
 /* BORDER RELATED RULES STARTS */
 .border-rounded {
     border-radius: 3.4rem;
@@ -24,6 +36,7 @@
     display: visible;
 }
 /* BOXING RELATED RULES ENDS */
+
 
 /* FLEX-BOX RELATED RULES STARTS*/
 .flex-container {
@@ -68,8 +81,67 @@
 .align-end {
     align-items: flex-end;
 }
-/* SPACE RELATED RULES ENDS */
+/* FLEX- BOX RELATED RULES ENDS */
 
+/* SIZE RULES STARTS */
+/* WIDTHS */
+.width-100 {
+    width: 100%;
+}
+.width-80 {
+    width: 80%;
+}
+.width-75 {
+    width: 75%;
+}
+.width-66 {
+    width: 66.666%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-33 {
+    width: 33.333%;
+}
+.width-25 {
+    width: 25%;
+}
+.width-20 {
+    width: 20%;
+}
+.width-16 {
+    width: 16.666%;
+}
+/* END WIDTHS */
+/* HEIGHTS */
+.height-100 {
+    height: 100%;
+}
+.height-80 {
+    height: 80%;
+}
+.height-75 {
+    height: 75%;
+}
+.height-66 {
+    height: 66.666%;
+}
+.height-50 {
+    height: 50%;
+}
+.height-33 {
+    height: 33.333%;
+}
+.height-25 {
+    height: 25%;
+}
+.height-20 {
+    height: 20%;
+}
+.height-16 {
+    height: 16.666%;
+}
+/* SIZE RULES ENDS */
 /* SPACING RELATED RULES STARTS*/
 /* PADDING */
 /* XS -> 1rem */

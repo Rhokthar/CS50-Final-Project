@@ -12,14 +12,14 @@ Skills
 <!-- SECTION START -->
 <section class="page_section">
     <!-- SECTION CONTAINER START -->
-    <div class="section_container skills">
+    <div class="flex-container vertical-row boxed-container margin-left-auto margin-right-auto padding-top-m">
         <!-- TEXT CONTAINER START -->
         <div class="text_container">
             <!-- START MAIN__TEXT SKILLS  -->
-            <div class="main__text skills">
+            <div class="main__text margin-bottom-m">
                 <!-- TITLE -->
                 <h2>
-                    <div class="special_text_2 skills">
+                    <div class="special_text_2 margin-left-s margin-bottom-s">
                         <span>S</span>
                         <span>K</span>
                         <span>I</span>
@@ -37,46 +37,52 @@ Skills
                 <p>Here are my programming skills and also something more. Hope that this can help you understand what I'm capable of 😉</p>    
                 <!-- END DESCRIPTION -->
             </div> <!-- END MAIN__TEXT SKILLS -->
-            <div class="progress__wrapper">
-                <div class="skill" id="sb_c_bar">
+            <!-- PROGRESS__BARS -->
+            <div class="flex-container row flex-wrap justify-center width-100" id="skill-progress-bars">
+                <div class="skill width-75" id="sb_c_bar">
                     <h3>C</h3>
-                    <span class="skill_bar" id="sb_c"></span><!-- C (95%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_c"></span> <!-- C (95%) -->
                 </div>  
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>C++</h3>
-                     <span class="skill_bar" id="sb_cpp"></span> <!-- C++ (10%) -->
+                     <span class="skill-bar flex-container height-100 width-100" id="sb_cpp"></span> <!-- C++ (10%) -->
                  </div>
-                 <div class="skill">
+                 <div class="skill width-75">
                      <h3>C#</h3>
-                     <span class="skill_bar" id="sb_csharp"></span><!-- C# (50%) -->
+                     <span class="skill-bar flex-container height-100 width-100" id="sb_csharp"></span><!-- C# (50%) -->
                  </div>              
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>PYTHON</h3>
-                    <span class="skill_bar" id="sb_py"></span><!-- PYTHON (85%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_py"></span><!-- PYTHON (85%) -->
                 </div>               
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>JAVA</h3>
-                    <span class="skill_bar" id="sb_java"></span><!-- JAVA (5%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_java"></span><!-- JAVA (5%) -->
                 </div>
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>SQL</h3>
-                    <span class="skill_bar" id="sb_sql"></span><!-- SQL (70%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_sql"></span><!-- SQL (70%) -->
                 </div>
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>HTML</h3>
-                    <span class="skill_bar" id="sb_html"></span> <!-- HTML (80%)-->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_html"></span> <!-- HTML (80%)-->
                 </div>             
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>CSS</h3>
-                    <span class="skill_bar" id="sb_css"></span><!-- CSS (60%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_css"></span><!-- CSS (60%) -->
                 </div>                
-                <div class="skill">
+                <div class="skill width-75">
                     <h3>JAVASCRIPT</h3>
-                    <span class="skill_bar" id="sb_js"></span><!-- JAVASCRIPT (35%) -->
+                    <span class="skill-bar flex-container height-100 width-100" id="sb_js"></span><!-- JAVASCRIPT (35%) -->
                 </div>                
             </div> <!-- END PROGRESS WRAPPER -->
-            <p style="margin-top: 5rem;">As I told you before, I'll indicate to you also my soft and secondary skills too:</p>  
+            
+            <p class="margin-top-m paragraph">As I told you before, I'll indicate to you also my soft and secondary skills too:</p>  
+            
+            <!-- TODO: FROM NOW ON FIX CLASSES -->
+            <!-- SIDE SKILLS WRAPPER STARTS -->
             <div class="side_skills_wrapper">
+                <!-- SOFT SKILLS STARTS -->
                 <div class="soft_skills">
                     <h3>Soft Skills</h3>
                     <ul>
@@ -142,10 +148,10 @@ Skills
         // Animation After Load
         window.addEventListener("load", () => {
             let skillsTimeLine = gsap.timeline();
-            let skillsHeroArray = document.querySelectorAll(".main__text.skills > p")
+            let skillsHeroArray = document.querySelectorAll(".main__text > p")
 
             // Title Animation
-            skillsTimeLine.from(".special_text_2.skills", {
+            skillsTimeLine.from(".special_text_2", {
                 delay: 0.5,
                 opacity: 0,
                 stagger: 1,
@@ -187,7 +193,7 @@ Skills
         });
 
         // Bars Animation
-        let barsArray = document.querySelectorAll(".skill_bar");
+        let barsArray = document.querySelectorAll(".skill-bar");
         let barsContainerArray = document.querySelectorAll(".skill");
 
         // Animating Container of the Bar
