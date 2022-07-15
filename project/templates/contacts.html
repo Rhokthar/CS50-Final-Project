@@ -11,50 +11,49 @@ Contacts
 {% block main %}
 <section class="page_section">
     <!-- START SECTION_CONTAINER PROJECTS -->
-    <div class="section_container contacts vertical-row">
+    <div class="flex-container vertical-row flex-wrap width-100 align-center padding-top-m text-center" id="contacts-page">
         <!-- PAGE__WRAPPER STARTS -->
-        <div class="page__wrapper width-100 left-padding right-padding">
+        <div class="flex-container boxed-container vertical-row width-100 padding-left-s padding-right-s align-center">
             <!-- START TITLE__WRAPPER -->
-            <div class="title__wrapper">
-                <!-- DIV__WRAPPER STARTS -->
-                <div class="div__wrapper justify-center">
-                    <h2>
-                        <!-- SPECIAL TEXT START -->
-                        <div class="special_text_2 contacts">
-                            <span>C</span>
-                            <span>O</span>
-                            <span>N</span>
-                            <span>T</span>
-                            <span>A</span>
-                            <span>C</span>
-                            <span>T</span>
-                            <span>S</span>
-                        </div> <!-- SPECIAL TEXT END-->
-                    </h2>
-                </div> <!-- DIV__WRAPPER ENDS -->
+            <div class="title__wrapper padding-bottom-s">
+                <h2>
+                    <!-- SPECIAL TEXT START -->
+                    <div class="special_text_2 contacts">
+                        <span>C</span>
+                        <span>O</span>
+                        <span>N</span>
+                        <span>T</span>
+                        <span>A</span>
+                        <span>C</span>
+                        <span>T</span>
+                        <span>S</span>
+                    </div> <!-- SPECIAL TEXT END-->
+                </h2>
             </div> <!-- END TITLE -->
             
             <p class="desc">You can contact me directly with this form, or via socials and telephone. I'm interested in everything, so go on!</p>
 
             <!-- FORM STARTS  -->
-            <form action="/contacts" method="post">
-                <!-- FORM CONTAINER - DIV__WRAPPER -->
-                <div class="div__wrapper form vertical-row align-center bg-dark-theme-hard padding-all border-rounded width-75">
-                    <label for="name_input" class="main-text-color text-shadow-color bottom-padding">Name</label>
-                    <input type="text" id="name_input" name="name_input" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Name" autofocus />
-                    <label for="surname_input" class="top-padding bottom-padding main-text-color text-shadow-color">Surname</label>
-                    <input type="text" id="surname_input" name="surname_input" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Surname" />
-                    <label for="e-mail" class="top-padding bottom-padding main-text-color text-shadow-color">E-mail</label>
-                    <input type="email" id="e-mail" name="e-mail" class="input-text-style input-text-width bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your E-Mail" />
-                    <label for="contact_info" class="top-padding bottom-padding main-text-color text-shadow-color">More Informations</label>
-                    <textarea id="contact_info" name="contact_info" class="input-text-style bg-dark-theme-medium box-shadow-color resize-vertical height-20 width-75 min-height" placeholder="What are you contacting me for?"></textarea>
-                    <button class="btn" type="submit">Submit</button>
-                </div> <!-- END FORM CONTAINER - DIV__WRAPPER ENDS -->
-            </form> <!-- FORM ENDS -->
+            <!-- FORM CONTAINER - DIV__WRAPPER -->
+            <div class="flex-container row bg-dark-theme-hard padding-all-s border-rounded width-75 width-lg-100">
+                <form action="/contacts" method="post">
+                    <div class="flex-container vertical-row align-center">
+                        <label for="name_input" class="padding-bottom-xs main-text-color text-shadow-color">Name</label>
+                        <input type="text" id="name_input" name="name_input" class="input-text-style width-50 bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Name" autofocus />
+                        <label for="surname_input" class="padding-top-s padding-bottom-xs main-text-color text-shadow-color">Surname</label>
+                        <input type="text" id="surname_input" name="surname_input" class="input-text-style width-50 bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your Surname" />
+                        <label for="e-mail" class="padding-top-s padding-bottom-xs main-text-color text-shadow-color">E-mail</label>
+                        <input type="email" id="e-mail" name="e-mail" class="input-text-style width-50 bg-dark-theme-medium box-shadow-color bottom-margin" placeholder="Your E-Mail" />
+                        <label for="contact_info" class="padding-top-s padding-bottom-xs main-text-color text-shadow-color">More Informations</label>
+                        <textarea id="contact_info" name="contact_info" class="input-text-style margin-bottom-s bg-dark-theme-medium box-shadow-color resize-vertical height-20 width-75 min-height" placeholder="What are you contacting me for?"></textarea>
+                        <button class="btn" type="submit">Submit</button>
+                    </div>
+                </form> <!-- FORM ENDS -->
+            </div> <!-- END FORM CONTAINER - DIV__WRAPPER ENDS -->  
             <!-- OTHER CONTACTS -->
-            <div class="other_contacts">
+            <div class="flex-container boxed-container row justify-center width-100 padding-all-m">
                 <!-- OTHER CONTACTS DIV__WRAPPER STARTS -->
-                <div class="div__wrapper justify-center">
+                <div class="flex-container row flex-wrap justify-center align-center width-50">
                     <p><span class="diff_color">Telephone</span> - +39 392 551 3237</p>
                     <p><span class="diff_color">Socials</span> - <a href="" target="_blank" class="a-hover secondary-text-color">Linkedin</a>, <a href="" target="_blank" class="a-hover secondary-text-color">GitHub</a>, <a href="" target="_blank" class="a-hover secondary-text-color">Instagram</a></p>
                 </div> <!-- OTHER CONTACTS DIV__WRAPPER ENDS -->
