@@ -39,6 +39,9 @@ def skills():
 
 
 # Contacts
-@app.route("/contacts")
+@app.route("/contacts", methods=["GET", "POST"])
 def contacts():
-    return render_template("contacts.html")
+    if request.method == "POST":
+        return render_template("index.html")
+    else:
+        return render_template("contacts.html")

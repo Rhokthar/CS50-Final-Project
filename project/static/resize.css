@@ -2,11 +2,7 @@
     section .section_container {
         flex-direction: row;
     }
-    /* .section_container > * + * {
-        padding-left: 5em;
-    } */
 }
-/* < */
 /* If width < 1520... */
 /* Don't Display Lateral Nav-bar */
 @media (max-width: 1715px) {
@@ -33,9 +29,6 @@
 @media (max-width: 1490px) {
     .text_container h1 {
         font-size: 2.5rem;
-    }
-    .text_container p {
-        font-size: 18px;
     }
     .symbol {
         font-size: 6rem;
@@ -112,13 +105,13 @@
           text-indent: 0;
         }
       }
-    .img_container img,
+    /* .img_container img,
     .img_container .tooltip,
     .img_container .tooltip::before,
     .img_container .tooltip::after {
         display: none;
         cursor: default;
-    }
+    } */
 }
 /* If width < 1200px... */
 @media (max-width: 1200px) {
@@ -273,9 +266,6 @@
         font-size: 1rem;
         padding-left: 1rem;
     }
-    .text_container p {
-        font-size: 15px;
-    }
     .symbol {
         font-size: 4rem;
     }
@@ -401,9 +391,7 @@
         font-size: 0.8rem;
         padding-left: 1rem;
     }
-    .text_container p {
-        font-size: 15px;
-    }
+
     .symbol {
         font-size: 2.5rem;
     }
@@ -656,9 +644,6 @@
     .text_container h1 {
         font-size: 2rem;
         padding-left: 1rem;
-    }
-    .text_container p {
-        font-size: 15px;
     }
     .symbol {
         font-size: 5rem;

@@ -35,8 +35,9 @@ h1 {
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 section {
-    /* border: 1px solid red; */
     background-color: var(--bg-dark-theme-light);
+    font-size: 1.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .footer, .header {
     position: relative;
@@ -209,11 +210,11 @@ section .section_container {
     line-height: 1.5;
     text-transform: uppercase;
 }
-.text_container p {
+/* .text_container p {
     font-family: "Courier New", Courier, monospace;
     font-size: 20px;
     margin: 2rem;
-}
+} */
 .title, .symbol {
     position: relative;
     display: inline-block;
@@ -338,10 +339,6 @@ h2 .special_text_2 {
     /* border: 1px solid blue; */
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-size: 0;
-    margin-left: 10px;
-    /* line-height: 1.5; */
-    height: fit-content;
-    width: fit-content;
     text-transform: uppercase;
     text-shadow: 0 0 10px var(--shadow-color);   
 }
@@ -449,7 +446,6 @@ button.btn:hover {
 }
 .disclaimer {
     background-color: rgba(255, 0, 0, 0.4);
-    border-radius: 35px;
     box-shadow: 0 0 10px var(--shadow-color);
     transition: 0.5s;
 }
@@ -552,37 +548,17 @@ button.btn:hover {
     /* border: 1px solid blue; */
     margin-right: -4rem;
 }
-/* ABOUT ME PAGE; SKILLS PAGE */
-.main__text.about_me,
-.secondary__text.about_me {
-    position: relative;
-}
-.about_me p,
-.skills p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.7rem;
-}
-.special_text_2.about_me {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
-}
+/* ABOUT ME PAGE RULES STARTS */
 .secondary__text li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
     list-style-type: circle;
     line-height: 2;
 }
-.carousel {
-    /* border: 1px solid blue; */
-    display: flex;
+.carousel-wrapper {
     position: relative;
-    max-width: 500px;
-    max-height: 500px;
     float: right;
     overflow: hidden;
-    margin: 2rem;
+    max-width: 50rem;
     box-shadow: 0 0 10px var(--shadow-color);
-    border-radius: 34px;
 }
 .img_container.about_me {
     /* border: 1px solid blue; */
@@ -605,6 +581,7 @@ button.btn:hover {
 .img_container.about_me.hobby {
     float: left;
 }
+
 .personal.img,
 .hobby.img {
     min-width: 100%;
@@ -618,7 +595,9 @@ button.btn:hover {
 .secondary__text.about_me > * {
     flex: 1;
 }
-/* SKILLS PAGE */
+/* ABOUT ME PAGE RULES ENDS */
+
+/* SKILLS PAGE RULES STARTS*/
 #skill-progress-bars {
     gap: 10rem;
 }
@@ -632,6 +611,7 @@ button.btn:hover {
 .skill h3 {
     position: absolute;
     top: 100%;
+    font-size: 2.5rem;
 }
 .skill > span {
     background-color: var(--main-text-dark-theme);
@@ -677,34 +657,12 @@ button.btn:hover {
     /* SQL (70%) */
     max-width: 70%;
 }
-.side_skills_wrapper,
-.wannaknow_skills {
-    /* border: 1px solid green; */
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10rem;
-}
-.side_skills_wrapper > div,
-.wannaknow_skills > div {
-    width: 20%;
-}
-.side_skills_wrapper > div h3,
-.wannaknow_skills > div h3 {
-    text-align: center;
+.skills-wrapper h3 {
     color: var(--main-text-dark-theme);
     text-shadow: 0 0 5px var(--shadow-color);
-    margin-bottom: 2rem;
+    font-size: 3rem;
 }
-.side_skills_wrapper > div li, 
-.wannaknow_skills > div li {
-    list-style-type: none;
-    font-size: 18px;
-}
-.side_skills_wrapper > div li::before, 
-.wannaknow_skills > div li::before {
+.skills-wrapper li::before {
     content: "\2022";
     color: var(--main-text-dark-theme);
     font-weight: bold;
@@ -713,7 +671,16 @@ button.btn:hover {
     margin: -1em;
     filter: drop-shadow(0 0 3px var(--main-text-dark-theme));
 }
-/* PROJECTS PAGE */
+.skills-wrapper li > span {
+    font-weight: 500;
+}
+#side-skills-wrapper,
+#wannaknow-skills {
+    gap: 5rem;
+}
+/* SKILLS PAGE RULES ENDS */
+
+/* PROJECTS PAGE RULES STARTS*/
 .disclaimer p {
     font-size: 1.5rem;
 }
@@ -732,9 +699,11 @@ button.btn:hover {
 .project_img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px var(--main-text-dark-theme);
-    border: 2px solid var(--main-text-dark-theme); /* Maybe not */
+    border: 2px solid var(--main-text-dark-theme);
 }
-/* Contacts Page */
+/* PROJECTS PAGE RULES ENDS */
+
+/* CONTACTS PAGE RULES STARTS */
 #contacts-page {
     font-size: 1.8rem;
 }
@@ -757,6 +726,8 @@ button.btn:hover {
     background-color: var(--bg-dark-theme-light);
     filter: drop-shadow(0 0 5px var(--main-text-dark-theme));
 }
+/* CONTACTS PAGE RULES ENDS */
+
 /************************/
 /* Top navigation menu */
 /**********************/
