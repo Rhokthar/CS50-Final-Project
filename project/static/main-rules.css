@@ -83,6 +83,24 @@
 }
 /* FLEX- BOX RELATED RULES ENDS */
 
+/* POSITION RULES STARTS */
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position: fixed;
+}
+.position-static {
+    position: static;
+}
+.position-sticky {
+    position: sticky;
+}
+/* POSITION RULES ENDS */
+
 /* SIZE RULES STARTS */
 /* WIDTHS */
 .width-100 {
@@ -142,6 +160,7 @@
     height: 16.666%;
 }
 /* SIZE RULES ENDS */
+
 /* SPACING RELATED RULES STARTS*/
 /* PADDING */
 /* XS -> 1rem */
@@ -339,8 +358,21 @@
 .text-decoration-none {
     text-decoration: none;
 }
-
 /* TEXT RELATED RULES ENDS */
+/* VISIBILITY RULES STARTS */
+.display-none {
+    display: none;
+}
+.visibility-hidden {
+    visibility: hidden;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-visible {
+    overflow: visible;
+}
+/* VISIBILITY RULES ENDS */
 
 /* PUT AT THE END */
 /* PROJECT START STUFF STARTS*/

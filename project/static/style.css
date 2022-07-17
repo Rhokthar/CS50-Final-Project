@@ -553,47 +553,23 @@ button.btn:hover {
     list-style-type: circle;
     line-height: 2;
 }
-.carousel-wrapper {
-    position: relative;
-    float: right;
-    overflow: hidden;
-    max-width: 50rem;
-    box-shadow: 0 0 10px var(--shadow-color);
+.carousel {
+    /* border: 1px solid red; */
+    filter: drop-shadow(0 0 10px var(--shadow-color));
 }
-.img_container.about_me {
-    /* border: 1px solid blue; */
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 500px;
-    height: 500px;
-    
-}
-.img_container.about_me:hover {
-    cursor: default;
-    transform: scale(1);
-}
-.img_container.about_me > * {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-}
+
 .img_container.about_me.hobby {
     float: left;
 }
 
-.personal.img,
+/* .personal.img,
 .hobby.img {
     min-width: 100%;
-    position: relative;
-}
+} */
 .secondary__text.about_me {
     display: flex;
     margin-top: 10rem;
     /* gap: 2rem; */
-}
-.secondary__text.about_me > * {
-    flex: 1;
 }
 /* ABOUT ME PAGE RULES ENDS */
 
