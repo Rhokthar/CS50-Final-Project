@@ -519,8 +519,6 @@ button.btn:hover {
 }
 #contacts .separator {
     background-color: var(--bg-dark-theme-hard);
-    /* margin: 0;
-    padding: 0; */
 }
 #contacts p,
 #contacts a {
@@ -548,8 +546,9 @@ button.btn:hover {
     /* border: 1px solid blue; */
     margin-right: -4rem;
 }
+
 /* ABOUT ME PAGE RULES STARTS */
-.secondary__text li {
+.curiosities-list li {
     list-style-type: circle;
     line-height: 2;
 }
@@ -557,20 +556,10 @@ button.btn:hover {
     /* border: 1px solid red; */
     filter: drop-shadow(0 0 10px var(--shadow-color));
 }
-
 .img_container.about_me.hobby {
     float: left;
 }
 
-/* .personal.img,
-.hobby.img {
-    min-width: 100%;
-} */
-.secondary__text.about_me {
-    display: flex;
-    margin-top: 10rem;
-    /* gap: 2rem; */
-}
 /* ABOUT ME PAGE RULES ENDS */
 
 /* SKILLS PAGE RULES STARTS*/

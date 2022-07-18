@@ -254,7 +254,7 @@ Projects
         }, "-=0.5");
         projectsTimeLine.from(buttonsArray[0], {
             opacity: 0,
-            x: (100 * invertAnimationDirection),
+            y: 100,
             duration: 0.5,
             ease: "bounce"
         }, "-=0.5");
@@ -271,7 +271,7 @@ Projects
                 end: "bottom center"
             },
             opacity: 0,
-            x: (100 * invertAnimationDirection * -1),
+            x: (100 * invertAnimationDirection),
             duration: 1,
             ease: "power4.out"
         });
@@ -288,12 +288,12 @@ Projects
         });
         gsap.from(buttonsArray[i], {
             scrollTrigger: {
-                trigger: textWrapperArray[i],
-                start: "top center",
+                trigger: buttonsArray[i],
+                start: "top 80%",
                 end: "bottom center",
             },
             opacity: 0,
-            x: (100 * invertAnimationDirection),
+            y: 100,
             duration: 0.5,
             ease: "bounce"
         });

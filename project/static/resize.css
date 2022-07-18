@@ -802,6 +802,18 @@
     .height-md-16 {
         height: 16.666%;
     }
+    /* CONTEXTUAL RESIZE STARTS */
+    .width-md-66-padding-personal {
+        width: 66%;
+        padding-bottom: 70%;
+        position: relative
+    }
+    .width-md-66-padding-hobby {
+        width: 66%;
+        padding-bottom: 60%;
+        position: relative;
+    }
+    /* CONTEXTUAL RESIZE ENDS */
 }
 /* Smartphone (XS) */
 @media screen and (max-width: 560px)
