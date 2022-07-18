@@ -123,13 +123,18 @@ About Me
                     <li>I'm engaged with my twin-soul, Lisa, since 2018 and we're planning to go living together.</li>
                 </ul> <!-- End of List of Curiosities-->
             </div> <!-- End Curiosities Container-->
-        </div> <!-- End "CURIOSITIES" Section -->        
+        </div> <!-- End "CURIOSITIES" Section -->      
     </div> <!-- END "SECTION_CONTAINER"-->
     <script>
         // Variables
         const imagesArray = gsap.utils.toArray('.personal.img');
+        const secondImagesArray = gsap.utils.toArray(".hobby.img");
+        
         const imagesAfterFirst = imagesArray.slice(1);
+        const secondImagesAfterFirst = secondImagesArray.slice(1);
+        
         const tl = gsap.timeline({repeat: -1});
+        const secondTL = gsap.timeline({repeat: -1});
 
         // FadeIn Function
         function fadeIn(image) {
@@ -144,10 +149,13 @@ About Me
 
         // Pass images after the first to FadeIn function
         imagesAfterFirst.forEach(image => tl.add(fadeIn(image)));
+        secondImagesAfterFirst.forEach(image => secondTL.add(fadeIn(image)))
         // After all images, fade the first image
         tl.add(fadeIn(imagesArray[0]));
+        secondTL.add(fadeIn(secondImagesArray[0]))
         // Set value of the first image
         tl.set(imagesArray[0], {opacity: 1}, 0);
+        secondTL.add(secondImagesArray[0], {opacity: 1}, 0);
     </script>
 </section> <!-- END "PAGE_SECTION ABOUT_ME"-->
 <!-- Start SCRIPTS -->
