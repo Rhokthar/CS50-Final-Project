@@ -36,105 +36,125 @@ lang="en"
     <!-- "HERO" Section: title and Bitmoji -->
     <section class="page_section boxed-container" id="hero" role="hero">
         <!-- Container of the containers of the elements in the section -->
-        <div class="flex-container row align-center justify-center width-100 padding-top-l"> <!-- .section .section_container -->
+        <div class="flex-container row align-center justify-center width-100 padding-top-xl padding-left-s padding-right-s"> <!-- .section .section_container -->
             <!-- Container of the text part -->
-            <div class="text_container width-50">
+            <div class="text_container flex-container justify-center hero width-50 width-xs-100 width-special-100">
                 <!-- Title -->
-                <h1 role="section-title">
-                    <span class="title">Hello, everyone! I'm</span>
-                    <!-- My Name: bouncing and filling each letter -->
-                    <div class="special_text">
-                        <span class="symbol">></span>
-                        <span class="letter" data-text="S">S</span>
-                        <span class="letter" data-text="I">I</span>
-                        <span class="letter" data-text="M">M</span>
-                        <span class="letter" data-text="O">O</span>
-                        <span class="letter" data-text="N">N</span>
-                        <span class="letter" data-text="E">E&nbsp;</span>                        
-                        <span class="letter" data-text="M">M</span>
-                        <span class="letter" data-text="O">O</span>
-                        <span class="letter" data-text="L">L</span>
-                        <span class="letter" data-text="I">I</span>
-                        <span class="letter" data-text="N">N</span>
-                        <span class="letter" data-text="O">O</span>
-                        <br>
+                <div class="wrapper">
+                    <h1 role="section-title">
+                        <span class="title">Hello, everyone! I'm</span>
+                        <!-- My Name: bouncing and filling each letter -->
+                        <div class="special_text flex-container column-lg">
+                            <div class="name padding-right-s">
+                                <span class="symbol">></span>
+                                <span class="letter" data-text="S">S</span>
+                                <span class="letter" data-text="I">I</span>
+                                <span class="letter" data-text="M">M</span>
+                                <span class="letter" data-text="O">O</span>
+                                <span class="letter" data-text="N">N</span>
+                                <span class="letter" data-text="E">E</span>
+                            </div> <!-- &nbsp;-->
+                            <div class="surname">
+                                <span class="letter" data-text="M">M</span>
+                                <span class="letter" data-text="O">O</span>
+                                <span class="letter" data-text="L">L</span>
+                                <span class="letter" data-text="I">I</span>
+                                <span class="letter" data-text="N">N</span>
+                                <span class="letter" data-text="O">O</span>
+                            </div>
+                            <br>
+                        </div>
+                        <!-- Cycling Words -->
+                        <div class="adjectives_container flex-container">
+                            <span>a</span>
+                            <div class="adjectives">
+                                <div>Software Developer</div>
+                                <div>Guy</div>
+                                <div>Challenge Lover</div>
+                            </div>
+                        </div>
+                    </h1>
+                    <!-- Underline -->
+                    <div class="underline padding-top-s padding-left-s text-center-lg">
+                        <p>Front-End <span class="diff_color">|</span> Back-End </p>
                     </div>
-                    <!-- Cycling Words -->
-                    <div class="adjectives_container">
-                        <span>a</span>
-                        <div class="adjectives">
-                            <div>Software Developer</div>
-                            <div>Guy</div>
-                            <div>Challenge Lover</div>
-                        </div> 
-                    </div>
-                </h1>
-                <!-- Underline -->
-                <div class="underline padding-top-s padding-left-s">
-                    <p>Front-End <span class="diff_color">|</span> Back-End </p>
-                </div>                
+                </div>
             </div> <!-- End "text_container"-->
             <!-- Container of the image part -->
-            <div class="img_container width-33" role="link">
-                <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png" />
-                <!-- Tooltip - Thanks to Bitmoji -->
-                <span class="tooltip" role="tooltip">
-                    Thanks to 
-                    <a href="https://www.bitmoji.com/" target="_blank">bitmoji</a> 
-                    for the Avatars!
-                </span>                
+            <div class="img_container flex-container width-25" role="link" id="hero-image">
+                <div class="wrapper margin-left-auto margin-right-auto">
+                    <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png" />
+                    <!-- Tooltip - Thanks to Bitmoji -->
+                    <span class="tooltip" role="tooltip">
+                        Thanks to
+                        <a href="https://www.bitmoji.com/" target="_blank">bitmoji</a>
+                        for the Avatars!
+                    </span>
+                </div>      
             </div>
         </div>
+
         <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-    </section> <!-- End "HERO" Section -->    
+
+    </section> <!-- End "HERO" Section -->
+
     <!-- "ABOUT ME" Section: very short description + my photo -->
-    <section class="page_section" id="about_me" role="info">
-        <div class="section_container about_me">
+    <section class="page_section boxed-container" id="about_me" role="info">
+        <div class="flex-container row flex-wrap justify-center-xl width-100">
             <!-- IMG First -->
-            <div class="img_container_2">
-                <img src="{{ url_for('static', filename='Me.png') }}" alt="Me.png">
+            <div class="flex-container justify-end justify-center-xl width-50">
+                <div class="wrapper about_me flex-container width-100 width-xl-66 width-md-80 width-xs-100 padding-bottom-xl-66-m padding-right-xl-66-none flex-container justify-end padding-right-m">
+                    <div class="img_container_2">
+                        <a href="/about-me"><img src="{{ url_for('static', filename='Me.png') }}" alt="Me.png" class="border-rounded" /></a>
+                    </div>
+                </div>
             </div>
             <!-- Text -->
-            <div class="text_container_2">
-                <!-- Biggest Title ever -->
-                <h2 role="section_title">
-                    <div class="special_text_2">
-                        <span>A</span>
-                        <span>b</span>
-                        <span>o</span>
-                        <span>u</span>
-                        <span>t&nbsp;</span>
-                        <span>M</span>
-                        <span>e</span>
+            <div class="flex-container align-center justify-center-xl width-33 width-xl-66 width-md-100">
+                <div class="text_container_2 about_me width-100 padding-left-m padding-left-xl-none padding-left-md-s">
+                    <!-- Biggest Title ever -->
+                    <h2 role="section_title">
+                        <div class="special_text_2">
+                            <span>A</span>
+                            <span>b</span>
+                            <span>o</span>
+                            <span>u</span>
+                            <span>t&nbsp;</span>
+                            <span>M</span>
+                            <span>e</span>
+                        </div>
+                    </h1>
+                    <!-- Form: Nome, Cognome, Età, Sesso, Cittadinanza, Cosa faccio -->
+                    <div class="aboutme_form" role="info">
+                        <h3>Name:</h3><p>Simone</p><br>
+                        <h3>Last Name:</h3><p>Molino</p><br>
+                        <h3>Age:</h3><p>26</p><br>
+                        <h3>Gender:</h3><p>Male</p><br>
+                        <h3>Country:</h3><p>Italy</p><br>
+                        <h3>Who am I:</h3><p>I'm a never-ending CS's student and a Software Developer for both Back-End and Front-End. Currently, I'm taking courses and I'm studying both UI/UX and Machine Learning's stuffs</p>
+                        <div class="button-wrapper about_me flex-container width-100 padding-top-s">
+                            <form action="/about_me" method="get" class="margin-left-auto margin-right-auto">
+                                <button class="btn">More About Me</button>
+                            </form>
+                        </div>
                     </div>
-                </h1>
-                <!-- Form: Nome, Cognome, Età, Sesso, Cittadinanza, Cosa faccio -->
-                <div class="aboutme_form" role="info">
-                    <h3>Name:</h3><p>Simone</p><br>
-                    <h3>Last Name:</h3><p>Molino</p><br>
-                    <h3>Age:</h3><p>26</p><br>
-                    <h3>Gender:</h3><p>Male</p><br>
-                    <h3>Country:</h3><p>Italy</p><br>
-                    <h3>Who am I:</h3><p>I'm a never-ending CS's student and a Software Developer for both Back-End and Front-End. Currently, I'm taking courses and I'm studying both UI/UX and Machine Learning's stuffs</p>
-                    <form action="/about_me" method="get">
-                        <button class="btn">More About Me</button>            
-                    </form>                    
                 </div>
             </div>
         </div>
         <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#242424" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-    </section> <!-- End "ABOUT ME" Section -->    
+    </section> <!-- End "ABOUT ME" Section --> 
+
     <!-- "PROJECTS" Section -->
-    <section class="page_section" id="projects" role="info">
-        <div class="section_container projects">
+    <section class="page_section boxed-container width-100 bg-dark-theme-hard" id="projects" role="info">
+        <div class="flex-container vertical-row width-80 margin-left-auto margin-right-auto">
             <!-- Title -->
-            <div class="text_container_3">
+            <div class="text_container_3 projects">
                 <h2 role="section_title">
-                    <div class="special_text_2">
+                    <div class="special_text_2 projects padding-left-m">
                         <span>P</span>
                         <span>R</span>
                         <span>O</span>
@@ -145,78 +165,93 @@ lang="en"
                         <span>S</span>
                     </div>
                 </h1>
+            
+                <p class="padding-left-m paragraph">Here are some of the projects that I've been (and I'm currently) working on:</p>
 
-                <p>Here are some of the projects that I've been (and I'm currently) working on:</p>
-
-                <!-- Projects view -->       
-                <!-- Container for all projects -->
-                <div class="projects_container">
-                    <!-- Class Project Container -->
-                    <div class="project">
-                        <h2>Class Project</h2>
-                        <img src="{{ url_for('static', filename='class-project-cs50-finance.png') }}" alt="cs50-finance.png" width="390" height="250">
-                        <h3>CS50 - Finance</h3>
-                        <p>Based on the IEX API, this Web application resumes all the concepts studied in the CS50's Course.</p>
-                    </div>
-                    <!-- Personal Project Container -->
-                    <div class="project">
-                        <h2>Personal Project</h2>
-                        <img src="{{ url_for('static', filename='password.png') }}" alt="password.png" width="390" height="250">
-                        <h3>Password Manager</h3>
-                        <p>A funny way to practice, and I actually need one.<br> Will be released upon finishing as free app.<br> Because if it's mine is better 😝</p>
-                    </div>
-                    <!-- Professional Project Container -->
-                    <div class="project">
-                        <h2>Professional Project</h2>
-                        <img src="{{ url_for('static', filename='placeholder.png') }}" alt="placeholder.png" width="390" height="250">
-                        <h3>none</h3>
-                        <p>As soon as I'll be hired by someone, I'll update this field and the project's page as well.</p>
+            </div>
+            <!-- Projects view -->       
+            <!-- Container for all projects -->
+            <div class="projects_container flex-container flex-wrap justify-space-between position-relative width-100 padding-top-m">
+                <!-- Class Project Container -->
+                <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
+                    <h2 class="margin-bottom-xs">Class Project</h2>
+                    <a href="/projects"><img src="{{ url_for('static', filename='class-project-cs50-finance.png') }}" alt="cs50-finance.png" width="390" height="250" class=" border-rounded"></a>
+                    <h3 class="margin-top-xs">CS50 - Finance</h3>
+                    <p class="paragraph padding-left-s padding-right-s">Based on the IEX API, this Web application resumes all the concepts studied in the CS50's Course.</p>
+                </div>
+                <!-- Personal Project Container -->
+                <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
+                    <h2 class="margin-bottom-xs">Personal Project</h2>
+                    <a href="/projects"><img src="{{ url_for('static', filename='password.png') }}" alt="password.png" width="390" height="250" class="border-rounded"></a>
+                    <h3 class="margin-top-xs">Password Manager</h3>
+                    <p class="paragraph padding-left-s padding-right-s">A funny way to practice, and I actually need one.<br> Will be released upon finishing as free app.<br> Because if it's mine is better 😝</p>
+                </div>
+                <!-- Professional Project Container -->
+                <div class="flex-container width-33 width-special-project-100 justify-center-special padding-top-special-project">
+                    <div class="project text-center width-100 width-special-project-50 width-lg-100">
+                        <h2 class="margin-bottom-xs">Professional Project</h2>
+                        <a href="/projects"><img src="{{ url_for('static', filename='placeholder.png') }}" alt="placeholder.png" width="390" height="250" class="border-rounded"></a>
+                        <h3 class="margin-top-xs">none</h3>
+                        <p class="paragraph padding-left-s padding-right-s">As soon as I'll be hired by someone, I'll update this field and the project's page as well.</p>
                     </div>
                 </div>
-                <!-- Button: redirect to projects page -->
-                <form action="/projects" method="get">
-                    <button class="btn">More Projects</button>
-                </form>                
             </div>
+            <!-- Button: redirect to projects page -->
+            <div class="button-wrapper flex-container width-100 padding-top-m">
+                <form action="/projects" method="get" class="margin-left-auto margin-right-auto">
+                    <button class="btn">More Projects</button>
+                </form>
+            </div>               
         </div>            
-    </section> <!-- End "PROJECTS" Section -->    
-    <!-- "CONTACTS" Section -->
-    <section class="page_section" id="contacts" role="info">
+    </section> <!-- End "PROJECTS" Section -->
+
+    <!-- "CONTACTS" Section STARTS -->
+    <section class="page_section contacts boxed-container width-100 bg-dark-theme-medium" id="contacts" role="info">
         <div class="separator">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-dark-theme-hard"><path fill="#363636" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
-        <div class="section_container">
-             <!-- Embed Google Maps -->
-             <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=paderno%20dugnano&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <a href="https://123movies-to.org"></a><br>
-                    <a href="https://www.embedgooglemap.net">embedding google maps in webpage</a>
+        <div class="flex-container row flex-wrap-reverse justify-center width-80 margin-left-auto margin-right-auto padding-bottom-xl">
+            <!-- Embed Google Maps -->
+            <div class="flex-container width-50 width-xl-50">
+                <div class="map-wrapper flex-container justify-center width-100">
+                    <div class="mapouter padding-right-m">
+                        <div class="gmap_canvas">
+                            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=paderno%20dugnano&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <a href="https://123movies-to.org"></a><br>
+                            <a href="https://www.embedgooglemap.net">embedding google maps in webpage</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Text -->
-            <div class="text_container_4">
-                <h2 role="section_title">
-                    <div class="special_text_2">
-                        <span>C</span>
-                        <span>O</span>
-                        <span>N</span>
-                        <span>T</span>
-                        <span>A</span>
-                        <span>C</span>
-                        <span>T</span>
-                        <span>S</span>
+            <div class="flex-container width-50 width-xl-66 width-md-100 padding-bottom-xl-66-m">
+                <div class="contact-form-wrapper flex-container justify-center align-center width-100">
+                    <div class="text_container_4">
+                        <h2 role="section_title">
+                            <div class="special_text_2 contacts padding-bottom-s">
+                                <span>C</span>
+                                <span>O</span>
+                                <span>N</span>
+                                <span>T</span>
+                                <span>A</span>
+                                <span>C</span>
+                                <span>T</span>
+                                <span>S</span>
+                            </div>
+                        </h2>
+                        <div class="contacts_form" role="info">
+                            <h3>Tel:</h3><p>(+39) 392 551 3237</p><br>
+                            <h3>E-mail:</h3><p>molino.simone1295@gmail.com</p><br>
+                            <h3>Linkedin:</h3><a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank" class="a-hover">Linkedin's Direct Link</a><br>
+                            <h3>GitHub:</h3><a href="https://github.com/Rhokthar" target="_blank" class="a-hover">GitHub's Direct Link</a><br>
+                            <h3>Instagram:</h3><a href="https://www.instagram.com/rhokthar/" target="_blank" class="a-hover">Instagram's Direct Link</a><br>
+                            <div class="button-wrapper flex-container width-100 padding-top-s">
+                                <form action="/contacts" method="get" class="margin-left-auto margin-right-auto">
+                                    <button class="btn">Wanna E-Mail me?</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </h2>
-                <div class="contacts_form" role="info">
-                    <h3>Tel:</h3><p>(+39) 392 551 3237</p><br>
-                    <h3>E-mail:</h3><p>molino.simone1295@gmail.com</p><br>
-                    <h3>Linkedin:</h3><a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank" class="a-hover">Linkedin's Direct Link</a><br>
-                    <h3>GitHub:</h3><a href="https://github.com/Rhokthar" target="_blank" class="a-hover">GitHub's Direct Link</a><br>
-                    <h3>Instagram:</h3><a href="https://www.instagram.com/rhokthar/" target="_blank" class="a-hover">Instagram's Direct Link</a><br>
-                    <form action="/about_me" method="get">
-                        <button class="btn">Wanna E-Mail me?</button>            
-                    </form> 
                 </div>
             </div>
         </div>
@@ -225,6 +260,7 @@ lang="en"
 
 <!-- Scripts -->
 <script>
+
     // Scrolling Scripts
     // Array of sections
     const sections = document.querySelectorAll("section");
@@ -298,7 +334,7 @@ lang="en"
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.defaults({
-        toggleActions: "restart pause resume reverse",
+        toggleActions: "play pause resume none",
         // markers: true
     });
 
@@ -306,14 +342,14 @@ lang="en"
     // Load done before function execution
     window.addEventListener("load", function() {
 
+        // Hide Home IMG START
+        let navIMG = document.getElementById("nav_img");
+        navIMG.classList.add("hidden");
+        // Hide Home IMG ENDS
+        
         // Animation "HERO"
         let tl = gsap.timeline();
-        // Nav_img animation
-        tl.from("#nav_img", {
-            delay: 1,
-            opacity: 0,
-            duration: 1,
-        });
+      
         // Top-Navbar animation
         tl.from(".header", {
             duration: 1,
@@ -366,23 +402,115 @@ lang="en"
     });
     // End HERO animation
 
-    // Sections easy Animation
-    let sectionsArray = gsap.utils.toArray(".section_container");
-    for (let i = 1; i < sectionsArray.length; i++)
+    // SECTIONS ANIMATIONS STARTS
+    let buttonsArray = document.querySelectorAll(".button-wrapper");
+    // ABOUT ME ANIMATIONS STARTS
+    gsap.from(".wrapper.about_me", {
+        scrollTrigger: {
+            trigger: "#about_me",
+            start: "top 70%",
+            end: "bottom center"
+        },
+        x: -100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    });
+    gsap.from(".text_container_2.about_me", {
+        scrollTrigger: {
+            trigger: "#about_me",
+            start: "top 70%",
+            end: "bottom center"
+        },
+        delay: 0.5,
+        x: 100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    });
+    // Setup all buttons once
+    for (var i = 0; i < buttonsArray.length; i++)
     {
-        gsap.from(sectionsArray[i], {
-            scrollTrigger: {
-                trigger: sectionsArray[i],
-                start: "top center",
-                end: "bottom center"
-            },
-            opacity: 0,
-            y: 100,
-            stagger: 0.25,
-            duration: 1,
-            ease: "Power2.easeOut" 
-        });
+        gsap.from(buttonsArray[i], {
+        scrollTrigger: {
+            trigger: buttonsArray[i],
+            start: "top 90%",
+            end: "bottom center"
+        },
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        ease: "bounce"
+    });
     }
+        
+    // ABOUT ME ANIMATIONS ENDS
+
+    // PROJECTS ANIMATIONS STARTS
+    gsap.from(".special_text_2.projects", {
+        scrollTrigger: {
+            trigger: "#projects",
+            start: "top 70%",
+            end: "bottom center",
+        },
+        x: -100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    });
+    gsap.from(".paragraph", {
+        scrollTrigger: {
+            trigger: "#projects",
+            start: "top 70%",
+            end: "bottom center"
+        },
+        delay: 0.25,
+        x: -100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    });
+    gsap.from(".projects_container", {
+        scrollTrigger: {
+            trigger: ".projects_container",
+            start: "top 70%",
+            end: "bottom center"
+        },
+        delay: 0.25,
+        y: 100,
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out"
+    });
+    // PROJECTS ANIMATIONS ENDS
+
+    // CONTACTS ANIMATIONS STARTS
+    gsap.from(".contact-form-wrapper", {
+        scrollTrigger: {
+            trigger: ".page_section.contacts",
+            start: "30% 70%",
+            end: "bottom center"
+        },
+        x: 100,
+        duration: 2,
+        opacity: 0,
+        ease: "power4.out"
+    });
+    gsap.from(".map-wrapper", {
+        scrollTrigger: {
+            trigger: ".page_section.contacts",
+            start: "30% 70%",
+            end: "bottom center"
+        },
+        delay: 0.5,
+        x: -100,
+        duration: 2,
+        opacity: 0,
+        ease: "power4.out"
+    })
+    // CONTACTS ANIMATIONS ENDS
+    
+    // SECTIONS ANIMATIONS ENDS
     
 </script>
 {% endblock %}
