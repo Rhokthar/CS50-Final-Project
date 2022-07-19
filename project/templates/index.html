@@ -34,11 +34,11 @@ lang="en"
 <!-- "MAIN CONTENT" -->
 <main class="main" id="main" role="main">
     <!-- "HERO" Section: title and Bitmoji -->
-    <section class="page_section" id="hero" role="hero">
+    <section class="page_section boxed-container" id="hero" role="hero">
         <!-- Container of the containers of the elements in the section -->
-        <div class="section_container">
+        <div class="flex-container row align-center justify-center width-100 padding-top-l"> <!-- .section .section_container -->
             <!-- Container of the text part -->
-            <div class="text_container">
+            <div class="text_container width-50">
                 <!-- Title -->
                 <h1 role="section-title">
                     <span class="title">Hello, everyone! I'm</span>
@@ -70,13 +70,13 @@ lang="en"
                     </div>
                 </h1>
                 <!-- Underline -->
-                <div class="underline">
+                <div class="underline padding-top-s padding-left-s">
                     <p>Front-End <span class="diff_color">|</span> Back-End </p>
                 </div>                
             </div> <!-- End "text_container"-->
             <!-- Container of the image part -->
-            <div class="img_container" role="link">
-                <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png">
+            <div class="img_container width-33" role="link">
+                <img src="{{ url_for('static', filename='index-home.png') }}" alt="index-home.png" />
                 <!-- Tooltip - Thanks to Bitmoji -->
                 <span class="tooltip" role="tooltip">
                     Thanks to 
