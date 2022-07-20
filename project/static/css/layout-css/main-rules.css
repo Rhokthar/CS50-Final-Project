@@ -3,6 +3,7 @@
     --window-max-width: 1920px;
 }
 
+
 /* BLOCK RELATED RULES STARTS */
 .block-container {
     display: block;
@@ -37,6 +38,32 @@
 }
 /* BOXING RELATED RULES ENDS */
 
+/* COLORS STARTS*/
+.bg-dark-theme-light {
+    background-color: var(--bg-light);
+}
+.bg-dark-theme-medium {
+    background-color: var(--bg-medium);
+}
+.bg-dark-theme-hard {
+    background-color: var(--bg-hard);
+}
+.bg-dark-theme-hardest {
+    background-color: var(--bg-hardest);
+}
+.main-text-color {
+    color: var(--main-text);
+}
+.secondary-text-color {
+    color: var(--secondary-text);
+}
+.box-shadow-color {
+    filter: drop-shadow(0 0 10px var(--shadow-color));
+}
+.text-shadow-color {
+    text-shadow: 0 0 10px var(--shadow-color);
+}
+/* COLORS ENDS */
 
 /* FLEX-BOX RELATED RULES STARTS*/
 .flex-container {
