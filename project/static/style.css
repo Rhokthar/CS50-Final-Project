@@ -1,6 +1,4 @@
-/********************
-    General Styles
-*********************/
+/* GENERAL RULES STARTS */
 :root {
     --bg-dark-theme-light: #484848; 
     --bg-dark-theme-medium: #363636;
@@ -68,31 +66,49 @@ section {
     font-size: 1.8rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.footer, .header {
+/* .footer, .header {
     position: relative;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Courier New", Courier, monospace;    
     background-color: var(--bg-dark-theme-hardest);
-    box-shadow: 0 0 10px var(--shadow-color);
-    z-index: 1;
-    width: auto;
-}
-.footer {
-    width: 100%;
+
 }
 .footer p {
     text-align: center;
     font-size: 1.2rem;
     padding-top: 2rem;
 }
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    height: fit-content;
-    padding-top: 1.1rem;
-    font-size: 1.1rem;    
+ 
+} */
+/* GENERAL RULES ENDS */
+
+/* COLORS STARTS*/
+.bg-dark-theme-light {
+    background-color: var(--bg-dark-theme-light);
 }
-/* LOADING SCREEN */
+.bg-dark-theme-medium {
+    background-color: var(--bg-dark-theme-medium);
+}
+.bg-dark-theme-hard {
+    background-color: var(--bg-dark-theme-hard);
+}
+.bg-dark-theme-hardest {
+    background-color: var(--bg-dark-theme-hardest);
+}
+.main-text-color {
+    color: var(--main-text-dark-theme);
+}
+.secondary-text-color {
+    color: var(--secondary-text-dark-theme);
+}
+.box-shadow-color {
+    filter: drop-shadow(0 0 10px var(--shadow-color));
+}
+.text-shadow-color {
+    text-shadow: 0 0 10px var(--shadow-color);
+}
+/* COLORS ENDS */
+
+/* LOADING SCREEN RULES STARTS */
 .spinner__wrapper {
     width: 100%;
     height: 100%;
@@ -120,10 +136,9 @@ section {
     content: "Settings things up for you...";
     font-size: 2.4rem;
 }
-/* END LOADING SCREEN */
+/* LOADING SCREEN RULES ENDS */
 
-/* INDEX STARTS */
-/* MENU-MOBILE STARTS */
+/* MENU-MOBILE RULES STARTS */
 .menu__button {
     border: 2px solid var(--main-text-dark-theme);
     position: fixed;
@@ -222,8 +237,9 @@ section {
 .menu__link:hover:after {
     width: 100%;
 }
-/* MENU-MOBILE ENDS */
+/* MENU-MOBILE RULES ENDS */
 
+/* INDEX STARTS */
 /* INDEX SECTION 1 STARTS */
 .text_container h1 {
     font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
@@ -415,7 +431,6 @@ section {
     border: 2px solid var(--main-text-dark-theme);
     box-shadow: 0 0 10px var(--main-text-dark-theme);
 }
-
 /* INDEX SECTION 3 ENDS */
 
 /* INDEX SECTION 4 STARTS */
@@ -435,6 +450,9 @@ section {
     width: 600px;
     transform: translateX(1rem) translateY(-1rem);
 }
+/* INDEX SECTION 4 ENDS */
+/* INDEX ENDS */
+
 /* ABOUT ME PAGE RULES STARTS */
 .curiosities-list li {
     list-style-type: circle;
@@ -447,7 +465,6 @@ section {
 .img_container.about_me.hobby {
     float: left;
 }
-/* INDEX SECTION 4 ENDS */
 /* ABOUT ME PAGE RULES ENDS */
 
 /* SKILLS PAGE RULES STARTS*/
@@ -602,22 +619,20 @@ section {
 }
 /* CONTACTS PAGE RULES ENDS */
 
-/************************/
-/* Top navigation menu */
-/**********************/
-/* Top-nav setup */
-.header_nav {
-    margin-right: 2.5rem;
-
+/* LAYOUT RULES STARTS */
+/* TOP-NAV RULES STARTS */
+#header {
+    position: relative;
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: 1;
 }
-.nav_items {
-    display: flex;
-    flex-wrap: wrap;
+.nav_items .item {
+    display: inline-block;
 }
 li.item a {
+    font-family: "Courier New", Courier, monospace;
     color: var(--secondary-text-dark-theme);
-    float: right;
-    padding: 10px;
+    padding: 1rem;
     text-decoration: none;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
     transition: 0.3s;
@@ -630,29 +645,17 @@ li.item a:hover {
 }
 li.item-disabled {
     color: var(--bg-dark-theme-light);
-    float: right;
-    padding: 10px;
+    padding: 1rem;
     text-decoration: none;
     font-size: 1.8rem;    
 }
-/* Switch Theme Button */                       
+
+/* SWITCH THEME BUTTON RULES STARTS */                       
 .switch_theme {
     position: relative;
     display: inline-block;    
-    width: 50px;
-    height: 25px;
-}
-.switch_theme input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.switch_theme_container {
-    position: relative;  
-    top: 7px;
-    right: 15px; 
-    height: fit-content;
-    width: fit-content;
+    width: 5rem;
+    height: 2.5rem;
 }
 .slider {
     position: absolute;
@@ -668,10 +671,10 @@ li.item-disabled {
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    bottom: 2px;
+    height: 2rem;
+    width: 2rem;
+    left: 0.2rem;
+    bottom: 0.2rem;
     background-color: white;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -693,9 +696,10 @@ input:focus + .slider {
 .slider.round:before {
     border-radius: 50%;
 }
-/**************/
-/* Img setup */
-/************/
+/* SWITCH THEME BUTTON RULES ENDS */
+/* TOP NAV RULES ENDS */
+
+/* NAV-IMG (HOME) RULES STARTS */
 #nav_img a {
     cursor: pointer;
     position: fixed;
@@ -727,10 +731,9 @@ input:focus + .slider {
 #nav_img.hidden {
     display: none;
 }
-/*************************
-    Progress Nav Bar
-*************************/
-/* Bar Section */
+/* NAV-IMG (HOME) RULES ENDS */
+
+/* NAV-BAR LEFT RULES STARTS */
 .bar_empty {
     border: 1px solid var(--shadow-color);
     position: inherit;
@@ -748,7 +751,7 @@ input:focus + .slider {
     height: 0%;
     background-color: var(--main-text-dark-theme);
 }
-/* Dots Section */
+/* DOTS RULES STARTS */
 #progress_bar_container {
     left: 1.5%;
     position: fixed;   
@@ -777,7 +780,9 @@ input:focus + .slider {
     border: 2px solid var(--main-text-dark-theme);
     z-index: 1;
 }
-/* Labels Section */
+/* DOTS RULES ENDS */
+
+/* LABELS RULES STARTS */
 .bar_labels_container {
     position: inherit;
     left: 30px;
@@ -812,25 +817,27 @@ input:focus + .slider {
     color: var(--main-text-dark-theme);
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);
 }
+/* LABELS RULES ENDS */
+/* NAV-BAR LEFT RULES ENDS */
 
-/*******************
-    Footer Stuff
-********************/
-/* Social Section */
-.social_container {
-    /* border: 1px solid red; */
-    height: fit-content;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 2rem;
+/* FOOTER RULES STARTS */
+#footer {
+    position: relative;
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: 1;
+}
+#footer p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-family: "Courier New", Courier, monospace;
+
 }
 .social_container a > img {
-    padding: 0.1rem;
+    margin: 1rem;
     transition: 0.3s;
 }
 .social_container a > img:hover {
-    transform: scale(1.3);
+    filter: drop-shadow(0 0 5px var(--main-text-dark-theme));
 }
 #language_change {
     padding-top: 0;
@@ -845,32 +852,8 @@ input:focus + .slider {
     color: var(--main-text-dark-theme);
     text-decoration: underline;
 }
-/* COLORS */
-.bg-dark-theme-light {
-    background-color: var(--bg-dark-theme-light);
-}
-.bg-dark-theme-medium {
-    background-color: var(--bg-dark-theme-medium);
-}
-.bg-dark-theme-hard {
-    background-color: var(--bg-dark-theme-hard);
-}
-.bg-dark-theme-hardest {
-    background-color: var(--bg-dark-theme-hardest);
-}
-.main-text-color {
-    color: var(--main-text-dark-theme);
-}
-.secondary-text-color {
-    color: var(--secondary-text-dark-theme);
-}
-.box-shadow-color {
-    filter: drop-shadow(0 0 10px var(--shadow-color));
-}
-.text-shadow-color {
-    text-shadow: 0 0 10px var(--shadow-color);
-}
-/* END COLORS*/
+/* FOOTER RULES ENDS */
+
 /* KeyFrames */
 /* IMG Bounce */
 @keyframes bounce {

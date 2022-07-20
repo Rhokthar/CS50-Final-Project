@@ -29,8 +29,8 @@
     width: 100%;
     max-width: var(--window-max-width);
 }
-.box-hidden {
-    display: hidden;
+.display-hidden {
+    display: none;
 }
 .box-visible {
     display: visible;

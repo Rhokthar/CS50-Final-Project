@@ -348,33 +348,34 @@ lang="en"
         // Hide Home IMG ENDS
         
         // Animation "HERO"
-        let tl = gsap.timeline();
+        let indexTL = gsap.timeline();
       
         // Top-Navbar animation
-        tl.from(".header", {
+        indexTL.from(".nav_items", {
+            delay: 1,
             duration: 1,
             opacity: 0,
         });
         // Side-Navbar animation
-        tl.from("#progress_bar_container", {
+        indexTL.from("#progress_bar_container", {
             opacity: 0,
             duration:1,
             x: -50,
         }, "-=1");    
         // Title animation
-        tl.from(".title", {
+        indexTL.from(".title", {
             opacity: 0,
             x: -100,
             duration: 1.5,
             ease: "power4.out"
         });
-        tl.from(".symbol", {
+        indexTL.from(".symbol", {
             opacity: 0,
             x: -100,
             duration: 1.5,
             ease: "power4.out"
         }, "-=1.25");
-        tl.from(".letter", {
+        indexTL.from(".letter", {
             opacity: 0,
             stagger: 0.1,
             y: -100,
@@ -382,18 +383,18 @@ lang="en"
             ease: "power4.out"
         }, "-=0.5");
         // img_container animation
-        tl.from(".img_container", {
+        indexTL.from(".img_container", {
             opacity: 0,
             duration: 0.5,
             ease: "power4.out"
         });
-        tl.from(".adjectives_container", {
+        indexTL.from(".adjectives_container", {
             opacity: 0,
             x: -100,
             duration: 1,
             ease: "power4.out"
         }, "-=1");
-        tl.from(".underline", {
+        indexTL.from(".underline", {
             opacity: 0,
             y: 100,
             duration: 1,

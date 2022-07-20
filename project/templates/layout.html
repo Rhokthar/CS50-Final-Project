@@ -51,12 +51,12 @@
         </div> <!-- END "HIDDEN NAV"-->
 
         <!-- Header -->
-        <header class="header" id="header" role="banner">        
+        <header class="header flex-container justify-end align-center padding-all-xs width-100" id="header" role="banner">        
             <!-- Top nav bar: change pages -->
-            <div class="header_nav">                
-                <nav class="top-nav" role="navigation">
+            <div class="header_nav flex-container align-center">                
+                <nav role="navigation" id="top-nav">
                     <!-- Nav Items -->
-                    <ul class="nav_items">
+                    <ul class="nav_items flex-container align-center margin-top-xs padding-right-s">
                         <li class="item"><a href="/about-me">About Me</a></li>                        
                         <li class="item"><a href="/projects">Projects</a></li>
                         <li class="item"><a href="/skills">Skills</a></li>                
@@ -66,10 +66,10 @@
                 </nav>                                              
             </div>
             <!-- Dark Theme Button -->
-            <div class="switch_theme_container" role="group">
+            <div class="switch_theme_container flex-container align-center padding-right-s" role="group">
                 <img src="{{ url_for('static', filename='moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35">
-                <label class="switch_theme" role="checkbox">                
-                    <input type="checkbox">
+                <label class="switch_theme margin-left-xs" role="button">                
+                    <input type="checkbox" class="display-hidden">
                     <span class="slider round"></span>
                 </label>  
             </div>                        
@@ -80,15 +80,15 @@
         </div>
         {% block main %}{% endblock %}
         <!-- FOOTER -->
-        <footer class="footer" id="footer" role="footer">
+        <footer class="footer flex-container vertical-row justify-center align-center width-100" id="footer" role="footer">
             <!-- Credits -->
-            <p>Designed and Built by Simone Molino &copy; 2022</p>
+            <p class="padding-top-s">Designed and Built by Simone Molino &copy; 2022</p>
             <p id="language_change"><a href="#">Italian</a> | <a href="#">English</a></p>
             <!-- Social Links -->
-            <div class="social_container" id="social_container" role="link">                
+            <div class="social_container padding-bottom-l" id="social_container" role="link">                
                 <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='lin-ico.png') }}" alt="lin-ico.png" height="25" width="25"></a>
+                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='insta-ico.png') }}" alt="insta-ico.png" height="30" width="30"></a>
                 <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='git-ico.png') }}" alt="git-ico.png" height="25" width="25"></a>
-                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='insta-ico.png') }}" alt="insta-ico.png" height="30" width="30"></a><br>
             </div>            
             <!-- TODO: stat recorder -->            
         </footer>
