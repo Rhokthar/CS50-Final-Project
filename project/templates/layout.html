@@ -31,13 +31,26 @@
             </div>
         </div>
 
-        <!-- "HIDDEN NAV": Spawns when width goes down (top right) -->
+        <!-- MOBILE MENU STARTS -->
         <div class="navbar_fullscreen">
-            <!-- Just graphics' stuff -->
-            <div class="menu__button">
-                <span></span>
-                <span></span>
-            </div> <!-- End "HIDDEN NAV" -->
+            <div class="flex-container justify-end">
+                <!-- DARK THEME BUTTON STARTS (DISPLAY ONLY IN MOBILE MENU) -->
+                <div class="switch-theme-wrapper display-hidden">
+                    <div class="switch_theme_container-mobile flex-container align-center padding-right-s" role="group">
+                        <img src="{{ url_for('static', filename='moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35">
+                        <label class="switch_theme margin-left-xs" role="button">
+                            <input type="checkbox" class="display-hidden">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <!-- MENU BUTTON STARTS -->
+                <div class="menu__button">
+                    <span></span>
+                    <span></span>
+                </div> <!-- MENU BUTTON ENDS -->
+            </div>
+
             <!-- "MENU HIDDEN NAV" -->
             <div class="menu__wrapper">
                 <ul class="menu__list">
@@ -48,7 +61,7 @@
                     <li class="menu__item"><a href="/contacts" class="menu__link">Contacts</a></li>
                 </ul>  
             </div> <!-- End "MENU HIDDEN NAV"-->           
-        </div> <!-- END "HIDDEN NAV"-->
+        </div> <!-- MOBILE MENU ENDS-->
 
         <!-- Header -->
         <header class="header flex-container justify-end align-center padding-all-xs width-100" id="header" role="banner">        
@@ -118,9 +131,11 @@
             document.querySelector(".menu__button").onclick = function(e) {
                 var menu = document.querySelector(".menu__wrapper");
                 var button = document.querySelector(".menu__button");
+                var themeButton = document.querySelector(".switch-theme-wrapper");
                 
                 menu.classList.toggle("active");
                 button.classList.toggle("active");
+                themeButton.classList.toggle("display-hidden");
                 e.preventDefault();
             }
 
