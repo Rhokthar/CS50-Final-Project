@@ -14,9 +14,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
 
         <!-- My CSS -->
-        <link href="../static/style.css" rel="stylesheet" />
-        <link href="../static/main-rules.css" rel="stylesheet" />
-        <link href="../static/resize.css" rel="stylesheet" />
+        <link href="../static/css/layout-css/style.css" rel="stylesheet" />
+        <link href="../static/css/layout-css/main-rules.css" rel="stylesheet" />
+        <link href="../static/css/layout-css/resize.css" rel="stylesheet" />
         
         <!-- Tab Title -->
         <title>Simone Molino - {% block title %}{% endblock %}</title>
@@ -37,9 +37,9 @@
                 <!-- DARK THEME BUTTON STARTS (DISPLAY ONLY IN MOBILE MENU) -->
                 <div class="switch-theme-wrapper display-hidden">
                     <div class="switch_theme_container-mobile flex-container align-center padding-right-s" role="group">
-                        <img src="{{ url_for('static', filename='moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35">
+                        <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" />
                         <label class="switch_theme margin-left-xs" role="button">
-                            <input type="checkbox" class="display-hidden">
+                            <input type="checkbox" class="display-hidden" />
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -80,7 +80,7 @@
             </div>
             <!-- Dark Theme Button -->
             <div class="switch_theme_container flex-container align-center padding-right-s" role="group">
-                <img src="{{ url_for('static', filename='moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35">
+                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" />
                 <label class="switch_theme margin-left-xs" role="button">                
                     <input type="checkbox" class="display-hidden">
                     <span class="slider round"></span>
@@ -89,7 +89,7 @@
         </header>
         <!-- IMG: click = top page -->        
         <div class="nav_img display-none-lg" id="nav_img">
-            <a href="/"><img src="{{ url_for('static', filename='nav-img.png') }}" alt="nav-img.png" width="150" height="150"></a>
+            <a href="/"><img src="{{ url_for('static', filename='imgs/layout-imgs/nav-img.png') }}" alt="nav-img.png" width="150" height="150" /></a>
         </div>
         {% block main %}{% endblock %}
         <!-- FOOTER -->
@@ -99,9 +99,9 @@
             <p id="language_change"><a href="#">Italian</a> | <a href="#">English</a></p>
             <!-- Social Links -->
             <div class="social_container padding-bottom-l" id="social_container" role="link">                
-                <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='lin-ico.png') }}" alt="lin-ico.png" height="25" width="25"></a>
-                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='insta-ico.png') }}" alt="insta-ico.png" height="30" width="30"></a>
-                <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='git-ico.png') }}" alt="git-ico.png" height="25" width="25"></a>
+                <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/lin-ico.png') }}" alt="lin-ico.png" height="25" width="25" /></a>
+                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/insta-ico.png') }}" alt="insta-ico.png" height="30" width="30" /></a>
+                <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/git-ico.png') }}" alt="git-ico.png" height="25" width="25" /></a>
             </div>            
             <!-- TODO: stat recorder -->            
         </footer>
