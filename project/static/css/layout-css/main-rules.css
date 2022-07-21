@@ -39,16 +39,16 @@
 /* BOXING RELATED RULES ENDS */
 
 /* COLORS STARTS*/
-.bg-dark-theme-light {
+.bg-low {
     background-color: var(--bg-light);
 }
-.bg-dark-theme-medium {
+.bg-medium {
     background-color: var(--bg-medium);
 }
-.bg-dark-theme-hard {
+.bg-hard {
     background-color: var(--bg-hard);
 }
-.bg-dark-theme-hardest {
+.bg-hardest {
     background-color: var(--bg-hardest);
 }
 .main-text-color {

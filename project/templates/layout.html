@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html {% block lang %}{% endblock %}>
+<html {% block lang %}{% endblock %} data-theme="light">
     <!-- HEAD -->
     <head>
         <meta charset="utf-8">
@@ -38,9 +38,10 @@
                 <!-- DARK THEME BUTTON STARTS (DISPLAY ONLY IN MOBILE MENU) -->
                 <div class="switch-theme-wrapper display-hidden">
                     <div class="switch_theme_container-mobile flex-container align-center padding-right-s" role="group">
-                        <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" />
+                        <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="dark-moon-mobile display-hidden"/>
+                        <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-light-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="light-moon-mobile"/>
                         <label class="switch_theme margin-left-xs" role="button">
-                            <input type="checkbox" class="display-hidden" />
+                            <input type="checkbox" class="display-hidden" id="switch-theme-mobile"/>
                             <span class="slider round"></span>
                         </label>
                     </div>
@@ -81,9 +82,10 @@
             </div>
             <!-- Dark Theme Button -->
             <div class="switch_theme_container flex-container align-center padding-right-s" role="group">
-                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" />
+                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="dark-moon display-hidden"/>
+                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-light-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="light-moon"/>
                 <label class="switch_theme margin-left-xs" role="button">                
-                    <input type="checkbox" class="display-hidden">
+                    <input type="checkbox" class="display-hidden" id="switch-theme">
                     <span class="slider round"></span>
                 </label>  
             </div>                        
@@ -99,7 +101,7 @@
             <p class="padding-top-s">Designed and Built by Simone Molino &copy; 2022</p>
             <p id="language_change"><a href="#">Italian</a> | <a href="#">English</a></p>
             <!-- Social Links -->
-            <div class="social_container padding-bottom-l" id="social_container" role="link">                
+            <div class="social_container padding-bottom-m" id="social_container" role="link">                
                 <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/lin-ico.png') }}" alt="lin-ico.png" height="25" width="25" /></a>
                 <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/insta-ico.png') }}" alt="insta-ico.png" height="30" width="30" /></a>
                 <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/git-ico.png') }}" alt="git-ico.png" height="25" width="25" /></a>
@@ -154,6 +156,102 @@
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             }
+
+            // SWITCH THEME STARTS
+            localStorage.setItem("data-theme", "light");
+
+            let SetDarkTheme = () => {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("data-theme", "dark");
+            }
+            let SetLightTheme = () => {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("data-theme", "light");
+            }
+
+            let themeSwitch = document.getElementById("switch-theme");
+            let themeSwitchMobile = document.getElementById("switch-theme-mobile");
+
+            let lightMoon = document.querySelector(".light-moon");
+            let darkMoon = document.querySelector(".dark-moon");
+            let lightMoonMobile = document.querySelector(".light-moon-mobile");
+            let darkMoonMobile = document.querySelector(".dark-moon-mobile");
+
+            themeSwitch.addEventListener("change", () => {
+                let themeStatus = localStorage.getItem("data-theme");
+                if (themeStatus === "light")
+                {
+                    if (themeSwitch.checked)
+                    {
+                        themeSwitchMobile.checked = true;
+                    }
+                    else
+                    {
+                        themeSwitchMobile.checked = false;
+                    }
+                    darkMoon.classList.toggle("display-hidden");
+                    lightMoon.classList.toggle("display-hidden");
+
+                    darkMoonMobile.classList.toggle("display-hidden");
+                    lightMoonMobile.classList.toggle("display-hidden");
+                    SetDarkTheme();
+                }
+                else
+                {
+                    if (themeSwitch.checked)
+                    {
+                        themeSwitchMobile.checked = true;
+                    }
+                    else
+                    {
+                        themeSwitchMobile.checked = false;                        
+                    }
+                    darkMoon.classList.toggle("display-hidden");
+                    lightMoon.classList.toggle("display-hidden");
+
+                    darkMoonMobile.classList.toggle("display-hidden");
+                    lightMoonMobile.classList.toggle("display-hidden");
+                    SetLightTheme();
+                }
+            });
+            themeSwitchMobile.addEventListener("change", () => {
+                let themeStatus = localStorage.getItem("data-theme");
+                if (themeStatus === "light")
+                {
+                    if (themeSwitchMobile.checked)
+                    {
+                        themeSwitch.checked = true;
+                    }
+                    else
+                    {
+                        themeSwitch.checked = false;
+                    }
+                    darkMoon.classList.toggle("display-hidden");
+                    lightMoon.classList.toggle("display-hidden");
+
+                    darkMoonMobile.classList.toggle("display-hidden");
+                    lightMoonMobile.classList.toggle("display-hidden");
+                    SetDarkTheme();
+                }
+                else
+                {
+                    if (themeSwitchMobile.checked)
+                    {
+                        themeSwitch.checked = true;
+                    }
+                    else
+                    {
+                        themeSwitch.checked = false;
+                    }
+                    darkMoon.classList.toggle("display-hidden");
+                    lightMoon.classList.toggle("display-hidden");
+
+                    darkMoonMobile.classList.toggle("display-hidden");
+                    lightMoonMobile.classList.toggle("display-hidden");
+                    SetLightTheme();
+                }
+            });
+            // SWITCH THEME ENDS
         </script>             
     </body>
 </html>
