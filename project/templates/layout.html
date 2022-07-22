@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html {% block lang %}{% endblock %} data-theme="light">
+<html {% block lang %}{% endblock %}>
     <!-- HEAD -->
     <head>
         <meta charset="utf-8">
@@ -118,6 +118,7 @@
             window.addEventListener("load", function() {
                 spinner.classList.add("hidden");
                 body.style.overflow = "visible";
+            
             });
             
             if (history.scrollRestoration) 
@@ -159,7 +160,40 @@
             }
 
             // SWITCH THEME STARTS
-            localStorage.setItem("data-theme", "light");
+            var themeValue = localStorage.getItem("data-theme");
+
+            let themeSwitch = document.getElementById("switch-theme");
+            let themeSwitchMobile = document.getElementById("switch-theme-mobile");
+
+            let lightMoon = document.querySelector(".light-moon");
+            let darkMoon = document.querySelector(".dark-moon");
+            let lightMoonMobile = document.querySelector(".light-moon-mobile");
+            let darkMoonMobile = document.querySelector(".dark-moon-mobile");
+
+            document.documentElement.setAttribute("data-theme", themeValue);
+
+            if (themeValue === "dark")
+            {
+                themeSwitch.checked = true;
+                themeSwitchMobile.checked = true;
+                
+                darkMoon.classList.remove("display-hidden");
+                lightMoon.classList.add("display-hidden");
+
+                darkMoonMobile.classList.remove("display-hidden");
+                lightMoonMobile.classList.add("display-hidden");
+            }
+            else
+            {
+                themeSwitch.checked = false;
+                themeSwitchMobile.checked = false;
+
+                darkMoon.classList.add("display-hidden");
+                lightMoon.classList.remove("display-hidden");
+
+                darkMoonMobile.classList.add("display-hidden");
+                lightMoonMobile.classList.remove("display-hidden");
+            }
 
             let SetDarkTheme = () => {
                 document.documentElement.setAttribute("data-theme", "dark");
@@ -169,14 +203,6 @@
                 document.documentElement.setAttribute("data-theme", "light");
                 localStorage.setItem("data-theme", "light");
             }
-
-            let themeSwitch = document.getElementById("switch-theme");
-            let themeSwitchMobile = document.getElementById("switch-theme-mobile");
-
-            let lightMoon = document.querySelector(".light-moon");
-            let darkMoon = document.querySelector(".dark-moon");
-            let lightMoonMobile = document.querySelector(".light-moon-mobile");
-            let darkMoonMobile = document.querySelector(".dark-moon-mobile");
 
             themeSwitch.addEventListener("change", () => {
                 let themeStatus = localStorage.getItem("data-theme");
@@ -190,11 +216,11 @@
                     {
                         themeSwitchMobile.checked = false;
                     }
-                    darkMoon.classList.toggle("display-hidden");
-                    lightMoon.classList.toggle("display-hidden");
+                    darkMoon.classList.remove("display-hidden");
+                    lightMoon.classList.add("display-hidden");
 
-                    darkMoonMobile.classList.toggle("display-hidden");
-                    lightMoonMobile.classList.toggle("display-hidden");
+                    darkMoonMobile.classList.remove("display-hidden");
+                    lightMoonMobile.classList.add("display-hidden");
                     SetDarkTheme();
                 }
                 else
@@ -207,11 +233,11 @@
                     {
                         themeSwitchMobile.checked = false;                        
                     }
-                    darkMoon.classList.toggle("display-hidden");
-                    lightMoon.classList.toggle("display-hidden");
+                    darkMoon.classList.add("display-hidden");
+                    lightMoon.classList.remove("display-hidden");
 
-                    darkMoonMobile.classList.toggle("display-hidden");
-                    lightMoonMobile.classList.toggle("display-hidden");
+                    darkMoonMobile.classList.add("display-hidden");
+                    lightMoonMobile.classList.remove("display-hidden");
                     SetLightTheme();
                 }
             });
@@ -227,11 +253,11 @@
                     {
                         themeSwitch.checked = false;
                     }
-                    darkMoon.classList.toggle("display-hidden");
-                    lightMoon.classList.toggle("display-hidden");
+                    darkMoon.classList.remove("display-hidden");
+                    lightMoon.classList.add("display-hidden");
 
-                    darkMoonMobile.classList.toggle("display-hidden");
-                    lightMoonMobile.classList.toggle("display-hidden");
+                    darkMoonMobile.classList.remove("display-hidden");
+                    lightMoonMobile.classList.add("display-hidden");
                     SetDarkTheme();
                 }
                 else
@@ -244,11 +270,11 @@
                     {
                         themeSwitch.checked = false;
                     }
-                    darkMoon.classList.toggle("display-hidden");
-                    lightMoon.classList.toggle("display-hidden");
+                    darkMoon.classList.add("display-hidden");
+                    lightMoon.classList.remove("display-hidden");
 
-                    darkMoonMobile.classList.toggle("display-hidden");
-                    lightMoonMobile.classList.toggle("display-hidden");
+                    darkMoonMobile.classList.add("display-hidden");
+                    lightMoonMobile.classList.remove("display-hidden");
                     SetLightTheme();
                 }
             });
