@@ -476,15 +476,15 @@ section {
 }
 .skill #sb_html {
     /* HTML (80%) */
-    max-width: 80%;
+    max-width: 85%;
 }
 .skill #sb_css {
     /* CSS (60%) */
-    max-width: 60%;
+    max-width: 75%;
 }
 .skill #sb_js {
     /* JAVASCRIPT (35%) */
-    max-width: 35%;
+    max-width: 45%;
 }
 .skill #sb_py {
     /* PYTHON (85%) */
