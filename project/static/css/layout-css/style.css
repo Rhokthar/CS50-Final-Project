@@ -612,6 +612,10 @@ section {
     color: var(--main-text);
     transform: translateY(-0.5rem);
 }
+.error-message {
+    font-size: 1.3rem;
+    color: red;
+}
 /* CONTACTS PAGE RULES ENDS */
 
 /* LAYOUT RULES STARTS */
@@ -835,6 +839,11 @@ input:focus + .slider {
     font-size: 1.2rem;
     font-family: "Courier New", Courier, monospace;
 
+}
+#language_change a {
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .social_container a > img {
     margin: 1rem;
