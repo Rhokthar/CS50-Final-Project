@@ -1,5 +1,6 @@
 import os
 import re
+import smtplib
 
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -42,6 +43,12 @@ def skills():
 @app.route("/contacts", methods=["GET", "POST"])
 def contacts():
     if request.method == "POST":
+        mailReceiver = "molino.code.testing.1@gmail.com"
+        mailSender = "molino.code.testing.1@gmail.com"
+        localServer = smtplib.SMTP("server.smtp.com")
+
+        mailMSG = "Prova"
+        localServer.sendmail(mailSender, mailReceiver, mailMSG)
         return render_template("index.html")
     else:
         return render_template("contacts.html")
