@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "it/layout.html" %}
 
 {% block lang %}
-lang="en"
+lang="it"
 {% endblock %}
 
 {% block title %}
-    Home
+Home
 {% endblock %}
 
 {% block main %}  
@@ -25,9 +25,9 @@ lang="en"
     <!-- "LABELS" for nav bar -->
     <div class="bar_labels_container" role="navigation">
         <a href="#" class="selected"><li><p>Home</p></li></a>
-        <a href="#about_me"><li><p>About Me</p></li></a>
-        <a href="#projects"><li><p>Projects</p></li></a>
-        <a href="#contacts"><li><p>Contacts</p></li></a>
+        <a href="#about_me"><li><p>Su di Me</p></li></a>
+        <a href="#projects"><li><p>Progetti</p></li></a>
+        <a href="#contacts"><li><p>Contatti</p></li></a>
     </div> <!-- End "LABELS"-->
 </div> <!-- End "PROGRESS BAR"-->   
 
@@ -42,7 +42,7 @@ lang="en"
                 <!-- Title -->
                 <div class="wrapper">
                     <h1 role="section-title">
-                        <span class="title">Hello, everyone! I'm</span>
+                        <span class="title">Ciao a tutti! Sono</span>
                         <!-- My Name: bouncing and filling each letter -->
                         <div class="special_text flex-container column-lg">
                             <div class="name padding-right-s">
@@ -66,7 +66,7 @@ lang="en"
                         </div>
                         <!-- Cycling Words -->
                         <div class="adjectives_container flex-container">
-                            <span>a</span>
+                            <span>.</span>
                             <div class="adjectives">
                                 <div>Software Developer</div>
                                 <div>Guy</div>
@@ -83,12 +83,12 @@ lang="en"
             <!-- Container of the image part -->
             <div class="img_container flex-container width-25" role="link" id="hero-image">
                 <div class="wrapper margin-left-auto margin-right-auto">
-                    <img src="../static/imgs/index-imgs/index-home.png" alt="index-home.png" />
+                    <img src="../../static/imgs/index-imgs/index-home.png" alt="index-home.png" />
                     <!-- Tooltip - Thanks to Bitmoji -->
                     <span class="tooltip" role="tooltip">
-                        Thanks to
+                        Grazie a
                         <a href="https://www.bitmoji.com/" target="_blank">bitmoji</a>
-                        for the Avatars!
+                        per gli Avatar!
                     </span>
                 </div>      
             </div>
@@ -107,7 +107,7 @@ lang="en"
             <div class="flex-container justify-end justify-center-xl width-50">
                 <div class="wrapper about_me flex-container width-100 width-xl-66 width-md-80 width-xs-100 padding-bottom-xl-66-m padding-right-xl-66-none flex-container justify-end padding-right-m">
                     <div class="img_container_2">
-                        <a href="/en/about-me"><img src="../static/imgs/index-imgs/Me.png" alt="Me.png" class="border-rounded" /></a>
+                        <a href="/en/about-me"><img src="../../static/imgs/index-imgs/Me.png" alt="Me.png" class="border-rounded" /></a>
                     </div>
                 </div>
             </div>
@@ -117,26 +117,25 @@ lang="en"
                     <!-- Biggest Title ever -->
                     <h2 role="section_title">
                         <div class="special_text_2">
-                            <span>A</span>
-                            <span>b</span>
-                            <span>o</span>
-                            <span>u</span>
-                            <span>t&nbsp;</span>
+                            <span>S</span>
+                            <span>U&nbsp;</span>
+                            <span>D</span>
+                            <span>I&nbsp;</span>
                             <span>M</span>
-                            <span>e</span>
+                            <span>E</span>
                         </div>
                     </h1>
                     <!-- Form: Nome, Cognome, Età, Sesso, Cittadinanza, Cosa faccio -->
                     <div class="aboutme_form" role="info">
-                        <h3>Name:</h3><p>Simone</p><br>
-                        <h3>Last Name:</h3><p>Molino</p><br>
-                        <h3>Age:</h3><p>26</p><br>
-                        <h3>Gender:</h3><p>Male</p><br>
-                        <h3>Country:</h3><p>Italy</p><br>
-                        <h3>Who am I:</h3><p>I'm a never-ending CS's student and a Software Developer for both Back-End and Front-End. Currently, I'm taking courses and I'm studying both UI/UX and Machine Learning's stuffs</p>
+                        <h3>Nome:</h3><p>Simone</p><br>
+                        <h3>Cognome:</h3><p>Molino</p><br>
+                        <h3>Età:</h3><p>26</p><br>
+                        <h3>Genere:</h3><p>Maschile</p><br>
+                        <h3>Nazionalità:</h3><p>Italiana</p><br>
+                        <h3>Chi sono:</h3><p>Sono uno studente senza fine di Informatica e un Software Developer sia per il Front-End che per il Back-End. Attualmente, sto tenendo corsi e studiando sia UI/UX che materiale di Machine Learning.</p>
                         <div class="button-wrapper about_me flex-container width-100 padding-top-s">
                             <form action="/about-me" method="get" class="margin-left-auto margin-right-auto">
-                                <button class="btn">More About Me</button>
+                                <button class="btn">Scopri di Più</button>
                             </form>
                         </div>
                     </div>
@@ -158,15 +157,15 @@ lang="en"
                         <span>P</span>
                         <span>R</span>
                         <span>O</span>
-                        <span>J</span>
+                        <span>G</span>
                         <span>E</span>
-                        <span>C</span>
                         <span>T</span>
-                        <span>S</span>
+                        <span>T</span>
+                        <span>I</span>
                     </div>
                 </h1>
             
-                <p class="padding-left-m paragraph">Here are some of the projects that I've been (and I'm currently) working on:</p>
+                <p class="padding-left-m paragraph">Qui sotto troverete alcuni progetti a cui ho lavorato, o a cui sto tutt'ora lavorando:</p>
 
             </div>
             <!-- Projects view -->       
@@ -174,32 +173,32 @@ lang="en"
             <div class="projects_container flex-container flex-wrap justify-space-between position-relative width-100 padding-top-m">
                 <!-- Class Project Container -->
                 <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
-                    <h2 class="margin-bottom-xs">Class Project</h2>
-                    <a href="/en/projects"><img src="../static/imgs/index-imgs/class-project-cs50-finance.png" alt="cs50-finance.png" width="390" height="250" class=" border-rounded" /></a>
+                    <h2 class="margin-bottom-xs">Progetto di Classe</h2>
+                    <a href="/en/projects"><img src="../../static/imgs/index-imgs/class-project-cs50-finance.png" alt="cs50-finance.png" width="390" height="250" class=" border-rounded" /></a>
                     <h3 class="margin-top-xs">CS50 - Finance</h3>
-                    <p class="paragraph padding-left-s padding-right-s">Based on the IEX API, this Web application resumes all the concepts studied in the CS50's Course.</p>
+                    <p class="paragraph padding-left-s padding-right-s">Basato sull'API IEX, questa applicazione Web riassume tutti i concetti studiati nel corso CS50.</p>
                 </div>
                 <!-- Personal Project Container -->
                 <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
-                    <h2 class="margin-bottom-xs">Personal Project</h2>
-                    <a href="/en/projects"><img src="../static/imgs/index-imgs/password.png" alt="password.png" width="390" height="250" class="border-rounded" /></a>
-                    <h3 class="margin-top-xs">Password Manager</h3>
-                    <p class="paragraph padding-left-s padding-right-s">A funny way to practice, and I actually need one.<br> Will be released upon finishing as free app.<br> Because if it's mine is better 😝</p>
+                    <h2 class="margin-bottom-xs">Progetto Personale</h2>
+                    <a href="/en/projects"><img src="../../static/imgs/index-imgs/password.png" alt="password.png" width="390" height="250" class="border-rounded" /></a>
+                    <h3 class="margin-top-xs">Gestore di Password</h3>
+                    <p class="paragraph padding-left-s padding-right-s">Un modo divertente per fare pratica, anche perché me ne serve uno.<br> Verrà rilasciata a completamento come app gratuita.<br> Perché se è mia è meglio 😝</p>
                 </div>
                 <!-- Professional Project Container -->
-                <div class="flex-container width-33 width-special-project-100 justify-center-special padding-top-special-project">
+                <div class="project flex-container width-33 width-special-project-100 justify-center-special padding-top-special-project">
                     <div class="project text-center width-100 width-special-project-50 width-lg-100">
-                        <h2 class="margin-bottom-xs">Professional Project</h2>
-                        <a href="/en/projects"><img src="../static/imgs/index-imgs/placeholder.png" alt="placeholder.png" width="390" height="250" class="border-rounded" /></a>
-                        <h3 class="margin-top-xs">none</h3>
-                        <p class="paragraph padding-left-s padding-right-s">As soon as I'll be hired by someone, I'll update this field and the project's page as well.</p>
+                        <h2 class="margin-bottom-xs">Progetto Professionale</h2>
+                        <a href="/en/projects"><img src="../../static/imgs/index-imgs/placeholder.png" alt="placeholder.png" width="390" height="250" class="border-rounded" /></a>
+                        <h3 class="margin-top-xs">nessuno</h3>
+                        <p class="paragraph padding-left-s padding-right-s">Non appena verrò ingaggiato da qualcuno, aggiornerò questo campo, così come la pagina dei progetti.</p>
                     </div>
                 </div>
             </div>
             <!-- Button: redirect to projects page -->
             <div class="button-wrapper flex-container width-100 padding-top-m">
                 <form action="/projects" method="get" class="margin-left-auto margin-right-auto">
-                    <button class="btn">More Projects</button>
+                    <button class="btn">Più Progetti</button>
                 </form>
             </div>               
         </div>            
@@ -218,7 +217,7 @@ lang="en"
                         <div class="gmap_canvas">
                             <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=paderno%20dugnano&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             <a href="https://123movies-to.org"></a><br>
-                            <a href="https://www.embedgooglemap.net">embedding google maps in webpage</a>
+                            <a href="https://www.embedgooglemap.net">incorporando google maps in una pagina web</a>
                         </div>
                     </div>
                 </div>
@@ -234,20 +233,20 @@ lang="en"
                                 <span>N</span>
                                 <span>T</span>
                                 <span>A</span>
-                                <span>C</span>
                                 <span>T</span>
-                                <span>S</span>
+                                <span>T</span>
+                                <span>I</span>
                             </div>
                         </h2>
                         <div class="contacts_form" role="info">
                             <h3>Tel:</h3><p>(+39) 392 551 3237</p><br>
                             <h3>E-mail:</h3><p>molino.simone1295@gmail.com</p><br>
-                            <h3>Linkedin:</h3><a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank" class="a-hover">Linkedin's Direct Link</a><br>
-                            <h3>GitHub:</h3><a href="https://github.com/Rhokthar" target="_blank" class="a-hover">GitHub's Direct Link</a><br>
-                            <h3>Instagram:</h3><a href="https://www.instagram.com/rhokthar/" target="_blank" class="a-hover">Instagram's Direct Link</a><br>
+                            <h3>Linkedin:</h3><a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank" class="a-hover">Link Diretto a Linkedin</a><br>
+                            <h3>GitHub:</h3><a href="https://github.com/Rhokthar" target="_blank" class="a-hover">Link Diretto a GitHub</a><br>
+                            <h3>Instagram:</h3><a href="https://www.instagram.com/rhokthar/" target="_blank" class="a-hover">Link Diretto a Instagram</a><br>
                             <div class="button-wrapper flex-container width-100 padding-top-s">
                                 <form action="/contacts" method="get" class="margin-left-auto margin-right-auto">
-                                    <button class="btn">Wanna E-Mail me?</button>
+                                    <button class="btn">Vuoi mandarmi una E-Mail?</button>
                                 </form>
                             </div>
                         </div>
@@ -514,4 +513,8 @@ lang="en"
     // SECTIONS ANIMATIONS ENDS
     
 </script>
+{% endblock %}
+
+{% block language_change %}
+<p id="language_change"><a href="/it/home">Italiano</a> | <a href="/en/home">Inglese</a></p>
 {% endblock %}

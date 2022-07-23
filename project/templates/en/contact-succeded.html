@@ -1,0 +1,38 @@
+{% extends "en/layout.html" %}
+
+{% block lang %}
+lang="en"
+{% endblock %}
+
+{% block title %}
+Mail Sent
+{% endblock %}
+
+{% block main %}
+<section class="page_section">
+    <div class="flex-container boxed-container vertical-row width-100 padding-left-s padding-right-s align-center" style="height: 100vh;">
+        <!-- START TITLE__WRAPPER -->
+        <div class="title__wrapper padding-bottom-s padding-top-m">
+            <h2>
+                <!-- SPECIAL TEXT START -->
+                <div class="special_text_2 contacts">
+                    <span>M</span>
+                    <span>A</span>
+                    <span>I</span>
+                    <span>L&nbsp;</span>
+                    <span>S</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>T</span>
+                </div> <!-- SPECIAL TEXT END-->
+            </h2>
+        </div> <!-- END TITLE -->
+        <p>Thanks for contacting me! I'll reply to you as soon as possible!</p>
+        <p>Click <a href="/en/home" class="a-hover-contacts main-text-color">HERE</a> to go back to the Home Page.</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block language_change %}
+<p id="language_change"><a href="/it/home">Italian</a> | <a href="/en/home">English</a></p>
+{% endblock %}

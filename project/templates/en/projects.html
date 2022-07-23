@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "en/layout.html" %}
 
 {% block lang %}
 lang="en"
@@ -46,13 +46,13 @@ Projects
             <div class="text__wrapper flex-container width-50 width-lg-100 padding-all-s align-center">
                 <div class="project_text width-66 width-lg-80 text-align-lg margin-auto-lg width-md-100">
                     <h3 class="diff_color">FINANCE</h3>
-                    <p>A full web application built for a Problem Set of Harvard's Course CS50. It uses IEX API to get real-time values of market stocks, and works as a portfolio of bought stocks. Back-end: Python - Front-End: Bootstrap. Working on implementing a real cash wallet.</p>
+                    <p>A full web application built for a Problem Set of Harvard's Course CS50. It uses IEX API to get real-time values of market stocks, and works as a portfolio of bought stocks. Back-end: Python, SQL - Front-End: Bootstrap. Working on implementing a real cash wallet.</p>
                 </div> <!-- PROJECT TEXT ENDS -->
             </div>
             <!-- PROJECT IMG -->
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
-                    <img src="../static/imgs/projects-imgs/finance-img.jpg" alt="finance-img.jpg" />
+                    <img src="../../static/imgs/projects-imgs/finance-img.jpg" alt="finance-img.jpg" />
                 </div>
             </div> <!-- END PROJECT IMG -->
         </div> <!-- END PROJECTS__WRAPPER-->
@@ -78,7 +78,7 @@ Projects
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <a href="https://replit.com/@SimoneMolino/CS50-Filter-Applier#filter-more/filter.c" target="_blank">
-                        <img src="../static/imgs/projects-imgs/filter-img.png" alt="filter-img.jpg" />
+                        <img src="../../static/imgs/projects-imgs/filter-img.png" alt="filter-img.jpg" />
                     </a> 
                 </div>
             </div><!-- END PROJECT_IMG -->
@@ -105,7 +105,9 @@ Projects
             <!-- START PROJECT IMG -->
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
-                    <a href="https://replit.com/@SimoneMolino/boilerplate-arithmetic-formatter#arithmetic_arranger.py" target="_blank"><img src="../static/imgs/projects-imgs/formatter-img.png" alt="formatter-img.png" /></a>
+                    <a href="https://replit.com/@SimoneMolino/boilerplate-arithmetic-formatter#arithmetic_arranger.py" target="_blank">
+                        <img src="../../static/imgs/projects-imgs/formatter-img.png" alt="formatter-img.png" />
+                    </a>
                 </div>
             </div> <!-- END PROJECT_IMG -->
         </div> <!-- END PROJECT__WRAPPER #3 -->
@@ -130,7 +132,7 @@ Projects
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <a href="https://replit.com/@SimoneMolino/boilerplate-time-calculator#time_calculator.py" target="_blank">
-                        <img src="../static/imgs/projects-imgs/time-calculator-img.png" alt="time-calculator-img.png" />
+                        <img src="../../static/imgs/projects-imgs/time-calculator-img.png" alt="time-calculator-img.png" />
                     </a>    
                 </div>
             </div> <!-- END PROJECT_IMG -->
@@ -158,7 +160,7 @@ Projects
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <a href="https://replit.com/@SimoneMolino/CS50-Fiftyville#fiftyville/log.sql" target="_blank">
-                        <img src="../static/imgs/projects-imgs/sql-fiftyville-img.webp" alt="sql-fiftyville-img.webp" />
+                        <img src="../../static/imgs/projects-imgs/sql-fiftyville-img.webp" alt="sql-fiftyville-img.webp" />
                     </a> 
                 </div> <!-- END PROJECT_IMG -->
             </div>
@@ -186,7 +188,7 @@ Projects
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
                     <a href="https://www.iislagrange.edu.it/" target="_blank">
-                        <img src="../static/imgs/projects-imgs/highschool-image.jpg" alt="highschool-image" />
+                        <img src="../../static/imgs/projects-imgs/highschool-image.jpg" alt="highschool-image" />
                     </a>
                 </div> <!-- END PROJECT_IMG -->
             </div>
@@ -212,13 +214,13 @@ Projects
             <!-- START PROJECT IMG -->
             <div class="img__wrapper flex-container width-50 width-lg-100 padding-all-s justify-end">
                 <div class="project_img border-rounded width-66 width-xl-100 width-lg-75 margin-auto-lg width-xs-100">
-                    <a href="/" target="_blank"><img src="../static/imgs/projects-imgs/portfolio-img.png" alt="portfolio image" /></a>
+                    <a href="/en/home" target="_blank"><img src="../../static/imgs/projects-imgs/portfolio-img.png" alt="portfolio image" /></a>
                 </div> <!-- END PROJECT_IMG -->
             </div>
         </div> <!-- END PROJECT__WRAPPER #7 -->
 
         <div class="flex-container justify-center width-100 bg-low padding-bottom-xl">
-            <a href="/" target="_blank"><button class="btn">Take a Look</button></a>
+            <a href="/en/home" target="_blank"><button class="btn">Take a Look</button></a>
         </div>
 
     </div> <!-- END SECTION_CONTAINER PROJECT -->
@@ -313,4 +315,8 @@ Projects
     }
     
 </script> <!-- END SCRIPTS-->
+{% endblock %}
+
+{% block language_change %}
+<p id="language_change"><a href="/it/projects">Italian</a> | <a href="/en/projects">English</a></p>
 {% endblock %}

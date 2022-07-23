@@ -1,0 +1,42 @@
+{% extends "it/layout.html" %}
+
+{% block lang %}
+lang="en"
+{% endblock %}
+
+{% block title %}
+Mail Spedita
+{% endblock %}
+
+{% block main %}
+<section class="page_section">
+    <div class="flex-container boxed-container vertical-row width-100 padding-left-s padding-right-s align-center" style="height: 100vh;">
+        <!-- START TITLE__WRAPPER -->
+        <div class="title__wrapper padding-bottom-s padding-top-m">
+            <h2>
+                <!-- SPECIAL TEXT START -->
+                <div class="special_text_2 contacts">
+                    <span>M</span>
+                    <span>A</span>
+                    <span>I</span>
+                    <span>L&nbsp;</span>
+                    <span>S</span>
+                    <span>P</span>
+                    <span>E</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>T</span>
+                    <span>A</span>
+                </div> <!-- SPECIAL TEXT END-->
+            </h2>
+        </div> <!-- END TITLE -->
+        <p>Grazie per avermi contattato! Ti risponderò il prima possibile!</p>
+        <p>Clicca <a href="/it/home" class="a-hover-contacts main-text-color">QUI</a> per tornare alla Home Page.</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block language_change %}
+<p id="language_change"><a href="/it/home">Italiano</a> | <a href="/en/home">Inglese</a></p>
+{% endblock %}
+

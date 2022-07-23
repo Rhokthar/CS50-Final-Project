@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "en/layout.html" %}
 
 {% block lang %}
 lang="en"
 {% endblock %}
 
 {% block title %}
-    Home
+Home
 {% endblock %}
 
 {% block main %}  
@@ -66,7 +66,7 @@ lang="en"
                         </div>
                         <!-- Cycling Words -->
                         <div class="adjectives_container flex-container">
-                            <span>a</span>
+                            <span>.</span>
                             <div class="adjectives">
                                 <div>Software Developer</div>
                                 <div>Guy</div>
@@ -83,7 +83,7 @@ lang="en"
             <!-- Container of the image part -->
             <div class="img_container flex-container width-25" role="link" id="hero-image">
                 <div class="wrapper margin-left-auto margin-right-auto">
-                    <img src="../static/imgs/index-imgs/index-home.png" alt="index-home.png" />
+                    <img src="../../static/imgs/index-imgs/index-home.png" alt="index-home.png" />
                     <!-- Tooltip - Thanks to Bitmoji -->
                     <span class="tooltip" role="tooltip">
                         Thanks to
@@ -107,7 +107,7 @@ lang="en"
             <div class="flex-container justify-end justify-center-xl width-50">
                 <div class="wrapper about_me flex-container width-100 width-xl-66 width-md-80 width-xs-100 padding-bottom-xl-66-m padding-right-xl-66-none flex-container justify-end padding-right-m">
                     <div class="img_container_2">
-                        <a href="/en/about-me"><img src="../static/imgs/index-imgs/Me.png" alt="Me.png" class="border-rounded" /></a>
+                        <a href="/en/about-me"><img src="../../static/imgs/index-imgs/Me.png" alt="Me.png" class="border-rounded" /></a>
                     </div>
                 </div>
             </div>
@@ -175,22 +175,22 @@ lang="en"
                 <!-- Class Project Container -->
                 <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
                     <h2 class="margin-bottom-xs">Class Project</h2>
-                    <a href="/en/projects"><img src="../static/imgs/index-imgs/class-project-cs50-finance.png" alt="cs50-finance.png" width="390" height="250" class=" border-rounded" /></a>
+                    <a href="/en/projects"><img src="../../static/imgs/index-imgs/class-project-cs50-finance.png" alt="cs50-finance.png" width="390" height="250" class=" border-rounded" /></a>
                     <h3 class="margin-top-xs">CS50 - Finance</h3>
                     <p class="paragraph padding-left-s padding-right-s">Based on the IEX API, this Web application resumes all the concepts studied in the CS50's Course.</p>
                 </div>
                 <!-- Personal Project Container -->
                 <div class="project text-center width-33 width-special-project-50 width-lg-100 padding-bottom-lg-m">
                     <h2 class="margin-bottom-xs">Personal Project</h2>
-                    <a href="/en/projects"><img src="../static/imgs/index-imgs/password.png" alt="password.png" width="390" height="250" class="border-rounded" /></a>
+                    <a href="/en/projects"><img src="../../static/imgs/index-imgs/password.png" alt="password.png" width="390" height="250" class="border-rounded" /></a>
                     <h3 class="margin-top-xs">Password Manager</h3>
                     <p class="paragraph padding-left-s padding-right-s">A funny way to practice, and I actually need one.<br> Will be released upon finishing as free app.<br> Because if it's mine is better 😝</p>
                 </div>
                 <!-- Professional Project Container -->
-                <div class="flex-container width-33 width-special-project-100 justify-center-special padding-top-special-project">
+                <div class="project flex-container width-33 width-special-project-100 justify-center-special padding-top-special-project">
                     <div class="project text-center width-100 width-special-project-50 width-lg-100">
                         <h2 class="margin-bottom-xs">Professional Project</h2>
-                        <a href="/en/projects"><img src="../static/imgs/index-imgs/placeholder.png" alt="placeholder.png" width="390" height="250" class="border-rounded" /></a>
+                        <a href="/en/projects"><img src="../../static/imgs/index-imgs/placeholder.png" alt="placeholder.png" width="390" height="250" class="border-rounded" /></a>
                         <h3 class="margin-top-xs">none</h3>
                         <p class="paragraph padding-left-s padding-right-s">As soon as I'll be hired by someone, I'll update this field and the project's page as well.</p>
                     </div>
@@ -514,4 +514,8 @@ lang="en"
     // SECTIONS ANIMATIONS ENDS
     
 </script>
+{% endblock %}
+
+{% block language_change %}
+<p id="language_change"><a href="/it/home">Italian</a> | <a href="/en/home">English</a></p>
 {% endblock %}
