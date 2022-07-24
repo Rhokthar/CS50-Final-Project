@@ -57,58 +57,12 @@
             <!-- "MENU HIDDEN NAV" -->
             <div class="menu__wrapper">
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="/en/about-me" class="menu__link">About Me</a></li>                        
-                    <li class="menu__item"><a href="/en/projects" class="menu__link">Projects</a></li>
-                    <li class="menu__item"><a href="/en/skills" class="menu__link">Skills</a></li>                
-                    <li class="menu__item"><a href="/en/contacts" class="menu__link">Contacts</a></li>
+                    <li class="menu__item"><a href="/en/home" class="menu__link">English / Inglese</a></li>                        
+                    <li class="menu__item"><a href="/it/home" class="menu__link">Italian / Italiano</a></li>
                 </ul>  
             </div> <!-- End "MENU HIDDEN NAV"-->           
         </div> <!-- MOBILE MENU ENDS-->
-
-        <!-- Header -->
-        <header class="header flex-container justify-end align-center padding-all-xs width-100" id="header" role="banner">        
-            <!-- Top nav bar: change pages -->
-            <div class="header_nav flex-container align-center">                
-                <nav role="navigation" id="top-nav">
-                    <!-- Nav Items -->
-                    <ul class="nav_items flex-container align-center margin-top-xs padding-right-s">
-                        <li class="item"><a href="/en/about-me">About Me</a></li>                        
-                        <li class="item"><a href="/en/projects">Projects</a></li>
-                        <li class="item"><a href="/en/skills">Skills</a></li>                
-                        <li class="item"><a href="/en/contacts">Contacts</a></li>
-                        <li class="item-disabled"><a role="/blog" aria-disabled="true">Blog (coming soon...)</a></li>
-                    </ul>                    
-                </nav>                                              
-            </div>
-            <!-- Dark Theme Button -->
-            <div class="switch_theme_container flex-container align-center padding-right-s" role="group">
-                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="dark-moon display-hidden"/>
-                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-light-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="light-moon"/>
-                <label class="switch_theme margin-left-xs" role="button">                
-                    <input type="checkbox" class="display-hidden" id="switch-theme">
-                    <span class="slider round"></span>
-                </label>  
-            </div>                        
-        </header>
-        <!-- IMG: click = top page -->        
-        <div class="nav_img display-none-lg" id="nav_img">
-            <a href="/"><img src="{{ url_for('static', filename='imgs/layout-imgs/nav-img.png') }}" alt="nav-img.png" width="150" height="150" /></a>
-        </div>
         {% block main %}{% endblock %}
-        <!-- FOOTER -->
-        <footer class="footer flex-container vertical-row justify-center align-center width-100" id="footer" role="footer">
-            <!-- Credits -->
-            <p class="padding-top-s">Designed and Built by Simone Molino &copy; 2022</p>
-            <p id="language_change"><a href="#">Italian</a> | <a href="#">English</a></p>
-            <!-- Social Links -->
-            <div class="social_container padding-bottom-m" id="social_container" role="link">                
-                <a href="https://www.linkedin.com/in/simone-molino-884486194/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/lin-ico.png') }}" alt="lin-ico.png" height="25" width="25" /></a>
-                <a href="https://www.instagram.com/rhokthar/" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/insta-ico.png') }}" alt="insta-ico.png" height="30" width="30" /></a>
-                <a href="https://github.com/Rhokthar" target="_blank"><img src="{{ url_for('static', filename='imgs/layout-imgs/git-ico.png') }}" alt="git-ico.png" height="25" width="25" /></a>
-            </div>            
-            <!-- TODO: stat recorder -->            
-        </footer>
         <!-- Scripts -->
         <script>
             // Spinner scripts
@@ -142,21 +96,6 @@
                 button.classList.toggle("active");
                 themeButton.classList.toggle("display-hidden");
                 e.preventDefault();
-            }
-
-            // Check if Elements are in the viewport
-            function isInViewport(element) 
-            {
-                // Get position of the elements
-                const rect = element.getBoundingClientRect();
-                // Return true if is in viewport, false otherwise
-                // In viewport if its top and left position are >= 0 and its bottom and right position <= window lenght
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
             }
 
             // SWITCH THEME STARTS

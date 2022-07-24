@@ -220,6 +220,27 @@ section {
 }
 /* MENU-MOBILE RULES ENDS */
 
+/* LANDING PAGE RULES STARTS */
+.landing-flag-title {
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: var(--main-text);
+    text-shadow: 1px 1px 0 var(--shadow-color);
+}
+.landing-flag-img {
+    transition: 0.5s;
+    filter: drop-shadow(0 0 10px var(--shadow-color));
+    overflow: hidden;
+}
+.landing-flag-img:hover {
+    border: 1px solid var(--main-text);
+    filter: drop-shadow(0 0 10px var(--main-text));
+    transform: scale(1.1);
+}
+/* LANDING PAGE RULES ENDS */
+
+
 /* INDEX STARTS */
 /* INDEX SECTION 1 STARTS */
 .text_container h1 {

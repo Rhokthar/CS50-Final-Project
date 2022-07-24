@@ -16,7 +16,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Index Route: Choose Lang (?)
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("landing-page.html")
 
 
 # HOME - EN
