@@ -1,0 +1,10 @@
+.curiosities-list li {
+    list-style-type: circle;
+    line-height: 2;
+}
+.carousel {
+    filter: drop-shadow(0 0 10px var(--shadow-color));
+}
+.img_container.about_me.hobby {
+    float: left;
+}

@@ -1,0 +1,66 @@
+/* OPEN CLOSE ANIMATION STARTS */
+@keyframes openclose {
+    0% {
+      top: -0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 50rem;
+    }
+    30% {
+      top: -0.2rem;
+      width: 50rem;
+    }
+    33% {
+      top: -0.2rem;
+      width: 0;
+    }
+    35% {
+      top: -0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -6.2rem;
+      
+    }
+    48% {
+      top: -6.2rem;
+      width: 10rem;
+    }
+    62% {
+      top: -6.2rem;
+      width: 10rem;
+    }
+    66% {
+      top: -6.2rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -12rem;
+      width: 0;
+      /* text-indent: 5px; */
+    }
+    86% {
+      top: -12rem;
+      width: 40rem;
+    }
+    95% {
+      top: -12rem;
+      width: 40rem;
+    }
+    98% {
+      top: -12rem;
+      width: 0;
+      /* text-indent: 5px; */
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+}
+/* OPEN CLOSE ANIMATION ENDS */

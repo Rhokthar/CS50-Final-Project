@@ -1,0 +1,79 @@
+#skill-progress-bars {
+    gap: 10rem;
+}
+.skill {
+    background-color: var(--secondary-text-common);
+    height: 1rem;    
+    position: relative;
+    padding: 1px;    
+}
+.skill h3 {
+    position: absolute;
+    top: 100%;
+    font-size: 2.5rem;
+}
+.skill > span {
+    background-color: var(--main-text);
+    position: relative;
+    transition: 0.3s;
+}
+.skill > span:hover {
+    box-shadow: 0 0 10px var(--main-text);
+}
+.skill #sb_html {
+    /* HTML (80%) */
+    max-width: 85%;
+}
+.skill #sb_css {
+    /* CSS (60%) */
+    max-width: 75%;
+}
+.skill #sb_js {
+    /* JAVASCRIPT (35%) */
+    max-width: 45%;
+}
+.skill #sb_py {
+    /* PYTHON (85%) */
+    max-width: 85%;
+}
+.skill #sb_c {
+    /* C (95%) */
+    max-width: 95%;
+}
+.skill #sb_cpp {
+    /* C++ (10%) */
+    max-width: 10%;
+}
+.skill #sb_csharp {
+    /* C# (50%) */
+    max-width: 50%;
+}
+.skill #sb_java {
+    /* JAVA (5%) */
+    max-width: 5%;
+}   
+.skill #sb_sql {
+    /* SQL (70%) */
+    max-width: 70%;
+}
+.skills-wrapper h3 {
+    color: var(--main-text);
+    text-shadow: 2px 2px 0px var(--shadow-color);
+    font-size: 3rem;
+}
+.skills-wrapper li::before {
+    content: "\2022";
+    color: var(--main-text);
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin: -1em;
+    filter: drop-shadow(0 0 3px var(--main-text));
+}
+.skills-wrapper li > span {
+    font-weight: 750;
+}
+#side-skills-wrapper,
+#wannaknow-skills {
+    gap: 5rem;
+}

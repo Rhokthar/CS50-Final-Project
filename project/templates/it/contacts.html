@@ -4,8 +4,8 @@
 lang="it"
 {% endblock %}
 
-{% block script %}
-<script src="../static/js/contacts-js/contacts.js"></script>
+{% block css %}
+<link rel="stylesheet" href="../../static/css/contacts-css/contacts-css.css" />
 {% endblock %}
 
 {% block title %}
@@ -40,7 +40,7 @@ Contatti
             <!-- FORM STARTS  -->
             <!-- FORM CONTAINER - DIV__WRAPPER -->
             <div class="flex-container row bg-hard padding-all-s border-rounded width-50 width-xl-80 width-lg-100 box-shadow-color" id="contacts-form">
-                <form action="/it/contacts" method="post" onsubmit="return FormClientValidation();"> 
+                <form action="/it/contacts" autocomplete="off" method="post" onsubmit="return FormClientValidation();"> 
                     <div class="flex-container vertical-row align-center">
                         <label for="name_input" class="padding-bottom-xs main-text-color">Nome</label>
                         <input type="text" id="name_input" name="name_input" class="input-text-style width-50 bg-medium bottom-margin" placeholder="Il tuo Nome" autofocus />
@@ -72,6 +72,9 @@ Contatti
             </div> <!-- OTHER CONTACTS ENDS -->
         </div> <!-- PAGE__WRAPPER ENDS -->       
     </div> <!-- END SECTION_CONTAINER PROJECT --> 
+
+    <script src=".."></script>
+
 </section> <!-- END SECTION -->
 {% endblock %}
 

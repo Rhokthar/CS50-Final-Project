@@ -1,0 +1,42 @@
+.disclaimer {
+    visibility: hidden;
+    background-color: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: 0.5s;
+}
+.disclaimer:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 10px var(--shadow-color);
+    transform: scale(1.05);
+
+}
+.disclaimer h4 {
+    color: var(--secondary-text-common);
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+.disclaimer p {
+    margin: 0 5%;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+.project_text h3 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 0px var(--shadow-color);
+}
+.project_text p {
+    font-size: 1.8rem;
+}
+.project_img {
+    box-shadow: 0 0 10px var(--shadow-color);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.project_img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--main-text);
+    border: 2px solid var(--main-text);
+}

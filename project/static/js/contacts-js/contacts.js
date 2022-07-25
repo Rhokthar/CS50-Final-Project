@@ -38,7 +38,8 @@ function FormClientValidation()
     let surname = document.getElementById("surname_input").value;
     let email = document.getElementById("e-mail").value;
     let message = document.getElementById("contact_info").value;
-    
+    let langCheck = localStorage.getItem("data-lang");
+
     // Defining RegEX to check for a correct e-mail
     let emailRE = /^([A-Za-z0-9_\.?\-?]+)(?<!\.)(?<!\-)@(?!\.)(?!\-)([A-Za-z0-9_\.?\-?]+)\.([A-Za-z0-9]{2,5})$/gi;
     let retValue = true;
@@ -47,29 +48,55 @@ function FormClientValidation()
     ErrorReset();
 
     // Check for Errors and Display them
+    // EN messages
     if (name.length < 2)
     {
-        document.getElementById("name-error").innerHTML = "* Inserted name not valid. Please, insert a name at least 2 characters long.";
+        if (langCheck === "en")
+        {
+            document.getElementById("name-error").innerHTML = "* Inserted name not valid. Please, insert a name at least 2 characters long.";
+        }
+        else
+        {
+            document.getElementById("name-error").innerHTML = "* Il nome inserito non è valido. Per favore, inserire un nome lungo almeno 2 caratteri.";
+        }
         retValue = false;
     }
     if (surname.length < 2)
     {
-        document.getElementById("surname-error").innerHTML = "* Inserted surname not valid. Please, insert a surname at least 2 characters long.";
+        if (langCheck === "en")
+        {
+            document.getElementById("surname-error").innerHTML = "* Inserted surname not valid. Please, insert a surname at least 2 characters long.";
+        }
+        else
+        {
+            document.getElementById("surname-error").innerHTML = "* Il cognome inserito non è valido. Per favore, inserire un cognome lungo almeno 2 caratteri.";
+        }
         retValue = false;
     }
     if (!emailRE.test(email))
     {
-        document.getElementById("email-error").innerHTML = "* E-mail format not correct. Please, insert a valid e-mail.";
+        if (langCheck === "en")
+        {
+            document.getElementById("email-error").innerHTML = "* E-mail format not correct. Please, insert a valid e-mail.";
+        }
+        else
+        {
+            document.getElementById("email-error").innerHTML = "* Formato della e-mail non valido. Per favore, inserire un e-mail valida.";
+        }
         retValue = false;
     }
     if (message.length < 50)
     {
-        document.getElementById("contact-info-error").innerHTML = "* Please, tell me with at least 50 characters what are you contacting me for.";
+        if (langCheck === "en")
+        {
+            document.getElementById("email-error").innerHTML = "* E-mail format not correct. Please, insert a valid e-mail.";
+        }
+        else
+        {
+            document.getElementById("contact-info-error").innerHTML = "* Per favore, raccontami con un breve testo (50 lettere) perché mi stai contattando.";
+        }
         retValue = false;
     }
-
-    console.log(retValue);
-
     return retValue;
 }
 
