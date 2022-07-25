@@ -20,6 +20,7 @@
     --secondary-text: #fff;
     --secondary-text-common: #121212;
     --inactive-link: #868686;
+
 }
 
 * {
@@ -78,6 +79,7 @@ section {
     background-color: var(--bg-light);
     font-size: 1.8rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    visibility: visible;
 }
 /* GENERAL RULES ENDS */
 
@@ -98,18 +100,27 @@ section {
     flex-direction: column;
     z-index: 100;
     opacity: 1;
-    transition: 1s;
+    transition: 0s;
 }
 .spinner__wrapper.hidden {
     opacity: 0;
     z-index: -100;
+    transition: 1s;
 }
 .spinner__wrapper > * {
     color: var(--main-text);
 }
 .spinner__wrapper::after {
-    content: "Settings things up for you...";
     font-size: 2.4rem;
+}
+.landing.spinner__wrapper::after {
+    content: "Loading...";
+}
+.it.spinner__wrapper::after {
+    content: "Sto caricando gli asset per te...";
+}
+.en.spinner__wrapper::after {
+    content: "Setting things up for you...";
 }
 /* LOADING SCREEN RULES ENDS */
 
@@ -228,12 +239,12 @@ section {
     color: var(--main-text);
     text-shadow: 1px 1px 0 var(--shadow-color);
 }
-.landing-flag-img {
+.landing-flag-img img {
     transition: 0.5s;
     filter: drop-shadow(0 0 10px var(--shadow-color));
     overflow: hidden;
 }
-.landing-flag-img:hover {
+.landing-flag-img img:hover {
     border: 1px solid var(--main-text);
     filter: drop-shadow(0 0 10px var(--main-text));
     transform: scale(1.1);
@@ -318,6 +329,7 @@ section {
     font-size: 1.8rem;
 }
 #hero-image {
+    visibility: hidden;
     transition: 0.3s;
 }
 #hero-image .tooltip {
@@ -556,6 +568,7 @@ section {
 
 /* PROJECTS PAGE RULES STARTS*/
 .disclaimer {
+    visibility: hidden;
     background-color: rgba(255, 0, 0, 0.4);
     box-shadow: 0 0 10px var(--shadow-color);
     transition: 0.5s;

@@ -28,7 +28,7 @@
     <!-- BODY -->
     <body>
          <!-- Loading Spinner -->    
-        <div class="spinner__wrapper" id="spinner__wrapper">
+        <div class="spinner__wrapper en" id="spinner__wrapper">
              <div class="spinner-border" role="status">
                 <span class="visually-hidden">Setting things up for you...</span>
             </div>
@@ -113,6 +113,8 @@
         <!-- Scripts -->
         <script>
             // Spinner scripts
+            localStorage.setItem("data-lang", "en");
+
             let spinner = document.querySelector(".spinner__wrapper");
             let body = document.querySelector("body");
 

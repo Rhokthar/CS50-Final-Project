@@ -51,7 +51,7 @@ Lang. Selection
                 <h3 class="landing-flag-title text-center padding-bottom-s">English / Inglese</h3>
                 <div class="width-66 landing-flag-img border-rounded">
                     <a href="/en/home">
-                        <img src="../static/imgs/landing-imgs/flag-eng.png" alt="Flag ENG" />
+                        <img src="../static/imgs/landing-imgs/flag-eng.png" alt="Flag ENG" class="border-rounded" />
                     </a>
                 </div>
             </div>
@@ -59,12 +59,12 @@ Lang. Selection
                 <h3 class="landing-flag-title text-center padding-bottom-s">Italian / Italiano</h3>
                 <div class="width-66 landing-flag-img border-rounded">
                     <a href="/it/home">
-                        <img src="../static/imgs/landing-imgs/flag-ita.png" alt="Flag ITA" />
+                        <img src="../static/imgs/landing-imgs/flag-ita.png" alt="Flag ITA" class="border-rounded" />
                     </a>
                 </div>
             </div>
         </div>
-        <div class="separator margin-bottom-xl">
+        <div class="separator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--bg-medium)" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
         </div>
     </section> <!-- End "HERO" Section --> 
@@ -74,34 +74,65 @@ Lang. Selection
 <!-- Scripts -->
 <script>
 
-    // Letter Bouncing Script
-    // Select letters
-    document.querySelectorAll(".letter").forEach((element) => {
-        // Add listening for mouseover
-        element.addEventListener("mouseover", (e) => BounceLetter(e.target));
-    });
+    // Variables
+    let titlesArray = document.querySelectorAll(".landing-flag-title");
+    let imgsArray = document.querySelectorAll(".landing-flag-img");
 
-    // HERO ANIMATION
-    // Load done before function execution
-    window.addEventListener("load", function() {
+    let langCheck = localStorage.getItem("data-lang");
+    
+    if (langCheck === "it")
+    {
+        window.location.href = "/it/home";
+    }
+    else if (langCheck === "en")
+    {
+        window.location.href = "/en/home";
+    }
+    else
+    {
+        // HERO ANIMATION
+        // Load done before function execution
+        window.addEventListener("load", function() {        
+            // Animation "HERO"
+            let landingTL = gsap.timeline();
 
-        // Hide Home IMG START
-        let navIMG = document.getElementById("nav_img");
-        navIMG.classList.add("hidden");
-        // Hide Home IMG ENDS
-        
-        // Animation "HERO"
-        let indexTL = gsap.timeline();
-      
-        // Top-Navbar animation
-        indexTL.from(".nav_items", {
-            delay: 1,
-            duration: 1,
-            opacity: 0,
+
+            // Top-Navbar animation
+            landingTL.from(".special_text_2", {
+                delay: 1,
+                duration: 2,
+                y: -100,
+                opacity: 0,
+                ease: "power4.out"
+            });
+            for (var i = 0; i < titlesArray.length; i++)
+            {
+                landingTL.from(titlesArray[i], {
+                    duration: 1,
+                    y: -100,
+                    opacity: 0,
+                    ease: "bounce"
+                });
+                landingTL.from(imgsArray[i], {
+                    duration: 0.5,
+                    x: -100,
+                    opacity: 0,
+                    ease: "power4.out"
+                });
+            }
         });
-    });
-    // HERO ANIMATIONS ENDS
-    // SECTIONS ANIMATIONS ENDS
+
+        imgsArray[0].addEventListener("click", () => {
+            localStorage.setItem("data-lang", "en");
+        });
+        imgsArray[1].addEventListener("click", () => {
+            localStorage.setItem("data-lang", "it");
+        });
+        // HERO ANIMATIONS ENDS
+        // SECTIONS ANIMATIONS ENDS
+    }
+    
+    
     
 </script>
 {% endblock %}

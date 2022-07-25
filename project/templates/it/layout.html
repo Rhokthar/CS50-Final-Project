@@ -27,7 +27,7 @@
     <!-- BODY -->
     <body>
          <!-- Loading Spinner -->    
-        <div class="spinner__wrapper" id="spinner__wrapper">
+        <div class="spinner__wrapper it" id="spinner__wrapper">
              <div class="spinner-border" role="status">
                 <span class="visually-hidden">Sto preparando le cose per te...</span>
             </div>
@@ -111,6 +111,9 @@
         </footer>
         <!-- Scripts -->
         <script>
+            
+            localStorage.setItem("data-lang", "it");
+
             // Spinner scripts
             let spinner = document.querySelector(".spinner__wrapper");
             let body = document.querySelector("body");
