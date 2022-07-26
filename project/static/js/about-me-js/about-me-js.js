@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
             gsap.from(paragraphArray[i], {
                 scrollTrigger: {
                     trigger: paragraphArray[i],
-                    start: "top 90%"
+                    start: "top 67.5%"
                 },
                 x: -100,
                 opacity: 0,
