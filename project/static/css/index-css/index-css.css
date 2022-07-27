@@ -8,7 +8,6 @@
     transform: translate(120%, -50%);
     width: 30%;        
     z-index: -1;
-    
 }
 .bar_filling {
     position: inherit;
@@ -39,7 +38,7 @@
     transition: all 0.3s;
     z-index: 1;
 }
-.progress_nav li:hover, .progress_nav li.selected {
+.progress_nav li.selected {
     transform: scale(2);
     box-shadow: 0px 0px 3px var(--shadow-color);
     border: 2px solid var(--main-text);

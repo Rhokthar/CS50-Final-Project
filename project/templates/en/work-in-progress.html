@@ -1,0 +1,50 @@
+{% extends "layout-landing.html" %}
+
+{% block lang %}
+lang="en"
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="../../static/css/layout-css/landing-page-css.css">
+<link rel="stylesheet" href="../../static/css/contacts-css/contacts-css.css">
+{% endblock %}
+
+{% block title %}
+Work in Progress
+{% endblock %}
+
+{% block main %}
+<main class="main" id="main" role="main">  
+    <!-- "HERO" Section: title and Bitmoji -->
+    <section class="page_section boxed-container margin-right-auto margin-left-auto" id="hero" role="hero">
+        <!-- Dark Theme Button STARTS -->
+        <div class="flex-container width-100 justify-end padding-right-s padding-top-s">
+            <div class="switch_theme_container flex-container" role="group">
+                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-dark-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="dark-moon display-hidden"/>
+                <img src="{{ url_for('static', filename='imgs/layout-imgs/moon-light-theme.png') }}" alt="moon-dark-theme.png" height="25" width="35" class="light-moon"/>
+                <label class="switch_theme margin-left-xs" role="button">
+                    <input type="checkbox" class="display-hidden" id="switch-theme">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div> <!-- Dark Theme Button ENDS -->
+
+        <!-- PAGE CONTENT STARTS -->
+        <div class="flex-container width-100 vertical-row justify-center align-center">
+            <!-- IMAGE STARTS -->
+            <div class="flex-container width-66 justify-center">
+                <img src="../static/imgs/other/Work-in-progress-1024x603-1.png" alt="Work in Progress IMG" />
+            </div> <!-- IMAGE ENDS -->
+            <p class="paragraph text-center">This page isn't ready yet. I'm currently working on it. You'll be redirected to the Home Page in 5s, or you can click <a href="/en/home" class="a-hover-contacts">HERE</a>.</p>
+        </div> <!-- PAGE CONTENT ENDS-->
+
+        <div class="separator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--bg-medium)" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,240C672,277,768,299,864,256C960,213,1056,107,1152,85.3C1248,64,1344,128,1392,160L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+
+    </section>
+
+    <script src="../../static/js/other/redirect.js"></script>
+
+</main>
+{% endblock %}

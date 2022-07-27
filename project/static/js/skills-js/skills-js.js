@@ -2,6 +2,10 @@
 let barsArray = document.querySelectorAll(".skill-bar");
 let barsContainerArray = document.querySelectorAll(".skill");
 let paragraphsArray = document.querySelectorAll(".paragraph");
+let softSkillsListArray = document.querySelectorAll("#soft-skills li");
+let sideSkillsListArray = document.querySelectorAll("#side-skills li");
+let studyPlanningListArray = document.querySelectorAll("#study-planning li");
+let otherSkillsListArray = document.querySelectorAll("#other-skills li");
 let skillsTimeLine = gsap.timeline();            
 
 // Register ScrollTrigger
@@ -98,54 +102,120 @@ window.addEventListener("load", () => {
 });
 // TITLE, PARAGRAPHS, BARS ANIMATIONS ENDS
 
-// SUBSECTIONS ANIMATIONS STARTS       
+// SUBSECTIONS ANIMATIONS STARTS
 // First Subsection STARTS
-gsap.from("#soft-skills", {
+// Soft Skills STARTS
+gsap.from("#soft-skills h3", {
     scrollTrigger: {
-        trigger: "#soft-skills",
+        trigger: "#soft-skills h3",
         start: "top center",
-        end: "bottom center"
+        toggleActions: "play none none none"
     },
-    x: -100,
+    y: -100,
     opacity: 0,
-    duration: 2,
-    ease: "power4.out"            
+    duration: 1,
+    ease: "bounce"
 });
-gsap.from("#side-skills", {
+for (var i = 0; i < softSkillsListArray.length; i++)
+{
+    gsap.from(softSkillsListArray[i], {
+        scrollTrigger: {
+            trigger: softSkillsListArray[i],
+            start: "top center",
+            toggleActions: "play none none none"
+        },
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out"            
+    });
+}
+// Soft Skills ENDS
+// Side Skills STARTS
+gsap.from("#side-skills h3", {
     scrollTrigger: {
-        trigger: "#side-skills",
+        trigger: "#side-skills h3",
         start: "top center",
-        end: "bottom center"
+        toggleActions: "play none none none"
     },
-    x: 100,
+    y: -100,
     opacity: 0,
-    duration: 2,
+    duration: 1,
     delay: 0.25,
-    ease: "power4.out"
+    ease: "bounce"
 });
+for (var i = 0; i < sideSkillsListArray.length; i++)
+{
+    gsap.from(sideSkillsListArray[i], {
+        scrollTrigger: {
+            trigger: sideSkillsListArray[i],
+            start: "top center",
+            toggleActions: "play none none none"
+        },
+        x: 100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.25,
+        ease: "power4.out"
+    });
+}
+// Side Skills ENDS
 // First Subsection ENDS
 
 // Second Subsection STARTS
-gsap.from("#study-planning", {
+// Study Planning STARTS
+gsap.from("#study-planning h3", {
     scrollTrigger: {
-        trigger: "#study-planning",
-        start: "top 60%",
+        trigger: "#study-planning h3",
+        start: "top 70%",
     },
-    x: -100,
+    y: -100,
     opacity: 0,
-    duration: 2,
-    ease: "power4.out"
-});
-gsap.from("#other-skills", {
-    scrollTrigger: {
-        trigger: "#other-skills",
-        start: "top 60%",
-    },
-    x: 100,
-    opacity: 0,
-    duration: 2,
+    duration: 1,
     delay: 0.25,
-    ease: "power4.out"
+    ease: "bounce"
 });
+for (var i = 0; i < studyPlanningListArray.length; i++)
+{
+    gsap.from(studyPlanningListArray[i], {
+        scrollTrigger: {
+            trigger: studyPlanningListArray[i],
+            start: "top 70%",
+            toggleActions: "play none none none"
+        },
+        x: -100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.25,
+        ease: "power4.out" 
+    });
+}
+// Study Planning ENDS
+// Other Skills STARTS
+gsap.from("#other-skills h3", {
+    scrollTrigger: {
+        trigger: "#other-skills h3",
+        start: "top 70%",
+    },
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "bounce"
+});
+for (var i = 0; i < otherSkillsListArray.length; i++)
+{
+    gsap.from(otherSkillsListArray[i], {
+        scrollTrigger: {
+            trigger: otherSkillsListArray[i],
+            start: "top 70%",
+            toggleActions: "play none none none"
+        },
+        x: 100,
+        duration: 1,
+        opacity: 0,
+        ease: "power4.out"
+    });
+}
+// Other Skills ENDS
 // Second Subsection END
 // SUBSECTIONS ANIMATIONS ENDS

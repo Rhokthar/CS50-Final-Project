@@ -1,6 +1,15 @@
 .curiosities-list li {
-    list-style-type: circle;
+    /* list-style-type: circle; */
     line-height: 2;
+}
+.curiosities-list li::before {
+    content: "\2022";
+    color: var(--main-text);
+    font-weight: bold;
+    display: inline-block;
+    width: 2em;
+    margin: -1em;
+    filter: drop-shadow(0 0 3px var(--main-text));
 }
 .carousel {
     filter: drop-shadow(0 0 10px var(--shadow-color));

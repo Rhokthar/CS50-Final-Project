@@ -13,10 +13,20 @@ app = Flask(__name__)
 # Templates autoreload
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-# Index Route: Choose Lang (?)
+# Index Route: Choose Lang
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+# WORK IN PROGRESS PAGE - EN
+@app.route("/en/work-in-progress")
+def en_work_in_progress():
+    return render_template("./en/work-in-progress.html")
+# WORK IN PROGRESS PAGE - IT
+@app.route("/it/work-in-progress")
+def it_work_in_progress():
+    return render_template("./it/work-in-progress.html")
 
 
 # HOME - EN

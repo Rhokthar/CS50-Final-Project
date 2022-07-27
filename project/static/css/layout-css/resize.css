@@ -189,7 +189,12 @@
     .aboutme_form p, 
     .contacts_form p, 
     .contacts_form a,
-    .paragraph {
+    .paragraph,
+    .curiosities-list,
+    #soft-skills li,
+    #side-skills li,
+    #study-planning li,
+    #other-skills li {
         font-size: 1.6rem;
     }
     
