@@ -115,7 +115,7 @@ def en_contacts():
         try:
             mailObj.sendmail(request.form.get("e-mail"), contactEmail, mailMessage.as_string())
         except:
-            return render_template("./en/contacts.html")
+            return render_template("./en/contacts.html", backEndTests=False)
         # MAIL SENDING ENDS
        
         # RENDER SUCCESS
@@ -167,7 +167,7 @@ def it_contacts():
         try:
             mailObj.sendmail(request.form.get("e-mail"), contactEmail, mailMessage.as_string())
         except:
-            return render_template("./it/contacts.html")
+            return render_template("./it/contacts.html", backEndTests=False)
         # MAIL SENDING ENDS
        
         # RENDER SUCCESS
