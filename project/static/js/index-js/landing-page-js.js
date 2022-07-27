@@ -1,7 +1,13 @@
 // Variables
 let titlesArray = document.querySelectorAll(".landing-flag-title");
 let imgsArray = document.querySelectorAll(".landing-flag-img");
-let langCheck = localStorage.getItem("data-lang");
+let langCheck = localStorage.setItem("data-lang");
+
+let themeNullCheck = localStorage.getItem("data-theme");
+if (themeNullCheck === null)
+{
+    localStorage.setItem("data-theme", "light");
+}
 
 // CHECK LANG START
 if (langCheck === "it")
