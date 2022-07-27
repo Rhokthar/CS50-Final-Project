@@ -18,7 +18,7 @@ Contatti
     <div class="flex-container vertical-row flex-wrap width-100 align-center padding-top-m text-center" id="contacts-page">
         <!-- PAGE__WRAPPER STARTS -->
         <div class="flex-container boxed-container vertical-row width-100 padding-left-s padding-right-s align-center">
-            {% if not {{ backEndTests }}}
+            {% if backEndTests == "False" %}
             <p class="desc padding-top-s" style="color: red;">E' stato riscontrato un errore quando il sistema ha provato a spedire l'e-mail. Per favore, riprova.</p>
             {% endif %}
             <!-- START TITLE__WRAPPER -->
